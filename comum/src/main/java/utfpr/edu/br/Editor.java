@@ -8,7 +8,7 @@ import java.util.Calendar;
 /**
  * Singleton responsavel por adicionar log's da aplicação de imprimir no console
  * 
- * @author Luan Malaguti Reffatti
+ * @author Bernardo Vale
  *
  */
 public class Editor implements Serializable{

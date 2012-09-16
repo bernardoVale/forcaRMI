@@ -17,4 +17,9 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
     public String mensagem(String mensagem) throws RemoteException {
         return "Testando o servidor para: "+mensagem;
     }
+
+    @Override
+    public String autenticarJogador(String nome) throws RemoteException {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

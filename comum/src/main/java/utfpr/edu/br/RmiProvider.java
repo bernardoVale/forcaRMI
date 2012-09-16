@@ -11,4 +11,5 @@ import java.rmi.RemoteException;
  */
 public interface RmiProvider extends Remote{
 	String mensagem(String mensagem)throws RemoteException;
+    String autenticarJogador(String nome)throws RemoteException;
 }
