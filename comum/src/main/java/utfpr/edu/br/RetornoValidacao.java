@@ -13,7 +13,7 @@ public class RetornoValidacao implements Serializable {
 
     private boolean ok;
     private String erro;
-    private Stream stream;
+    private String md5;
 
     public RetornoValidacao(boolean ok, String erro) {
         super();
@@ -35,12 +35,6 @@ public class RetornoValidacao implements Serializable {
     public RetornoValidacao(String erro) {
         this.setErro(erro);
         this.ok = false;
-        this.setStream(null);
-    }
-
-    public RetornoValidacao(boolean ok, Stream stream) {
-        this.ok = true;
-        this.setStream(stream);
     }
 
     public boolean isOk() {
@@ -59,12 +53,12 @@ public class RetornoValidacao implements Serializable {
         this.erro = erro;
     }
 
-    public Stream getStream() {
-        return stream;
+    public String getStream() {
+        return md5;
     }
 
-    public void setStream(Stream stream) {
-        this.stream = stream;
+    public void setStream(String md5) {
+        this.md5 = md5;
     }
 
 }

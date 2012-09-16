@@ -1,6 +1,8 @@
 package utfpr.edu.br.rmi.rmi;
 
+import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.RmiProvider;
+import utfpr.edu.br.facade.JogadorFacade;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -8,6 +10,7 @@ import java.rmi.server.UnicastRemoteObject;
 public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider {
 
     private static final long serialVersionUID = 1L;
+    private JogadorFacade facade;
 
     protected RmiProviderImpl() throws RemoteException {
         super();
@@ -19,7 +22,7 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
     }
 
     @Override
-    public String autenticarJogador(String nome) throws RemoteException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public RetornoValidacao autenticarJogador(String nome,String md5) throws RemoteException {
+       return facade.autenticar(nome,md5);
     }
 }
