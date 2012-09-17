@@ -2,13 +2,17 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package utfpr.edu.br.view.login;
+package utfpr.edu.br.view.telas.login;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionListener;
 
 /**
  *
  * @author Bernardo
  */
-public class LoginView extends javax.swing.JFrame {
+public class LoginView extends javax.swing.JFrame implements LoginViewI{
 
     /**
      * Creates new form LoginView
@@ -133,4 +137,37 @@ public class LoginView extends javax.swing.JFrame {
     private javax.swing.JTextField jtfJogar;
     private javax.swing.JPanel panelJogar;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public JButton getBotaoLogin() {
+        return btJogar;
+    }
+
+    @Override
+    public JTextField getNome() {
+        return jtfJogar;
+    }
+
+    @Override
+    public void addAutenticarListener(ActionListener listener) {
+        btJogar.addActionListener(listener);
+    }
+
+    @Override
+    public void packAndShow() {
+        this.pack();
+        this.setVisible(true);
+    }
+
+    @Override
+    public void clearFields() {
+        Component[] componentes = this.getContentPane().getComponents();
+
+        for (int i = 0; i < componentes.length; i++) {
+            if (componentes[i] instanceof JTextField) {
+                JTextField field = (JTextField)componentes[i];
+                field.setText("");
+            }
+        }
+    }
 }

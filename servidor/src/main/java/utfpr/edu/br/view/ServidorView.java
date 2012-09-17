@@ -5,7 +5,7 @@
 package utfpr.edu.br.view;
 
 import utfpr.edu.br.Editor;
-import utfpr.edu.br.rmi.rmi.Servidor;
+import utfpr.edu.br.rmi.Servidor;
 
 import java.awt.*;
 

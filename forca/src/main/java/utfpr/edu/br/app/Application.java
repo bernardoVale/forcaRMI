@@ -5,7 +5,10 @@ package utfpr.edu.br.app;/**
  * Time: 17:16
  */
 
-import utfpr.edu.br.view.login.LoginView;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import utfpr.edu.br.presenter.LoginPresenter;
+import utfpr.edu.br.view.telas.login.LoginView;
 
 import javax.swing.*;
 
@@ -34,8 +37,13 @@ public class Application extends JFrame{
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
-                new LoginView().setVisible(true);
+                getPresenter().createView();
+                //new LoginView().setVisible(true);
             }
         });
+    }
+    public static LoginPresenter getPresenter() {
+        BeanFactory factory = new ClassPathXmlApplicationContext("/META-INF/applicationContext.xml");
+        return (LoginPresenter)factory.getBean("presenter");
     }
 }

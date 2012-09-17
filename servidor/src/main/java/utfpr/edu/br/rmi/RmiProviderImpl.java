@@ -1,7 +1,8 @@
-package utfpr.edu.br.rmi.rmi;
+package utfpr.edu.br.rmi;
 
 import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.RmiProvider;
+import utfpr.edu.br.facade.Jogador;
 import utfpr.edu.br.facade.JogadorFacade;
 
 import java.rmi.RemoteException;
@@ -14,6 +15,7 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
 
     protected RmiProviderImpl() throws RemoteException {
         super();
+        facade = Jogador.getInstance();
     }
 
     @Override
