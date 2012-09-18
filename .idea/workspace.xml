@@ -1,34 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d7e4036-3454-4dd4-811d-5c11fa7dd43c" name="Default" comment="Fachada pronta">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/comum/target/comum-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/comum/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/comum/target/surefire-reports/TEST-utfpr.edu.br.AppTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/comum/target/surefire-reports/utfpr.edu.br.AppTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/App.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/login/LoginView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/login/LoginView$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/login/LoginView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/forca-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/surefire-reports/TEST-utfpr.edu.br.AppTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/surefire-reports/utfpr.edu.br.AppTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/servidor/target/classes/utfpr/edu/br/rmi/rmi/RmiProviderImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/servidor/target/classes/utfpr/edu/br/rmi/rmi/Servidor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/servidor/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/servidor/target/servidor-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/servidor/target/surefire-reports/TEST-utfpr.edu.br.AppTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/servidor/target/surefire-reports/utfpr.edu.br.AppTest.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/login/LoginView.form" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.form" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/login/LoginView.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/rmi/RmiProviderImpl.java" afterPath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/RmiProviderImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/rmi/Servidor.java" afterPath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/Servidor.java" />
+    <list default="true" id="2d7e4036-3454-4dd4-811d-5c11fa7dd43c" name="Default" comment="Implementado MVP, Action para salvar jogador funcionando!">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/comum/comum.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.form" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/src/main/resources/bota_FOCADO.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/src/main/resources/botaoJogar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/Label Nome.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/servidor/servidor.iml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/forca/src/main/resources/Label Nome.png" afterPath="$PROJECT_DIR$/forca/src/main/resources/LabelNome.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comum/pom.xml" afterPath="$PROJECT_DIR$/comum/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/forca.iml" afterPath="$PROJECT_DIR$/forca/forca.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/app/Application.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/app/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/view/ServidorView.java" afterPath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/view/ServidorView.java" />
     </list>
     <ignored path="forcaRMI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,20 +70,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LoginView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.java">
+      <file leaf-file-name="applicationContext.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forca/src/main/resources/META-INF/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="14" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0">
+            <state line="14" column="4" selection-start="480" selection-end="480" vertical-scroll-proportion="-10.0">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MensagemBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="26" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginViewI.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginViewI.java">
+      <file leaf-file-name="MensagemDirector.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemDirector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="25" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0">
+            <state line="15" column="11" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginViewImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginViewImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="24" selection-start="1498" selection-end="1568" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#7465#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#663#693#0" expanded="true" />
+                <element signature="e#6162#6289#0" expanded="true" />
+                <element signature="e#6278#6279#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,33 +118,44 @@
       <file leaf-file-name="LoginActionListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/LoginActionListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="26" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="43" column="72" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServidorView.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/view/ServidorView.java">
+      <file leaf-file-name="RMIClient.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/rmi/RMIClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="49" selection-start="5307" selection-end="5307" vertical-scroll-proportion="0.3314121">
-              <folding>
-                <element signature="e#1767#1949#0" expanded="true" />
-                <element signature="e#1938#1939#0" expanded="true" />
-              </folding>
+            <state line="35" column="45" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginPresenter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/LoginPresenter.java">
+      <file leaf-file-name="MensagemError.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemError.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="19" column="96" selection-start="461" selection-end="461" vertical-scroll-proportion="0.47513813">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MensagemOK.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemOK.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="8" selection-start="368" selection-end="453" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/app/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="0" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -154,22 +176,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/Teste.java" />
-        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/rmi/Servidor.java" />
-        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/Servidor.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/login/LoginPresenter.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/login/LoginViewI.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/login/LoginView.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginViewI.java" />
-        <option value="$PROJECT_DIR$/comum/pom.xml" />
-        <option value="$PROJECT_DIR$/comum/src/main/resources/META-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/RmiProviderImpl.java" />
+        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/RmiProvider.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/LoginPresenter.java" />
+        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginViewI.java" />
+        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/decorator/Mensagem.java" />
         <option value="$PROJECT_DIR$/forca/src/main/resources/META-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/app/Application.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/App.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/rmi/RMIClient.java" />
+        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.java" />
+        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginViewImpl.java" />
+        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/Mensagem.java" />
+        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemDirector.java" />
+        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemBuilder.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/LoginActionListener.java" />
+        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemOK.java" />
+        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/rmi/RMIClient.java" />
+        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemError.java" />
       </list>
     </option>
   </component>
@@ -395,40 +417,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servidor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="br" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -596,6 +584,10 @@
               <option name="myItemId" value="br" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -665,9 +657,106 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="br" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forca" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -688,9 +777,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -715,7 +804,7 @@
       <recent name="$PROJECT_DIR$/servidor/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="Application.Aplication">
     <configuration default="false" name="Aplication" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -735,34 +824,6 @@
       <module name="servidor" />
       <envs />
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Application" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="utfpr.edu.br.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="utfpr.edu.br.app.Application" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="forca" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1112,6 +1173,13 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" web_path="">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="#com.intellij.j2meplugin.run.J2MEConfigurationType" factoryName="J2ME">
       <module name="" />
       <USER_OPTIONS />
@@ -1135,13 +1203,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" web_path="">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" class_name="" method_name="" output_log_level="" package_name="" scope="Class">
       <option name="BCName" value="" />
       <option name="launcherParameters">
@@ -1157,6 +1218,15 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="RemoteFlashRunConfigurationType" factoryName="Flash Remote Debug">
+      <option name="BCName" value="" />
+      <option name="moduleName" value="" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -1180,18 +1250,20 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="RemoteFlashRunConfigurationType" factoryName="Flash Remote Debug">
-      <option name="BCName" value="" />
-      <option name="moduleName" value="" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
       <module name="" />
       <option name="BROWSER" value="Chrome" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1219,16 +1291,33 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
+    <configuration default="false" name="Application" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="utfpr.edu.br.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="utfpr.edu.br.app.Application" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="forca" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Aplication" />
@@ -1243,6 +1332,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -1283,14 +1377,17 @@
       <created>1347835259205</created>
       <updated>1347835259205</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implementado MVP, Action para salvar jogador funcionando!">
+      <created>1347852180324</created>
+      <updated>1347852180324</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.8" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6118644" order="5" side_tool="false" content_ui="tabs" />
@@ -1308,8 +1405,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.8" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39984825" sideWeight="0.6118644" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32245827" sideWeight="0.6542373" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3457627" sideWeight="0.6312595" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32245827" sideWeight="0.64576274" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3542373" sideWeight="0.6312595" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.8" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1355,7 +1453,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fachada pronta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementado MVP, Action para salvar jogador funcionando!" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1373,6 +1471,7 @@
     <MESSAGE value="Iniciando a autenticacao do jogador" />
     <MESSAGE value="Introduzindo o padrao facade" />
     <MESSAGE value="Fachada pronta" />
+    <MESSAGE value="Implementado MVP, Action para salvar jogador funcionando!" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1416,85 +1515,43 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/java/security/AccessController.java">
+    <entry file="file://$PROJECT_DIR$/servidor/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="328" column="31" selection-start="11823" selection-end="11823" vertical-scroll-proportion="0.297561">
-          <folding />
-        </state>
+        <state line="17" column="77" selection-start="667" selection-end="667" vertical-scroll-proportion="0.46279493" />
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/java/awt/EventQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="673" column="0" selection-start="22474" selection-end="22474" vertical-scroll-proportion="0.2699115">
-          <folding>
-            <element signature="e#21894#22056#0" expanded="true" />
-            <element signature="e#21914#21920#0" expanded="true" />
-            <element signature="e#22045#22046#0" expanded="true" />
-            <element signature="e#22490#22723#0" expanded="true" />
-            <element signature="e#22704#22705#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/java/awt/Container.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2286" column="0" selection-start="86611" selection-end="86611" vertical-scroll-proportion="0.3004695">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/java/awt/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4860" column="0" selection-start="173652" selection-end="173652" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/javax/swing/AbstractButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2017" column="0" selection-start="71674" selection-end="71674" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/java/net/PlainSocketImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="16" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/app/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="41" selection-start="788" selection-end="788" vertical-scroll-proportion="0.36842105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/app/Aplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="547" selection-end="547" vertical-scroll-proportion="0.38112524">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/rmi/RMIClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="71" selection-start="646" selection-end="646" vertical-scroll-proportion="0.2109929">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/resources/Label Nome.png">
+    <entry file="file://$PROJECT_DIR$/forca/src/main/resources/LabelNome.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/javax/swing/ImageIcon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="204" column="0" selection-start="6414" selection-end="6414" vertical-scroll-proportion="0.33043477" />
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/javax/swing/JOptionPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="352" column="36" selection-start="13159" selection-end="13159" vertical-scroll-proportion="0.03816794" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/LoginPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="16" selection-start="336" selection-end="336" vertical-scroll-proportion="0.1160221">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/forca/src/main/resources/META-INF/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="4" selection-start="480" selection-end="480" vertical-scroll-proportion="0.6005917">
+        <state line="14" column="4" selection-start="480" selection-end="480" vertical-scroll-proportion="-10.0">
           <folding />
         </state>
       </provider>
@@ -1502,45 +1559,65 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginViewI.java">
+    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginViewImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="25" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="14" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/LoginPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+        <state line="48" column="24" selection-start="1498" selection-end="1568" vertical-scroll-proportion="0.0">
           <folding>
+            <element signature="e#0#7465#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#663#693#0" expanded="true" />
+            <element signature="e#6162#6289#0" expanded="true" />
+            <element signature="e#6278#6279#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemDirector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="11" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="26" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/app/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/LoginActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="26" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="43" column="72" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/view/ServidorView.java">
+    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemOK.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="49" selection-start="5307" selection-end="5307" vertical-scroll-proportion="0.3314121">
-          <folding>
-            <element signature="e#1767#1949#0" expanded="true" />
-            <element signature="e#1938#1939#0" expanded="true" />
-          </folding>
+        <state line="20" column="8" selection-start="368" selection-end="453" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/rmi/RMIClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="45" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="96" selection-start="461" selection-end="461" vertical-scroll-proportion="0.47513813">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/comum/comum.iml" filepath="$PROJECT_DIR$/comum/comum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comum/comum.iml" filepath="$PROJECT_DIR$/comum/comum.iml" />
       <module fileurl="file://$PROJECT_DIR$/forca/forca.iml" filepath="$PROJECT_DIR$/forca/forca.iml" />
       <module fileurl="file://$PROJECT_DIR$/forcaRMI.iml" filepath="$PROJECT_DIR$/forcaRMI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servidor/servidor.iml" filepath="$PROJECT_DIR$/servidor/servidor.iml" />
       <module fileurl="file://$PROJECT_DIR$/servidor/servidor.iml" filepath="$PROJECT_DIR$/servidor/servidor.iml" />
     </modules>
   </component>
