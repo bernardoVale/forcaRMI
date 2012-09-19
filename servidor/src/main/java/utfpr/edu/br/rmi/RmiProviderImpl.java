@@ -2,6 +2,7 @@ package utfpr.edu.br.rmi;
 
 import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.RmiProvider;
+import utfpr.edu.br.controller.ControladorCategoria;
 import utfpr.edu.br.facade.Jogador;
 import utfpr.edu.br.facade.JogadorFacade;
 
@@ -12,6 +13,7 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
 
     private static final long serialVersionUID = 1L;
     private JogadorFacade facade;
+    private ControladorCategoria categoria;
 
     protected RmiProviderImpl() throws RemoteException {
         super();

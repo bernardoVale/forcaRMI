@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d7e4036-3454-4dd4-811d-5c11fa7dd43c" name="Default" comment="Implementado MVP, Action para salvar jogador funcionando!">
+    <list default="true" id="2d7e4036-3454-4dd4-811d-5c11fa7dd43c" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/comum/comum.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.form" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/src/main/resources/bota_FOCADO.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/src/main/resources/botaoJogar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/Label Nome.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/bota_FOCADO.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/botaoJogar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/forca.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/app/Application$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/app/Application.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/test-classes/utfpr/edu/br/AppTest.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/servidor/servidor.iml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/forca/src/main/resources/Label Nome.png" afterPath="$PROJECT_DIR$/forca/src/main/resources/LabelNome.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/app/Aplication.java" afterPath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/view/ServidorViewImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/app/Application.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/app/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servidor/pom.xml" afterPath="$PROJECT_DIR$/servidor/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/RmiProviderImpl.java" afterPath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/RmiProviderImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/Servidor.java" afterPath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/Servidor.java" />
     </list>
     <ignored path="forcaRMI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,91 +73,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/resources/META-INF/applicationContext.xml">
+      <file leaf-file-name="Bootstrap.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/app/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="4" selection-start="480" selection-end="480" vertical-scroll-proportion="-10.0">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MensagemBuilder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="26" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MensagemDirector.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemDirector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="11" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginViewImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginViewImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="24" selection-start="1498" selection-end="1568" vertical-scroll-proportion="0.0">
+            <state line="29" column="59" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.66759">
               <folding>
-                <element signature="e#0#7465#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#663#693#0" expanded="true" />
-                <element signature="e#6162#6289#0" expanded="true" />
-                <element signature="e#6278#6279#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginActionListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/LoginActionListener.java">
+      <file leaf-file-name="Jogador.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Jogador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="72" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.0">
+            <state line="27" column="22" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/IBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RMIClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/rmi/RMIClient.java">
+      <file leaf-file-name="ControladorCategoriaImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/controller/ControladorCategoriaImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="45" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0">
+            <state line="25" column="20" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Jogo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Jogo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="55" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MensagemError.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemError.java">
+      <file leaf-file-name="Palavra.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Palavra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="96" selection-start="461" selection-end="461" vertical-scroll-proportion="0.47513813">
+            <state line="26" column="54" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MensagemOK.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemOK.java">
+      <file leaf-file-name="Categoria.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Categoria.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="8" selection-start="368" selection-end="453" vertical-scroll-proportion="0.0">
+            <state line="35" column="39" selection-start="247" selection-end="586" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/app/Application.java">
+      <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0">
+            <state line="14" column="12" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -176,22 +167,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/RmiProviderImpl.java" />
-        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/RmiProvider.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/LoginPresenter.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginViewI.java" />
-        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/decorator/Mensagem.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/resources/META-INF/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/app/Application.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginViewImpl.java" />
-        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/Mensagem.java" />
-        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemDirector.java" />
-        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemBuilder.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/LoginActionListener.java" />
-        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemOK.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/rmi/RMIClient.java" />
-        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemError.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/app/ServidorViewImpl.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/view/ServidorViewImpl.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/inject/AppInitializer.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/inject/ControllerModule.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Categoria.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/AbstractDao.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/DaoCategoria.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Jogo.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/inject/Getinjector.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Palavra.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/IBean.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Jogador.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/app/Bootstrap.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/JogadorDao.java" />
       </list>
     </option>
   </component>
@@ -275,16 +266,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -334,6 +315,18 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="br" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -354,6 +347,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servidor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,6 +411,252 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="br" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servidor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="br" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servidor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="br" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servidor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="br" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servidor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="br" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servidor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="br" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servidor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="br" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servidor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="br" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -710,6 +983,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -739,6 +1016,50 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="br" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="br" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -777,56 +1098,39 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="utfpr.edu.br.md5" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utfpr.edu.br.inject" />
+      <recent name="utfpr.edu.br.model.dao.interfaces" />
+      <recent name="utfpr.edu.br.util" />
       <recent name="utfpr.edu.br" />
       <recent name="utfpr.edu.br.md5" />
-      <recent name="utfpr.edu.br.app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/inject" />
+      <recent name="$PROJECT_DIR$/servidor/src/main/resources" />
+      <recent name="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/util" />
+      <recent name="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model" />
       <recent name="$PROJECT_DIR$/forca/src/main" />
-      <recent name="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi" />
-      <recent name="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="utfpr.edu.br.view" />
-      <recent name="utfpr.edu.br.rmi" />
-      <recent name="utfpr.edu.br" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/servidor/src/main" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="utfpr.edu.br.model" />
+      <recent name="utfpr.edu.br.view" />
+      <recent name="utfpr.edu.br.rmi" />
+      <recent name="utfpr.edu.br" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Aplication">
-    <configuration default="false" name="Aplication" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="utfpr.edu.br.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="utfpr.edu.br.app.Aplication" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="servidor" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.Bootstrap">
     <configuration default="false" name="AppTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -894,6 +1198,50 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="forca" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GeraBanco" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="utfpr.edu.br.model.hibernate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="utfpr.edu.br.model.hibernate.GeraBanco" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="servidor" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Bootstrap" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="utfpr.edu.br.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="utfpr.edu.br.app.Bootstrap" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="servidor" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -1173,13 +1521,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" web_path="">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="#com.intellij.j2meplugin.run.J2MEConfigurationType" factoryName="J2ME">
       <module name="" />
       <USER_OPTIONS />
@@ -1203,6 +1544,13 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" web_path="">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" class_name="" method_name="" output_log_level="" package_name="" scope="Class">
       <option name="BCName" value="" />
       <option name="launcherParameters">
@@ -1218,15 +1566,6 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="RemoteFlashRunConfigurationType" factoryName="Flash Remote Debug">
-      <option name="BCName" value="" />
-      <option name="moduleName" value="" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -1250,20 +1589,18 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
-      <module name="" />
-      <option name="BROWSER" value="Chrome" />
+    <configuration default="true" type="RemoteFlashRunConfigurationType" factoryName="Flash Remote Debug">
+      <option name="BCName" value="" />
+      <option name="moduleName" value="" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
+      <module name="" />
+      <option name="BROWSER" value="Chrome" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1284,6 +1621,17 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1319,12 +1667,13 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Aplication" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Application" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AppTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Teste" />
-      <item index="4" class="java.lang.String" itemvalue="Application.App" />
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.AppTest" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Teste" />
+      <item index="2" class="java.lang.String" itemvalue="Application.App" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Application" />
+      <item index="4" class="java.lang.String" itemvalue="Application.GeraBanco" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Bootstrap" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1381,7 +1730,11 @@
       <created>1347852180324</created>
       <updated>1347852180324</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Padrao builder pronto">
+      <created>1347927154316</created>
+      <updated>1347927154316</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1390,6 +1743,7 @@
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6118644" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.8" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1403,12 +1757,11 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23898305" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.8" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.64576274" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39984825" sideWeight="0.6118644" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32245827" sideWeight="0.64576274" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3542373" sideWeight="0.6312595" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32245827" sideWeight="0.6915254" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30847457" sideWeight="0.6312595" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.8" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1453,7 +1806,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementado MVP, Action para salvar jogador funcionando!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Padrao builder pronto" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1472,6 +1825,7 @@
     <MESSAGE value="Introduzindo o padrao facade" />
     <MESSAGE value="Fachada pronta" />
     <MESSAGE value="Implementado MVP, Action para salvar jogador funcionando!" />
+    <MESSAGE value="Padrao builder pronto" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1515,109 +1869,131 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/servidor/pom.xml">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/AbstractDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="77" selection-start="667" selection-end="667" vertical-scroll-proportion="0.46279493" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/resources/LabelNome.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/javax/swing/ImageIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="204" column="0" selection-start="6414" selection-end="6414" vertical-scroll-proportion="0.33043477" />
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/javax/swing/JOptionPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="352" column="36" selection-start="13159" selection-end="13159" vertical-scroll-proportion="0.03816794" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/LoginPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="16" selection-start="336" selection-end="336" vertical-scroll-proportion="0.1160221">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/resources/META-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="4" selection-start="480" selection-end="480" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginViewImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="24" selection-start="1498" selection-end="1568" vertical-scroll-proportion="0.0">
+        <state line="13" column="24" selection-start="299" selection-end="299" vertical-scroll-proportion="0.112338856">
           <folding>
-            <element signature="e#0#7465#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#663#693#0" expanded="true" />
-            <element signature="e#6162#6289#0" expanded="true" />
-            <element signature="e#6278#6279#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemDirector.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/CategoriaDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="11" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+        <state line="13" column="44" selection-start="344" selection-end="344" vertical-scroll-proportion="0.35911602">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/test/java/utfpr/edu/br/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="75" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemBuilder.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+        <state line="14" column="12" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/app/Application.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Jogo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0">
+        <state line="26" column="55" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/LoginActionListener.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/view/ServidorViewImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="72" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.0">
+        <state line="9" column="16" selection-start="204" selection-end="204" vertical-scroll-proportion="-0.1637931">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemOK.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="368" selection-end="453" vertical-scroll-proportion="0.0">
+        <state line="18" column="10" selection-start="360" selection-end="360" vertical-scroll-proportion="0.58448756">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/inject/ControllerModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="41" selection-start="341" selection-end="341" vertical-scroll-proportion="0.33518004">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/rmi/RMIClient.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/inject/AppInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="45" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0">
+        <state line="12" column="82" selection-start="313" selection-end="313" vertical-scroll-proportion="0.3767313">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/inject/Getinjector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="27" selection-start="447" selection-end="447" vertical-scroll-proportion="0.4238227">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Palavra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="54" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/builder/MensagemError.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/IBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="96" selection-start="461" selection-end="461" vertical-scroll-proportion="0.47513813">
+        <state line="5" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Categoria.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="39" selection-start="247" selection-end="586" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Jogador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="22" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/JogadorDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="10" selection-start="584" selection-end="584" vertical-scroll-proportion="0.70914125">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/app/Bootstrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="59" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.66759">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

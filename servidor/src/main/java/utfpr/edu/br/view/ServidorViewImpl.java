@@ -1,12 +1,13 @@
-package utfpr.edu.br.app;
-
-import utfpr.edu.br.view.ServidorView;
+package utfpr.edu.br.view;
 
 import javax.swing.*;
 
-public class Aplication extends JFrame {
-	public static void main(String args[]) {
-	      
+/**
+ * @author Bernardo Vale
+ * Classe que tem o metodo que inicia a tela do servidor
+ */
+public class ServidorViewImpl extends JFrame {
+    public void run(){
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -23,7 +24,7 @@ public class Aplication extends JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ServidorView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-    
+
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {

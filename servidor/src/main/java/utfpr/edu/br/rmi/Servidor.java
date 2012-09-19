@@ -12,7 +12,6 @@ public class Servidor {
 
     private Registry registry;
     private static final int PORTA = 1099;
-
     public void inicia() {
         try {
             RmiProvider provider = new RmiProviderImpl();
