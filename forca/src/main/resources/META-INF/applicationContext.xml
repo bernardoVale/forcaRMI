@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+        "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- Classe que encapsula a lógica de apresentação -->
+    <bean id="presenter" class="utfpr.edu.br.presenter.LoginPresenter" singleton="false">
+        <property name="view">
+            <ref local="view" />
+        </property>
+    </bean>
+
+    <!-- Classe responsável por renderizar os dados graficamente -->
+    <bean id="view" class="utfpr.edu.br.view.telas.login.LoginViewImpl" singleton="false">
+
+    </bean>
+</beans>
