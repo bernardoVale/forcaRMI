@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d7e4036-3454-4dd4-811d-5c11fa7dd43c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comum/target/classes/utfpr/edu/br/App.class" afterPath="$PROJECT_DIR$/comum/target/classes/utfpr/edu/br/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comum/target/classes/utfpr/edu/br/RmiProvider.class" afterPath="$PROJECT_DIR$/comum/target/classes/utfpr/edu/br/RmiProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servidor/target/classes/utfpr/edu/br/view/ServidorView.class" afterPath="$PROJECT_DIR$/servidor/target/classes/utfpr/edu/br/view/ServidorView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="forcaRMI.iws" />
@@ -63,20 +60,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Bootstrap.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Bootstrap.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/app/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="44" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.0">
+            <state line="35" column="38" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.6678967">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/AbstractDao.java">
+      <file leaf-file-name="JogadoresDoJogo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/JogadoresDoJogo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="24" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="33" column="53" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,16 +83,16 @@
       <file leaf-file-name="PalavrasDoJogo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/PalavrasDoJogo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="13" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
+            <state line="28" column="57" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JogadoresDoJogo.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/JogadoresDoJogo.java">
+      <file leaf-file-name="JogadoresDoJogoDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/JogadoresDoJogoDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="27" selection-start="529" selection-end="529" vertical-scroll-proportion="0.7193606">
+            <state line="23" column="10" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java" />
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/IBean.java" />
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/JogadorDao.java" />
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Partida.java" />
@@ -137,11 +135,12 @@
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Palavra.java" />
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/Jogo.java" />
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/PalavrasDoJogo.java" />
-        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/app/Bootstrap.java" />
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/AbstractDao.java" />
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/PalavrasDoJogoID.java" />
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/JogadoresdoJogoID.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/JogadoresDoJogoDao.java" />
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/JogadoresDoJogo.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/app/Bootstrap.java" />
       </list>
     </option>
   </component>
@@ -1254,10 +1253,10 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.Teste" />
       <item index="1" class="java.lang.String" itemvalue="Application.App" />
-      <item index="2" class="java.lang.String" itemvalue="Application.GeraBanco" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Bootstrap" />
-      <item index="4" class="java.lang.String" itemvalue="Query Language Console.Default" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Application" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Application" />
+      <item index="3" class="java.lang.String" itemvalue="Application.GeraBanco" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Bootstrap" />
+      <item index="5" class="java.lang.String" itemvalue="Query Language Console.Default" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1326,7 +1325,11 @@
       <created>1348194349163</created>
       <updated>1348194349163</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Terminando a estrutura dos beans">
+      <created>1348254558912</created>
+      <updated>1348254558912</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1345,18 +1348,18 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23898305" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.64576274" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39984825" sideWeight="0.6118644" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32218844" sideWeight="0.45084745" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54915255" sideWeight="0.6312595" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32218844" sideWeight="0.4516129" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5483871" sideWeight="0.6312595" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.8" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23898305" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.15254237" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1398,7 +1401,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="DI com Guice pronta, fazendo dao's dos beans" />
+    <option name="LAST_COMMIT_MESSAGE" value="Terminando a estrutura dos beans" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1419,6 +1422,7 @@
     <MESSAGE value="Implementado MVP, Action para salvar jogador funcionando!" />
     <MESSAGE value="Padrao builder pronto" />
     <MESSAGE value="DI com Guice pronta, fazendo dao's dos beans" />
+    <MESSAGE value="Terminando a estrutura dos beans" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1462,11 +1466,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/IBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/controller/ControladorCategoriaImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="20" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0" />
@@ -1517,33 +1516,48 @@
         <state line="17" column="27" selection-start="320" selection-end="320" vertical-scroll-proportion="0.1160221" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/app/Bootstrap.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/JogadoresdoJogoID.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="44" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.0" />
+        <state line="22" column="60" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/AbstractDao.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/JogadoresDoJogoDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="24" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/PalavrasDoJogo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="13" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/JogadoresDoJogo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="27" selection-start="529" selection-end="529" vertical-scroll-proportion="0.7193606">
+        <state line="23" column="10" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/JogadoresdoJogoID.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/AbstractDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="60" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" />
+        <state line="62" column="24" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.35977858">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/PalavrasDoJogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="57" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/bean/JogadoresDoJogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="53" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/app/Bootstrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="38" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.6678967">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
