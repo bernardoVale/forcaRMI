@@ -9,7 +9,6 @@ import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.builder.MensagemDirector;
 import utfpr.edu.br.builder.MensagemError;
 import utfpr.edu.br.builder.MensagemOK;
-import utfpr.edu.br.md5.Md5;
 import utfpr.edu.br.presenter.LoginPresenter;
 import utfpr.edu.br.rmi.RMIClient;
 import utfpr.edu.br.view.telas.login.LoginView;
@@ -17,9 +16,7 @@ import utfpr.edu.br.view.telas.login.LoginView;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.UnsupportedEncodingException;
 import java.rmi.RemoteException;
-import java.security.NoSuchAlgorithmException;
 
 /**
  * @author Bernardo Vale
@@ -49,8 +46,7 @@ public class LoginActionListener {
             }
              try {
                 RetornoValidacao rv =
-                        RMIClient.getInstance().provider().autenticarJogador(view.getNome().getText()
-                                ,Md5.MD5(view.getNome().getText()));
+                        RMIClient.getInstance().provider().iniciarJogo(view.getNome().getText());
                  System.out.println(rv.isOk());
                 if(rv.isOk()){
                     mensagem = new MensagemDirector(new MensagemOK("Inserido com Sucesso"));
@@ -71,12 +67,7 @@ public class LoginActionListener {
                 }
             } catch (RemoteException e) {
                 e.printStackTrace();
-            } catch (NoSuchAlgorithmException e) {
-                e.printStackTrace();
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-            }
-            view.clearFields();
+             }
 
         }
     }

@@ -10,6 +10,7 @@ import utfpr.edu.br.model.bean.Jogador;
 import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 
 /**
  * @author Bernardo Vale
@@ -24,5 +25,15 @@ public class JogadorDao extends AbstractDao<Jogador>{
     @Inject
     public JogadorDao(Provider<EntityManager> emp) {
         super(emp,Jogador.class);
+    }
+
+    public Jogador findByNome(String nome){
+        try{
+            return em().createQuery("SELECT j from Jogador j where " +
+                    "j.nome=?1",Jogador.class).setParameter(1,nome).getSingleResult();
+        }catch (NoResultException e){
+            System.out.println("No result");
+            return null;
+        }
     }
 }

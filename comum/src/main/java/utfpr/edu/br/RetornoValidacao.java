@@ -14,11 +14,18 @@ public class RetornoValidacao implements Serializable {
     private boolean ok;
     private String erro;
     private String md5;
+    private Object objeto;
 
     public RetornoValidacao(boolean ok, String erro) {
         super();
         this.ok = ok;
         this.setErro(erro);
+    }
+    public RetornoValidacao(boolean ok, String erro,Object objeto) {
+        super();
+        this.ok = ok;
+        this.setErro(erro);
+        this.objeto = objeto;
     }
 
     /**
@@ -35,6 +42,11 @@ public class RetornoValidacao implements Serializable {
     public RetornoValidacao(String erro) {
         this.setErro(erro);
         this.ok = false;
+    }
+
+    public RetornoValidacao(Object objeto) {
+        this.objeto = objeto;
+        this.ok = true;
     }
 
     public boolean isOk() {
@@ -61,4 +73,11 @@ public class RetornoValidacao implements Serializable {
         this.md5 = md5;
     }
 
+    public Object getObjeto() {
+        return objeto;
+    }
+
+    public void setObjeto(Object objeto) {
+        this.objeto = objeto;
+    }
 }

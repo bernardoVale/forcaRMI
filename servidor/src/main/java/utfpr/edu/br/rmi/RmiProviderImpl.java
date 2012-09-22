@@ -3,8 +3,11 @@ package utfpr.edu.br.rmi;
 import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.RmiProvider;
 import utfpr.edu.br.controller.ControladorCategoria;
-import utfpr.edu.br.facade.Jogador;
+import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.facade.JogadorFacade;
+import utfpr.edu.br.facade.JogadorFacadeImpl;
+import utfpr.edu.br.facade.JogoFacade;
+import utfpr.edu.br.facade.JogoFacadeImpl;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -12,12 +15,14 @@ import java.rmi.server.UnicastRemoteObject;
 public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider {
 
     private static final long serialVersionUID = 1L;
-    private JogadorFacade facade;
+    private JogadorFacade facadeJogador;
+    private JogoFacade facadeJogo;
     private ControladorCategoria categoria;
 
     protected RmiProviderImpl() throws RemoteException {
         super();
-        facade = Jogador.getInstance();
+        facadeJogador = new JogadorFacadeImpl();
+        facadeJogo = new JogoFacadeImpl();
     }
 
     @Override
@@ -26,7 +31,11 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
     }
 
     @Override
-    public RetornoValidacao autenticarJogador(String nome,String md5) throws RemoteException {
-       return facade.autenticar(nome,md5);
+    public RetornoValidacao iniciarJogo(String nome) throws RemoteException {
+        RetornoValidacao rv = facadeJogador.autenticar(nome);
+       if(rv.isOk()){
+           facadeJogo.iniciarJogo((JogadorDTO) rv.getObjeto());
+       }
+       return rv;
     }
 }

@@ -23,6 +23,11 @@ public class Jogador implements IBean{
         this.nome = nome;
     }
 
+    public Jogador(Long id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
+
     public Jogador() {
     }
 
@@ -42,5 +47,11 @@ public class Jogador implements IBean{
         this.id = id;
     }
 
-
+    @Override
+    public String toString() {
+        return "Jogador{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                '}';
+    }
 }

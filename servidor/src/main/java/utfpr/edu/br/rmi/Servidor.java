@@ -22,7 +22,7 @@ public class Servidor {
             /*RetornoValidacao r = provider.autenticarJogador("Tiao Bengalao", Md5.MD5("Tiao Bengalao"));
 
             if(r.isOk()){
-                ServidorView.addLog("Jogador inserido!");
+                ServidorView.addLog("JogadorFacadeImpl inserido!");
             }else{
                 ServidorView.addLog(r.getErro());
             } */

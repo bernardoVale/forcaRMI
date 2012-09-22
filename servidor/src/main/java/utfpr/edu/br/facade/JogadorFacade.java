@@ -1,6 +1,7 @@
 package utfpr.edu.br.facade;
 
 import utfpr.edu.br.RetornoValidacao;
+import utfpr.edu.br.dto.JogadorDTO;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,8 +10,7 @@ import utfpr.edu.br.RetornoValidacao;
  * Time: 19:19
  */
 public interface JogadorFacade {
-    public boolean findJogador(String nome);
-    public void saveJogador(String nome);
-    public RetornoValidacao autenticar(String nome,String md5);
+    public JogadorDTO saveJogador(String nome);
+    public RetornoValidacao autenticar(String nome);
 
 }

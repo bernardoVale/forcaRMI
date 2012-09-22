@@ -5,10 +5,7 @@ package utfpr.edu.br.app;/**
  * Time: 15:27
  */
 
-import com.google.inject.Injector;
-import utfpr.edu.br.inject.Getinjector;
-import utfpr.edu.br.model.bean.*;
-import utfpr.edu.br.model.dao.*;
+import utfpr.edu.br.view.ServidorViewImpl;
 
 /**
  * @author Bernardo Vale
@@ -16,9 +13,9 @@ import utfpr.edu.br.model.dao.*;
  */
 public class Bootstrap {
     public static void main(String[] args) {
-            //ServidorViewImpl app = new ServidorViewImpl();
-            //app.run();
-            Injector injector = Getinjector.getInstance();
+            ServidorViewImpl app = new ServidorViewImpl();
+            app.run();
+            /*Injector injector = Getinjector.getInstance();
             Categoria c = new Categoria("Apetrechos");
             Jogador j = new Jogador("Jhones");
             Palavra p1 = new Palavra("Banana",c);
@@ -36,6 +33,6 @@ public class Bootstrap {
             injector.getInstance(JogadoresDoJogoDao.class).save(new JogadoresDoJogo(
                 j.getId(),jogo.getId().intValue(),null));
             injector.getInstance(JogadoresDoJogoDao.class).update(new JogadoresDoJogo(
-                j.getId(),jogo.getId().intValue(),15L));
+                    j.getId(), jogo.getId().intValue(), 15L));                */
     }
 }
