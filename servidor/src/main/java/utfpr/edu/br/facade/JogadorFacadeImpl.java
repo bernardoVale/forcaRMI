@@ -2,8 +2,9 @@ package utfpr.edu.br.facade;
 
 import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.controller.ControladorJogador;
-import utfpr.edu.br.controller.ControladorJogadorImpl;
 import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.inject.Getinjector;
+import utfpr.edu.br.model.bean.Jogador;
 import utfpr.edu.br.util.Erros;
 
 /**
@@ -17,7 +18,7 @@ public class JogadorFacadeImpl implements JogadorFacade{
 
 
     public JogadorFacadeImpl() {
-        controlador = new ControladorJogadorImpl();
+        controlador = Getinjector.getInstance().getInstance(ControladorJogador.class);
     }
 
 
@@ -26,19 +27,19 @@ public class JogadorFacadeImpl implements JogadorFacade{
      * @param nome Nome do jogador a inserir
      */
     @Override
-    public JogadorDTO saveJogador(String nome){
-        return controlador.salvar(new JogadorDTO(nome));
+    public RetornoValidacao saveJogador(String nome){
+       return controlador.save(new Jogador(nome));
     }
 
     /**
-     * Funçao que inseri o usuario no StringBuilder
+     * Funçao que inseri o usuario no banco
      * @param nome Nome do JogadorFacadeImpl
-     * @return A resultado da operacao
+     * @return Um retorno validaçao que podera ou nao ter erros.
      */
     @Override
     public RetornoValidacao autenticar(String nome) {
         if(!controlador.jogadorExiste(new JogadorDTO(nome))){
-            return new RetornoValidacao(saveJogador(nome));
+            return saveJogador(nome);
         }
         return new RetornoValidacao(Erros.JOGADOREXISTE.nome());
     }

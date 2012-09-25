@@ -7,7 +7,8 @@ package utfpr.edu.br.inject;/**
 
 import com.google.inject.AbstractModule;
 import utfpr.edu.br.controller.ControladorCategoria;
-import utfpr.edu.br.controller.ControladorCategoriaImpl;
+import utfpr.edu.br.controller.ControladorJogador;
+import utfpr.edu.br.controller.ControladorJogo;
 
 /**
  * @author Bernardo Vale
@@ -16,9 +17,8 @@ import utfpr.edu.br.controller.ControladorCategoriaImpl;
 public class ControllerModule extends AbstractModule{
     @Override
     protected void configure() {
-        // isntalando as dependencias.
-     //   install(new PersistenceModule());
-
-        bind(ControladorCategoria.class).to(ControladorCategoriaImpl.class);
+        bind(ControladorCategoria.class);
+        bind(ControladorJogo.class);
+        bind(ControladorJogador.class);
     }
 }

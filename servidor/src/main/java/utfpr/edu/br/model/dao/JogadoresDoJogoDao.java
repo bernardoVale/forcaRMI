@@ -25,4 +25,14 @@ public class JogadoresDoJogoDao extends AbstractDao<JogadoresDoJogo> {
     public JogadoresDoJogoDao(Provider<EntityManager> emp) {
         super(emp, JogadoresDoJogo.class);
     }
+
+    /**
+     * Metodo que retorna quantos jogadores estao em um determinado jogo
+     * @param idJogo
+     * @return Quatidade
+     */
+    public Long quantidadeDeJogadores(Long idJogo){
+        return  (Long) em().createQuery("SELECT COUNT(*) FROM JogadoresDoJogo j " +
+                "where j.id.jogo_id = ?1").setParameter(1,idJogo).getSingleResult();
+    }
 }

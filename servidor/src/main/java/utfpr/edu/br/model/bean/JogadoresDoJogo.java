@@ -26,6 +26,7 @@ public class JogadoresDoJogo implements IBean{
     public JogadoresDoJogo() {
     }
 
+
     public Long getPontuacao() {
         return pontuacao;
     }

@@ -30,6 +30,12 @@ public class Palavra implements IBean{
         this.categoria = categoria;
     }
 
+    public Palavra(Long id, String nome, Categoria categoria) {
+        this.id = id;
+        this.nome = nome;
+        this.categoria = categoria;
+    }
+
     public String getNome() {
         return nome;
     }

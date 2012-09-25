@@ -10,7 +10,8 @@ public enum Erros {
     JOGADOREXISTE("Já existe um jogador com este nome!"),
     ALGORITMO("Problemas no algoritmo de criptografia, tente novamente"),
     CARACTER_NAO_SUPORTADO("Digitastes algum caracter inválido"),
-    DESCONHECIDO("ERRO,Tente novamente mais tarde");
+    DESCONHECIDO("ERRO,Tente novamente mais tarde"),
+    PERSISTENCIA("Problemas na persistencia, tente novamente!");
     private final String erro;
 
     private Erros(String erro) {

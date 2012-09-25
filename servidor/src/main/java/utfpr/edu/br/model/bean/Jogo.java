@@ -30,6 +30,12 @@ public class Jogo implements IBean{
         this.numRodadas = numRodadas;
     }
 
+    public Jogo(Long id, Long numRodadas, Categoria categoria) {
+        this.id = id;
+        this.numRodadas = numRodadas;
+        this.categoria = categoria;
+    }
+
     public Long getId() {
         return id;
     }

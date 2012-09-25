@@ -8,6 +8,7 @@ import utfpr.edu.br.facade.JogadorFacade;
 import utfpr.edu.br.facade.JogadorFacadeImpl;
 import utfpr.edu.br.facade.JogoFacade;
 import utfpr.edu.br.facade.JogoFacadeImpl;
+import utfpr.edu.br.inject.Getinjector;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -22,7 +23,7 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
     protected RmiProviderImpl() throws RemoteException {
         super();
         facadeJogador = new JogadorFacadeImpl();
-        facadeJogo = new JogoFacadeImpl();
+        facadeJogo = Getinjector.getInstance().getInstance(JogoFacadeImpl.class);
     }
 
     @Override
@@ -37,5 +38,11 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
            facadeJogo.iniciarJogo((JogadorDTO) rv.getObjeto());
        }
        return rv;
+    }
+
+    @Override
+    public RetornoValidacao popularJogos() throws RemoteException {
+        //o objeto e uma lista de DTO de jogos.
+        return facadeJogo.listaJogos();
     }
 }

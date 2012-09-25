@@ -18,7 +18,7 @@ public class Getinjector {
         if(injector==null){
             //Cria DI para todos os modulos do Guice
             injector = Guice.createInjector(new JpaPersistModule("forcaRMI"),
-                    new ControllerModule(), new ConverterModule());
+                    new ControllerModule(), new ConverterModule(), new FacadeModule());
             //Essa classe starta o servico do JPA, aqui inicia o banco!
             injector.getInstance(AppInitializer.class);
         }

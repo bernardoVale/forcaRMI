@@ -5,19 +5,17 @@ package utfpr.edu.br;/**
  * Time: 19:58
  */
 
-import utfpr.edu.br.converter.JogadorConverter;
+import utfpr.edu.br.controller.ControladorCategoria;
 import utfpr.edu.br.inject.Getinjector;
-import utfpr.edu.br.model.bean.Jogador;
-import utfpr.edu.br.model.dao.JogadorDao;
+import utfpr.edu.br.model.bean.Categoria;
+import utfpr.edu.br.model.dao.CategoriaDao;
 
 /**
  * @author Bernardo Vale
  */
 public class Teste {
     public static void main(String[] args) {
-        //Getinjector.getInstance().getInstance(JogadorDao.class).save(new Jogador("joao"));
-        Jogador j = Getinjector.getInstance().getInstance(JogadorDao.class).findByNome("joao");
-        JogadorConverter cv = new JogadorConverter();
-        System.out.println(cv.toDTO(j).toString());
-    }
+        Categoria c = Getinjector.getInstance().getInstance(CategoriaDao.class).save(new Categoria("Mascote"));
+        Getinjector.getInstance().getInstance(ControladorCategoria.class).save(c);
+        }
 }

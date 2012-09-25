@@ -47,6 +47,11 @@ public class Categoria implements IBean {
         this.nome = nome;
     }
 
+    public Categoria(Long id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
