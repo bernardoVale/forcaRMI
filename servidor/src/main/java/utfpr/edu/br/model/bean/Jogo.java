@@ -18,7 +18,7 @@ public class Jogo implements IBean{
     @SequenceGenerator(allocationSize = 1, name = "seq_jogo", sequenceName = "seq_jogo")
     private Long id;
     private Long numRodadas;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 

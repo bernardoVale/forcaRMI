@@ -11,6 +11,9 @@ public enum Erros {
     ALGORITMO("Problemas no algoritmo de criptografia, tente novamente"),
     CARACTER_NAO_SUPORTADO("Digitastes algum caracter inválido"),
     DESCONHECIDO("ERRO,Tente novamente mais tarde"),
+    CREDENCIAIS("Nome e/ou senha incorreto(s)"),
+    DADOSNAOENCONTRADOS("Não foi encontrado nenhum resultado!"),
+    JOGO_LOTADO("Jogo já esta lotado!"),
     PERSISTENCIA("Problemas na persistencia, tente novamente!");
     private final String erro;
 

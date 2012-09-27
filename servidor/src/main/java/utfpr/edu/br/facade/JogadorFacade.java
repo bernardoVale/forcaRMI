@@ -9,7 +9,7 @@ import utfpr.edu.br.RetornoValidacao;
  * Time: 19:19
  */
 public interface JogadorFacade {
-    public RetornoValidacao saveJogador(String nome);
-    public RetornoValidacao autenticar(String nome);
+    public RetornoValidacao saveJogador(String nome,String senha);
+    public RetornoValidacao autenticar(String nome,String senha);
 
 }

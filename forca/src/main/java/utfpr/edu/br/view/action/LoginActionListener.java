@@ -9,6 +9,7 @@ import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.builder.MensagemDirector;
 import utfpr.edu.br.builder.MensagemError;
 import utfpr.edu.br.builder.MensagemOK;
+import utfpr.edu.br.md5.CriptografiaLogix;
 import utfpr.edu.br.presenter.LoginPresenter;
 import utfpr.edu.br.rmi.RMIClient;
 import utfpr.edu.br.view.telas.login.LoginView;
@@ -33,9 +34,9 @@ public class LoginActionListener {
         }
 
         public void actionPerformed(ActionEvent evt) {
-            LoginView view = presenter.getView();
-            if(view.getNome().getText().equals("")){
-                mensagem = new MensagemDirector(new MensagemError("Insira um apelido(Nickname)"));
+            LoginView view = presenter.getLoginView();
+            if(view.getNome().equals("") || view.getSenha().equals("")){
+                mensagem = new MensagemDirector(new MensagemError("Preencha todos os campos!"));
                 container = mensagem.construirDialogMensagem();
                 //Seta a posicao do container de uma maneira nao tao bela
                 int x = view.getJFrame().getX() + view.getJFrame().getWidth()/2;
@@ -45,11 +46,11 @@ public class LoginActionListener {
                 return ;
             }
              try {
+                 CriptografiaLogix cripto = new CriptografiaLogix(view.getNome(),view.getSenha());
                 RetornoValidacao rv =
-                        RMIClient.getInstance().provider().iniciarJogo(view.getNome().getText());
-                 System.out.println(rv.isOk());
+                        RMIClient.getInstance().provider().iniciarJogo(view.getNome(),cripto.getSenhaCriptografada());
                 if(rv.isOk()){
-                    mensagem = new MensagemDirector(new MensagemOK("Inserido com Sucesso"));
+                    mensagem = new MensagemDirector(new MensagemOK("Jogador pronto para jogar!"));
                     container = mensagem.construirDialogMensagem();
                     //Seta a posicao do container de uma maneira nao tao bela
                     int x = view.getJFrame().getX() + view.getJFrame().getWidth()/2;

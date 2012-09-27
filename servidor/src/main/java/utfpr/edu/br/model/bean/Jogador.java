@@ -18,6 +18,7 @@ public class Jogador implements IBean{
     @SequenceGenerator(allocationSize = 1, name = "seq_jogador", sequenceName = "seq_jogador")
     private Long id;
     private String nome;
+    private String senha;
 
     public Jogador(String nome) {
         this.nome = nome;
@@ -29,6 +30,17 @@ public class Jogador implements IBean{
     }
 
     public Jogador() {
+    }
+
+    public Jogador(Long id, String nome, String senha) {
+        this.id = id;
+        this.nome = nome;
+        this.senha = senha;
+    }
+
+    public Jogador(String nome, String senha) {
+        this.nome = nome;
+        this.senha = senha;
     }
 
     public String getNome() {
@@ -47,11 +59,20 @@ public class Jogador implements IBean{
         this.id = id;
     }
 
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     @Override
     public String toString() {
         return "Jogador{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
+                ", senha='" + senha + '\'' +
                 '}';
     }
 }

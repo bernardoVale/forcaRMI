@@ -6,6 +6,7 @@ package utfpr.edu.br.model.bean;/**
  */
 
 import javax.persistence.*;
+import java.util.Collection;
 
 /**
  * @author Bernardo Vale
@@ -70,5 +71,16 @@ public class Categoria implements IBean {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (nome != null ? nome.hashCode() : 0);
         return result;
+    }
+
+    @OneToMany(mappedBy = "categoria")
+    private Collection<Jogo> jogo;
+
+    public Collection<Jogo> getJogo() {
+        return jogo;
+    }
+
+    public void setJogo(Collection<Jogo> jogo) {
+        this.jogo = jogo;
     }
 }

@@ -8,7 +8,8 @@ import java.awt.event.ActionListener;
  */
 public interface LoginView {
     JButton getBotaoLogin();
-    JTextField getNome();
+    String getNome();
+    String getSenha();
     void addAutenticarListener(ActionListener listener);
     java.awt.Component getJFrame();
 

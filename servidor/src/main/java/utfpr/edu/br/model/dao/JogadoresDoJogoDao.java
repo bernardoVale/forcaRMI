@@ -32,7 +32,7 @@ public class JogadoresDoJogoDao extends AbstractDao<JogadoresDoJogo> {
      * @return Quatidade
      */
     public Long quantidadeDeJogadores(Long idJogo){
-        return  (Long) em().createQuery("SELECT COUNT(*) FROM JogadoresDoJogo j " +
+        return  (Long) em().createQuery("SELECT COUNT(j.id.jogo_id) FROM JogadoresDoJogo j " +
                 "where j.id.jogo_id = ?1").setParameter(1,idJogo).getSingleResult();
     }
 }

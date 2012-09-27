@@ -18,7 +18,7 @@ public class Palavra implements IBean{
     @SequenceGenerator(allocationSize = 1, name = "seq_palavra", sequenceName = "seq_palavra")
     private Long id;
     private String nome;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 

@@ -43,6 +43,6 @@ public class Application extends JFrame{
     }
     public static LoginPresenter getPresenter() {
         BeanFactory factory = new ClassPathXmlApplicationContext("/META-INF/applicationContext.xml");
-        return (LoginPresenter)factory.getBean("presenter");
+        return (LoginPresenter)factory.getBean("LoginPresenter");
     }
 }

@@ -56,6 +56,12 @@ public abstract class AbstractDao<T extends IBean> {
     em().persist(t);
     return t;
   }
+    @Transactional
+    public T findByKeyAtribute(String key,String keyValue){
+      return (T) em().createQuery("Select t from " +
+              "" + clazz.getSimpleName() + " t where t."+key+"='"+keyValue+"'",clazz)
+        .getSingleResult();
+    }
 
     /**
      * Metodo so para atualizaçao. Foi necessario utiliza-lo fora do save para que

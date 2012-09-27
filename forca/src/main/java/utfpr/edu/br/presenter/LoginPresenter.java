@@ -13,10 +13,10 @@ import static utfpr.edu.br.view.action.LoginActionListener.AutenticarActionListe
  * @author Bernardo Vale
  */
 public class LoginPresenter{
-    private LoginView view;
+    private LoginView loginView;
 
-    public LoginPresenter(LoginView view) {
-        this.view = view;
+    public LoginPresenter(LoginView loginView) {
+        this.loginView = loginView;
     }
     public LoginPresenter() {
 
@@ -24,18 +24,21 @@ public class LoginPresenter{
 
     public void createView() {
         this.setUpViewListeners();
-        view.packAndShow();
+        loginView.packAndShow();
     }
 
     public void setUpViewListeners() {
-       view.addAutenticarListener(new AutenticarActionListener(this));
+       loginView.addAutenticarListener(new AutenticarActionListener(this));
     }
 
-    public LoginView getView() {
-        return view;
+    public LoginView getLoginView() {
+        return loginView;
     }
 
-    public void setView(LoginView view) {
-        this.view = view;
+    public void setLoginView(LoginView loginView) {
+        this.loginView = loginView;
     }
+
+
+
 }

@@ -12,11 +12,12 @@ import java.awt.event.ActionListener;
  *
  * @author Bernardo
  */
-public class LoginViewImpl extends javax.swing.JFrame implements LoginView {
+public class LoginViewImpl extends javax.swing.JFrame implements LoginView{
 
     /**
-     * Creates new form LoginViewImpl
+     * Creates new form LoginView
      */
+    ActionListener butaoListener;
     public LoginViewImpl() {
         initComponents();
     }
@@ -32,9 +33,11 @@ public class LoginViewImpl extends javax.swing.JFrame implements LoginView {
         java.awt.GridBagConstraints gridBagConstraints;
 
         panelJogar = new javax.swing.JPanel();
-        jtfJogar = new javax.swing.JTextField();
         btJogar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        lbNome = new javax.swing.JLabel();
+        jtfJogar1 = new javax.swing.JTextField();
+        lbSenha = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -42,43 +45,60 @@ public class LoginViewImpl extends javax.swing.JFrame implements LoginView {
 
         panelJogar.setOpaque(false);
 
-        jtfJogar.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jtfJogar.setName("jtfNome");
-
         btJogar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btJogar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BOTAO_NORMAL.png"))); // NOI18N
-        btJogar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/BOTAO_ON_FOCUS.png")));
+        btJogar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BOTAO_NORMAL.png")));
+         btJogar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/BOTAO_ON_FOCUS.png")));// NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LabelNome.png"))); // NOI18N
+        lbNome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LabelNome.png"))); // NOI18N
+        lbNome.setName("lbName"); // NOI18N
+
+        jtfJogar1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jtfJogar1.setName("jtfNome"); // NOI18N
+
+        lbSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/label_Senha.png"))); // NOI18N
+        lbSenha.setName("lbSenha");
+
+
+        jPasswordField1.setPreferredSize(new java.awt.Dimension(6, 50));
+        jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
 
         javax.swing.GroupLayout panelJogarLayout = new javax.swing.GroupLayout(panelJogar);
         panelJogar.setLayout(panelJogarLayout);
         panelJogarLayout.setHorizontalGroup(
             panelJogarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelJogarLayout.createSequentialGroup()
-                .addContainerGap(115, Short.MAX_VALUE)
                 .addGroup(panelJogarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJogarLayout.createSequentialGroup()
-                        .addComponent(btJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(130, 130, 130))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJogarLayout.createSequentialGroup()
-                        .addComponent(jtfJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(79, 79, 79))))
-            .addGroup(panelJogarLayout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(panelJogarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(panelJogarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(panelJogarLayout.createSequentialGroup()
+                                                .addGap(104, 104, 104)
+                                                .addComponent(jtfJogar1, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(panelJogarLayout.createSequentialGroup()
+                                                .addGap(141, 141, 141)
+                                                .addComponent(btJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(panelJogarLayout.createSequentialGroup()
+                                                .addGap(81, 81, 81)
+                                                .addComponent(lbNome))))
+                        .addGroup(panelJogarLayout.createSequentialGroup()
+                                .addGap(55, 55, 55)
+                                .addComponent(lbSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(249, Short.MAX_VALUE))
         );
         panelJogarLayout.setVerticalGroup(
             panelJogarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelJogarLayout.createSequentialGroup()
-                .addGap(214, 214, 214)
-                .addComponent(jLabel2)
+                .addGap(209, 209, 209)
+                .addComponent(lbNome)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jtfJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addComponent(jtfJogar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(lbSenha)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
                 .addComponent(btJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -141,8 +161,10 @@ public class LoginViewImpl extends javax.swing.JFrame implements LoginView {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btJogar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jtfJogar;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JTextField jtfJogar1;
+    private javax.swing.JLabel lbNome;
+    private javax.swing.JLabel lbSenha;
     private javax.swing.JPanel panelJogar;
     // End of variables declaration//GEN-END:variables
 
@@ -152,13 +174,17 @@ public class LoginViewImpl extends javax.swing.JFrame implements LoginView {
     }
 
     @Override
-    public JTextField getNome() {
-        return jtfJogar;
+    public String getSenha() {
+        return jPasswordField1.getText();
     }
-
+    @Override
+    public String getNome() {
+        System.out.println(jtfJogar1.getText());
+        return jtfJogar1.getText();
+    }
     @Override
     public void addAutenticarListener(ActionListener listener) {
-        btJogar.addActionListener(listener);
+       btJogar.addActionListener(listener);
     }
 
     @Override
