@@ -46,6 +46,25 @@ public abstract class AbstractControlador<T extends IBean,O extends DTO, D exten
             return new RetornoValidacao(Erros.PERSISTENCIA.nome());
         }
     }
+
+    /**
+     * Retorna o dto do camarada passando o id
+     * @param id
+     * @return
+     */
+    public RetornoValidacao findById(Long id){
+        try{
+            return new RetornoValidacao(converter.toDTO(dao.findByID(id)));
+        }
+        catch (NoResultException e){
+            System.out.println("NoResult");
+            return new RetornoValidacao(Erros.DADOSNAOENCONTRADOS.nome());
+        }catch (Exception e){
+            System.out.println("NoResultexxx");
+            e.printStackTrace();
+            return new RetornoValidacao(Erros.PERSISTENCIA.nome());
+        }
+    }
     /**
      * Salva um objeto e commita.
      *

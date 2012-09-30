@@ -1,0 +1,65 @@
+package utfpr.edu.br.view.jogo;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import javax.swing.JLabel;
+import java.awt.Insets;
+import javax.swing.ImageIcon;
+
+public class CarregandoDialog extends JDialog {
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			CarregandoDialog dialog = new CarregandoDialog();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setTitle("Aguardando Jogadores...");
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public CarregandoDialog() {
+		setBounds(100, 100, 450, 300);
+		GridBagLayout gridBagLayout = new GridBagLayout();
+		gridBagLayout.columnWidths = new int[]{0, 0, 0};
+		gridBagLayout.rowHeights = new int[]{0, 0, 0};
+		gridBagLayout.columnWeights = new double[]{1.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.rowWeights = new double[]{1.0, 0.0, Double.MIN_VALUE};
+		getContentPane().setLayout(gridBagLayout);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon("/home/bernardo/Área de Trabalho/loading.gif"));
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel.gridx = 1;
+		gbc_lblNewLabel.gridy = 1;
+		getContentPane().add(lblNewLabel, gbc_lblNewLabel);
+		
+		JPanel panel = new JPanel();
+		panel.setLayout(null);
+		GridBagConstraints gbc_panel = new GridBagConstraints();
+		gbc_panel.anchor = GridBagConstraints.WEST;
+		gbc_panel.fill = GridBagConstraints.VERTICAL;
+		gbc_panel.gridx = 1;
+		gbc_panel.gridy = 1;
+		getContentPane().add(panel, gbc_panel);
+		
+		JLabel lblAguardandoJogadores = new JLabel("Aguardando Jogadores");
+		lblAguardandoJogadores.setBounds(-27, 5, 163, 15);
+		panel.add(lblAguardandoJogadores);
+	}
+}

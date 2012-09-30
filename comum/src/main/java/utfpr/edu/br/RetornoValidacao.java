@@ -37,6 +37,13 @@ public class RetornoValidacao implements Serializable {
     }
 
     /**
+     * Construtor para setar o ok sem precisar de setar uma String de erro
+     * @param ok
+     */
+    public RetornoValidacao(boolean ok){
+        this.ok = ok;
+    }
+    /**
      * seta os erros e automaticamente seta o boolean "ok" para false;
      */
     public RetornoValidacao(String erro) {

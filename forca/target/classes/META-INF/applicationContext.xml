@@ -18,5 +18,6 @@
 
     <!-- Classe responsável por renderizar os dados graficamente -->
     <bean id="LoginView" class="utfpr.edu.br.view.telas.login.LoginViewImpl" singleton="false"/>
-    <bean id="JogoView" class="utfpr.edu.br.view.telas.jogo.JogoViewImpl" singleton="false"/>
+    <bean id="JogoView" class="utfpr.edu.br.view.telas.jogo.JogoViewImpl" singleton="false">
+    </bean>
 </beans>

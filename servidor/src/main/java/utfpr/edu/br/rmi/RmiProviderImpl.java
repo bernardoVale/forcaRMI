@@ -28,6 +28,7 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
 
     @Override
     public String mensagem(String mensagem) throws RemoteException {
+        System.out.println(mensagem);
         return "Testando o servidor para: "+mensagem;
     }
 
@@ -44,5 +45,10 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
     public RetornoValidacao popularJogos() throws RemoteException {
         //o objeto e uma lista de DTO de jogos.
         return facadeJogo.listaJogos();
+    }
+
+    @Override
+    public RetornoValidacao retornaAdversario(JogadorDTO jogador) throws RemoteException {
+        return facadeJogador.adversario(jogador);
     }
 }

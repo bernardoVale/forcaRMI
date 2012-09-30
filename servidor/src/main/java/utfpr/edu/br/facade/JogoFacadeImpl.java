@@ -47,7 +47,7 @@ public class JogoFacadeImpl implements JogoFacade{
         if(daoJDJ.quantidadeDeJogadores(1L)<2){     //pode salvar
           daoJDJ.save(new JogadoresDoJogo(j.getId(),
                   1,null));
-          return new RetornoValidacao();
+          return new RetornoValidacao(j);
         }else{
             return new RetornoValidacao(Erros.JOGO_LOTADO.nome());
         }
@@ -57,6 +57,7 @@ public class JogoFacadeImpl implements JogoFacade{
     public RetornoValidacao listaJogos() {
        return control.lista();
     }
+
 
     public RetornoValidacao criarNovoJogo(JogadorDTO j){
         rv = control.save(new Jogo(new Categoria("Adjetivo"),5L));

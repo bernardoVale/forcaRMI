@@ -26,7 +26,9 @@ public class LoginPresenter{
         this.setUpViewListeners();
         loginView.packAndShow();
     }
-
+    public void destroyView(){
+        loginView.destroy();
+    }
     public void setUpViewListeners() {
        loginView.addAutenticarListener(new AutenticarActionListener(this));
     }

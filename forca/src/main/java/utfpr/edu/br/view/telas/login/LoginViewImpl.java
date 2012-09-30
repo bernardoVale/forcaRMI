@@ -193,6 +193,12 @@ public class LoginViewImpl extends javax.swing.JFrame implements LoginView{
     }
 
     @Override
+    public void destroy() {
+        this.setVisible(false);
+        this.dispose();
+    }
+
+    @Override
     public void packAndShow() {
         this.pack();
         this.setVisible(true);

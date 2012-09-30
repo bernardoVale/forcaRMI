@@ -47,17 +47,17 @@ public class JogoViewImpl extends JFrame {
         lbP2 = new javax.swing.JLabel();
         lbP2.setBounds(672, 58, 66, 28);
         P2_nome = new javax.swing.JLabel();
-        P2_nome.setBounds(784, 58, 93, 28);
+        P2_nome.setBounds(740, 58, 182, 28);
         pJogador1 = new javax.swing.JPanel();
         pJogador1.setBounds(96, 87, 250, 387);
         P1_nome = new javax.swing.JLabel();
-        P1_nome.setBounds(211, 58, 93, 28);
+        P1_nome.setBounds(162, 58, 184, 28);
         lbP1 = new javax.swing.JLabel();
         lbP1.setBounds(99, 58, 66, 28);
         pJogador2 = new javax.swing.JPanel();
         pJogador2.setBounds(672, 92, 250, 387);
         lbPlacar = new javax.swing.JLabel();
-        lbPlacar.setBounds(401, 84, 195, 73);
+        lbPlacar.setBounds(364, 87, 288, 73);
         lbPontuacaoP2 = new javax.swing.JLabel();
         lbPontuacaoP2.setBounds(558, 159, 38, 52);
         lbX = new javax.swing.JLabel();
@@ -293,6 +293,11 @@ public class JogoViewImpl extends JFrame {
         panelLobby.add(pJogador2);
         panelLobby.add(pLetras);
         panelLobby.add(pEnviar);
+        
+        lbCarregando = new JLabel("");
+        lbCarregando.setIcon(null);
+        lbCarregando.setBounds(447, 159, 128, 128);
+        panelLobby.add(lbCarregando);
 
         lbBackground.setIcon(new ImageIcon("/home/bernardo/forcaRMI/forca/src/main/resources/presentation_background.jpg")); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -332,4 +337,7 @@ public class JogoViewImpl extends JFrame {
 	    private javax.swing.JPanel pLetras;
 	    private javax.swing.JPanel pLetrasErradas;
 	    private javax.swing.JPanel panelLobby;
+	    private JLabel lbCarregando;
+
+
 }

@@ -5,9 +5,8 @@ package utfpr.edu.br.app;/**
  * Time: 17:16
  */
 
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import utfpr.edu.br.presenter.LoginPresenter;
+import utfpr.edu.br.spring.SpringFactory;
 import utfpr.edu.br.view.telas.login.LoginViewImpl;
 
 import javax.swing.*;
@@ -42,7 +41,6 @@ public class Application extends JFrame{
         });
     }
     public static LoginPresenter getPresenter() {
-        BeanFactory factory = new ClassPathXmlApplicationContext("/META-INF/applicationContext.xml");
-        return (LoginPresenter)factory.getBean("LoginPresenter");
+        return (LoginPresenter)SpringFactory.getFactory().getBean("LoginPresenter");
     }
 }

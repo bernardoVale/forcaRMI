@@ -12,6 +12,7 @@ public interface LoginView {
     String getSenha();
     void addAutenticarListener(ActionListener listener);
     java.awt.Component getJFrame();
+    void destroy();
 
     /**
      * Organiza e mostra a tela
@@ -22,7 +23,6 @@ public interface LoginView {
      * Limpa os campos da tela
      */
     public void clearFields();
-
 
 
 }

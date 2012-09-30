@@ -1,5 +1,7 @@
 package utfpr.edu.br.view.telas.jogo;
 
+import utfpr.edu.br.dto.JogadorDTO;
+
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
@@ -7,6 +9,8 @@ import java.awt.*;
 
 public class JogoViewImpl extends JFrame implements JogoView{
 
+    private JogadorDTO jogador;
+    private JogadorDTO adversario;
 	private JPanel contentPane;
 
 	/**
@@ -34,23 +38,23 @@ public class JogoViewImpl extends JFrame implements JogoView{
         buttonGroup1 = new javax.swing.ButtonGroup();
         panelLobby = new JPanel();
         lbP2 = new JLabel();
-        lbP2.setBounds(672, 58, 66, 28);
+        lbP2.setBounds(672, 58, 106, 28);
         P2_nome = new JLabel();
-        P2_nome.setBounds(784, 58, 93, 28);
+        P2_nome.setBounds(780, 58, 182, 28);
         pJogador1 = new JPanel();
         pJogador1.setBounds(96, 87, 250, 387);
         P1_nome = new JLabel();
-        P1_nome.setBounds(211, 58, 93, 28);
+        P1_nome.setBounds(162, 58, 184, 28);
         lbP1 = new JLabel();
         lbP1.setBounds(99, 58, 66, 28);
         pJogador2 = new JPanel();
         pJogador2.setBounds(672, 92, 250, 387);
         lbPlacar = new JLabel();
-        lbPlacar.setBounds(401, 84, 195, 73);
+        lbPlacar.setBounds(364, 87, 288, 73);
         lbPontuacaoP2 = new JLabel();
         lbPontuacaoP2.setBounds(558, 159, 38, 52);
         lbX = new JLabel();
-        lbX.setBounds(467, 159, 36, 52);
+        lbX.setBounds(467, 159, 128, 128);
         lbPontuacaoP1 = new JLabel();
         lbPontuacaoP1.setBounds(390, 159, 38, 52);
         pLetrasErradas = new JPanel();
@@ -80,7 +84,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         panelLobby.setOpaque(false);
 
         lbP2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lbP2.setText("Nome:");
+        lbP2.setText("Oponente:");
 
         P2_nome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         P2_nome.setText("João1234");
@@ -282,6 +286,11 @@ public class JogoViewImpl extends JFrame implements JogoView{
         panelLobby.add(pJogador2);
         panelLobby.add(pLetras);
         panelLobby.add(pEnviar);
+        lbCarregando = new JLabel("");
+        lbCarregando.setIcon(new ImageIcon(getClass().getResource("/carregando.gif")));
+        lbCarregando.setBounds(447, 159, 128, 128);
+        lbCarregando.setVisible(false);
+        panelLobby.add(lbCarregando);
 
         lbBackground.setIcon(new ImageIcon("/home/bernardo/forcaRMI/forca/src/main/resources/presentation_background.jpg")); // NOI18N
         gridBagConstraints = new GridBagConstraints();
@@ -321,9 +330,66 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	    private JPanel pLetras;
 	    private JPanel pLetrasErradas;
 	    private JPanel panelLobby;
+        private JLabel lbCarregando;
 
     @Override
-    public void packAndShow() {
+    public JLabel P1_nome() {
+        return P1_nome;
+    }
+
+    @Override
+    public JLabel P2_nome() {
+        return P2_nome;
+    }
+
+    @Override
+    public JLabel lbPontuacaoP1() {
+        return lbPontuacaoP1;
+    }
+
+    @Override
+    public JLabel lbPontuacaoP2() {
+        return lbPontuacaoP2;
+    }
+
+    @Override
+    public JLabel lbX() {
+        return lbX;
+    }
+
+    @Override
+    public JLabel lbCarregando() {
+        return lbCarregando;
+    }
+
+    @Override
+    public JLabel lbPlacar() {
+        return lbPlacar;
+    }
+
+    @Override
+    public JPanel pLetrasErradas() {
+        return pLetrasErradas;
+    }
+
+    @Override
+    public JogadorDTO jogador() {
+        return jogador;
+    }
+
+    @Override
+    public JogadorDTO adversario() {
+        return adversario;
+    }
+
+    @Override
+    public void setAdversario(JogadorDTO adversario) {
+        this.adversario = adversario;
+    }
+
+    @Override
+    public void packAndShow(JogadorDTO jogador) {
+        this.jogador = jogador;
         this.pack();
         this.setVisible(true);
     }
@@ -339,4 +405,35 @@ public class JogoViewImpl extends JFrame implements JogoView{
             }
         }
     }
+
+
+    /*public void aguardandoJogador() {
+        //Todos os componentes que nao precisao ser mostrados sao escondidos
+        //alguns sao apenas modificados
+        P1_nome.setText(jogador.getNome());
+        lbPontuacaoP1.setVisible(false);
+        lbPontuacaoP2.setVisible(false);
+        pLetrasErradas.setVisible(false);
+        lbX.setVisible(false);
+        lbCarregando.setVisible(true);
+        lbPlacar.setText("Aguardando Oponente...");
+        lbPlacar.setFont(new Font("Tahoma",0,23));
+        aguardarAdversario();
+    } */
+
+
+    /*public JogadorDTO aguardarAdversario() {
+        MyThread mt = new MyThread(jogador);
+        mt.start();
+        do {
+            System.out.println("In main thread.");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException exc) {
+                System.out.println("Main thread interrupted.");
+            }
+        }while (mt.getAdversario() == null);
+        System.out.println("Main thread ending.");
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }*/
 }

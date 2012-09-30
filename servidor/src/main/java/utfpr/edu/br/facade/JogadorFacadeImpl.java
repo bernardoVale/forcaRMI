@@ -5,6 +5,7 @@ import utfpr.edu.br.controller.ControladorJogador;
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.inject.Getinjector;
 import utfpr.edu.br.model.bean.Jogador;
+import utfpr.edu.br.model.dao.JogadoresDoJogoDao;
 import utfpr.edu.br.util.Erros;
 import utfpr.edu.br.util.JogadoresSession;
 
@@ -56,4 +57,22 @@ public class JogadorFacadeImpl implements JogadorFacade{
             }
         }
     }
+    @Override
+    public RetornoValidacao adversario(JogadorDTO j) {
+        RetornoValidacao rv = new RetornoValidacao();
+        JogadoresDoJogoDao daoJDJ = Getinjector.getInstance().getInstance(JogadoresDoJogoDao.class);
+        Long quantidade = daoJDJ.quantidadeDeJogadores(1L);
+        if(quantidade!=2){
+            //Faço isso pra nao retorna NoResultException
+            //Ou seja so procuro o idAdversario se houver adversario
+           rv.setOk(false);
+           return rv;
+        }else{
+            //todo tirar o jogo estatico e deixar dinamico
+            Long idAdversario = daoJDJ.idAdversario(j.getId(),1L);
+            rv = controlador.findById(idAdversario);
+            return rv;
+        }
+    }
+
 }

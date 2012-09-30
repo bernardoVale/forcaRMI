@@ -9,9 +9,12 @@ import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.builder.MensagemDirector;
 import utfpr.edu.br.builder.MensagemError;
 import utfpr.edu.br.builder.MensagemOK;
+import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.md5.CriptografiaLogix;
+import utfpr.edu.br.presenter.JogoPresenter;
 import utfpr.edu.br.presenter.LoginPresenter;
 import utfpr.edu.br.rmi.RMIClient;
+import utfpr.edu.br.spring.SpringFactory;
 import utfpr.edu.br.view.telas.login.LoginView;
 
 import javax.swing.*;
@@ -24,13 +27,17 @@ import java.rmi.RemoteException;
  */
 public class LoginActionListener {
 
+
+
     public static class AutenticarActionListener implements ActionListener {
         private LoginPresenter presenter;
+        private JogoPresenter jogoPresenter;
         private MensagemDirector mensagem;
         private JDialog container;
 
         public AutenticarActionListener(LoginPresenter presenter) {
             this.presenter = presenter;
+            this.jogoPresenter = (JogoPresenter) SpringFactory.getFactory().getBean("JogoPresenter");
         }
 
         public void actionPerformed(ActionEvent evt) {
@@ -57,6 +64,9 @@ public class LoginActionListener {
                     int y = view.getJFrame().getY() + view.getJFrame().getHeight()/2 - container.getHeight();
                     container.setLocation(x,y);
                     container.setVisible(true);
+                    //Ta tudo ok entao tem que chamar a view do jogo e destruir a view de login
+                    view.destroy();
+                    jogoPresenter.createView((JogadorDTO) rv.getObjeto());
 
                 }else{
                     mensagem = new MensagemDirector(new MensagemError(rv.getErro()));
