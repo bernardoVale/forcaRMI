@@ -1,4 +1,4 @@
-package utfpr.edu.br.util;
+package utfpr.edu.br.util.session;
 
 import utfpr.edu.br.dto.JogadorDTO;
 

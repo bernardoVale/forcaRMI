@@ -1,5 +1,6 @@
 package utfpr.edu.br.view.telas.jogo;
 
+
 import utfpr.edu.br.dto.JogadorDTO;
 
 import javax.swing.*;
@@ -35,7 +36,6 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	public JogoViewImpl() {
 		GridBagConstraints gridBagConstraints;
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         panelLobby = new JPanel();
         lbP2 = new JLabel();
         lbP2.setBounds(672, 58, 106, 28);
@@ -48,17 +48,17 @@ public class JogoViewImpl extends JFrame implements JogoView{
         lbP1 = new JLabel();
         lbP1.setBounds(99, 58, 66, 28);
         pJogador2 = new JPanel();
-        pJogador2.setBounds(672, 92, 250, 387);
+        pJogador2.setBounds(682, 87, 250, 387);
         lbPlacar = new JLabel();
-        lbPlacar.setBounds(364, 87, 288, 73);
+        lbPlacar.setBounds(414, 74, 288, 73);
         lbPontuacaoP2 = new JLabel();
-        lbPontuacaoP2.setBounds(558, 159, 38, 52);
+        lbPontuacaoP2.setBounds(560, 141, 38, 52);
         lbX = new JLabel();
-        lbX.setBounds(467, 159, 128, 128);
+        lbX.setBounds(473, 137, 38, 60);
         lbPontuacaoP1 = new JLabel();
-        lbPontuacaoP1.setBounds(390, 159, 38, 52);
+        lbPontuacaoP1.setBounds(400, 141, 38, 52);
         pLetrasErradas = new JPanel();
-        pLetrasErradas.setBounds(352, 223, 300, 263);
+        pLetrasErradas.setBounds(360, 211, 300, 263);
         letra4 = new JLabel();
         letra7 = new JLabel();
         letra1 = new JLabel();
@@ -72,22 +72,22 @@ public class JogoViewImpl extends JFrame implements JogoView{
         pLetras.setBounds(96, 498, 814, 100);
         pEnviar = new JPanel();
         pEnviar.setBounds(96, 610, 514, 92);
-        jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        btEnviar = new JButton();
+        jTextField1 = new JTextField();
+        jRadioButton1 = new JRadioButton();
+        jRadioButton2 = new JRadioButton();
         lbBackground = new JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new GridBagLayout());
 
         panelLobby.setOpaque(false);
 
-        lbP2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lbP2.setFont(new Font("Tahoma", 0, 18)); // NOI18N
         lbP2.setText("Oponente:");
 
-        P2_nome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        P2_nome.setText("João1234");
+        P2_nome.setFont(new Font("Tahoma", 0, 18)); // NOI18N
+        P2_nome.setText("");
 
         GroupLayout pJogador1Layout = new GroupLayout(pJogador1);
         pJogador1.setLayout(pJogador1Layout);
@@ -100,10 +100,10 @@ public class JogoViewImpl extends JFrame implements JogoView{
             .addGap(0, 387, Short.MAX_VALUE)
         );
 
-        P1_nome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        P1_nome.setText("João1234");
+        P1_nome.setFont(new Font("Tahoma", 0, 18)); // NOI18N
+        P1_nome.setText("");
 
-        lbP1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lbP1.setFont(new Font("Tahoma", 0, 18)); // NOI18N
         lbP1.setText("Nome:");
 
         GroupLayout pJogador2Layout = new GroupLayout(pJogador2);
@@ -117,53 +117,53 @@ public class JogoViewImpl extends JFrame implements JogoView{
             .addGap(0, 387, Short.MAX_VALUE)
         );
 
-        lbPlacar.setFont(new java.awt.Font("Tahoma", 0, 55)); // NOI18N
+        lbPlacar.setFont(new Font("Tahoma", 0, 55)); // NOI18N
         lbPlacar.setText("Placar");
 
-        lbPontuacaoP2.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
-        lbPontuacaoP2.setText("3");
+        lbPontuacaoP2.setFont(new Font("Tahoma", 0, 60)); // NOI18N
+        lbPontuacaoP2.setText("0");
 
-        lbX.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        lbX.setFont(new Font("Tahoma", 0, 60)); // NOI18N
         lbX.setText("x");
 
-        lbPontuacaoP1.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
-        lbPontuacaoP1.setText("3");
+        lbPontuacaoP1.setFont(new Font("Tahoma", 0, 60)); // NOI18N
+        lbPontuacaoP1.setText("0");
 
-        letra4.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
-        letra4.setText("J");
-        letra4.setPreferredSize(new java.awt.Dimension(100, 14));
+        letra4.setFont(new Font("Tahoma", 0, 60)); // NOI18N
+        letra4.setText("");
+        letra4.setPreferredSize(new Dimension(100, 14));
 
-        letra7.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
-        letra7.setText("K");
-        letra7.setPreferredSize(new java.awt.Dimension(100, 14));
+        letra7.setFont(new Font("Tahoma", 0, 60)); // NOI18N
+        letra7.setText("");
+        letra7.setPreferredSize(new Dimension(100, 14));
 
-        letra1.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
-        letra1.setText("A");
-        letra1.setPreferredSize(new java.awt.Dimension(100, 14));
+        letra1.setFont(new Font("Tahoma", 0, 60)); // NOI18N
+        letra1.setText("");
+        letra1.setPreferredSize(new Dimension(100, 14));
 
-        letra2.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
-        letra2.setText("B");
-        letra2.setPreferredSize(new java.awt.Dimension(100, 14));
+        letra2.setFont(new Font("Tahoma", 0, 60)); // NOI18N
+        letra2.setText("");
+        letra2.setPreferredSize(new Dimension(100, 14));
 
-        letra5.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
-        letra5.setText("R");
-        letra5.setPreferredSize(new java.awt.Dimension(100, 14));
+        letra5.setFont(new Font("Tahoma", 0, 60)); // NOI18N
+        letra5.setText("");
+        letra5.setPreferredSize(new Dimension(100, 14));
 
-        letra8.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
-        letra8.setText("L");
-        letra8.setPreferredSize(new java.awt.Dimension(100, 14));
+        letra8.setFont(new Font("Tahoma", 0, 60)); // NOI18N
+        letra8.setText("");
+        letra8.setPreferredSize(new Dimension(100, 14));
 
-        letra6.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
-        letra6.setText("Z");
-        letra6.setPreferredSize(new java.awt.Dimension(100, 14));
+        letra6.setFont(new Font("Tahoma", 0, 60)); // NOI18N
+        letra6.setText("");
+        letra6.setPreferredSize(new Dimension(100, 14));
 
-        letra9.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
-        letra9.setText("U");
-        letra9.setPreferredSize(new java.awt.Dimension(100, 14));
+        letra9.setFont(new Font("Tahoma", 0, 60)); // NOI18N
+        letra9.setText("");
+        letra9.setPreferredSize(new Dimension(100, 14));
 
-        letra3.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
-        letra3.setText("C");
-        letra3.setPreferredSize(new java.awt.Dimension(100, 14));
+        letra3.setFont(new Font("Tahoma", 0, 60)); // NOI18N
+        letra3.setText("");
+        letra3.setPreferredSize(new Dimension(100, 14));
 
         GroupLayout pLetrasErradasLayout = new GroupLayout(pLetrasErradas);
         pLetrasErradas.setLayout(pLetrasErradasLayout);
@@ -225,47 +225,50 @@ public class JogoViewImpl extends JFrame implements JogoView{
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton1.setText("Enviar");
+        btEnviar.setFont(new Font("Tahoma", 0, 24)); // NOI18N
+        btEnviar.setText("Enviar");
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jTextField1.setFont(new Font("Tahoma", 0, 24)); // NOI18N
 
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jRadioButton1.setFont(new Font("Tahoma", 0, 24)); // NOI18N
         jRadioButton1.setText("Letra");
 
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jRadioButton2.setFont(new Font("Tahoma", 0, 24)); // NOI18N
         jRadioButton2.setText("Chutar");
+        
+        JButton btnDesistir = new JButton("Desistir");
 
         GroupLayout pEnviarLayout = new GroupLayout(pEnviar);
-        pEnviar.setLayout(pEnviarLayout);
         pEnviarLayout.setHorizontalGroup(
-            pEnviarLayout.createParallelGroup(Alignment.LEADING)
-            .addGroup(pEnviarLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(pEnviarLayout.createParallelGroup(Alignment.LEADING)
-                    .addGroup(pEnviarLayout.createSequentialGroup()
-                        .addComponent(jRadioButton2)
-                        .addGap(45, 45, 45)
-                        .addComponent(jRadioButton1))
-                    .addGroup(pEnviarLayout.createSequentialGroup()
-                        .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1)))
-                .addContainerGap(206, Short.MAX_VALUE))
+        	pEnviarLayout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(pEnviarLayout.createSequentialGroup()
+        			.addGap(50)
+        			.addGroup(pEnviarLayout.createParallelGroup(Alignment.LEADING)
+        				.addGroup(pEnviarLayout.createSequentialGroup()
+        					.addComponent(jRadioButton2)
+        					.addGap(45)
+        					.addComponent(jRadioButton1))
+        				.addGroup(pEnviarLayout.createSequentialGroup()
+        					.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+        					.addGap(18)
+        					.addComponent(btEnviar)
+        					.addPreferredGap(ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+        					.addComponent(btnDesistir))))
         );
         pEnviarLayout.setVerticalGroup(
-            pEnviarLayout.createParallelGroup(Alignment.LEADING)
-            .addGroup(pEnviarLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(pEnviarLayout.createParallelGroup(Alignment.BASELINE)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1))
-                .addPreferredGap(ComponentPlacement.UNRELATED)
-                .addGroup(pEnviarLayout.createParallelGroup(Alignment.BASELINE)
-                    .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+        	pEnviarLayout.createParallelGroup(Alignment.TRAILING)
+        		.addGroup(pEnviarLayout.createSequentialGroup()
+        			.addGroup(pEnviarLayout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(jRadioButton2)
+        				.addComponent(jRadioButton1))
+        			.addPreferredGap(ComponentPlacement.UNRELATED)
+        			.addGroup(pEnviarLayout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(btEnviar, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
+        			.addContainerGap())
+        		.addComponent(btnDesistir)
         );
+        pEnviar.setLayout(pEnviarLayout);
         panelLobby.setLayout(null);
 
         gridBagConstraints = new GridBagConstraints();
@@ -303,11 +306,10 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	}
 	 private JLabel P1_nome;
 	    private JLabel P2_nome;
-	    private javax.swing.ButtonGroup buttonGroup1;
-	    private javax.swing.JButton jButton1;
-	    private javax.swing.JRadioButton jRadioButton1;
-	    private javax.swing.JRadioButton jRadioButton2;
-	    private javax.swing.JTextField jTextField1;
+	    private JButton btEnviar;
+	    private JRadioButton jRadioButton1;
+	    private JRadioButton jRadioButton2;
+	    private JTextField jTextField1;
 	    private JLabel lbBackground;
 	    private JLabel lbP1;
 	    private JLabel lbP2;
@@ -373,6 +375,11 @@ public class JogoViewImpl extends JFrame implements JogoView{
     }
 
     @Override
+    public JPanel pEnviar() {
+        return pEnviar;
+    }
+
+    @Override
     public JogadorDTO jogador() {
         return jogador;
     }
@@ -405,35 +412,4 @@ public class JogoViewImpl extends JFrame implements JogoView{
             }
         }
     }
-
-
-    /*public void aguardandoJogador() {
-        //Todos os componentes que nao precisao ser mostrados sao escondidos
-        //alguns sao apenas modificados
-        P1_nome.setText(jogador.getNome());
-        lbPontuacaoP1.setVisible(false);
-        lbPontuacaoP2.setVisible(false);
-        pLetrasErradas.setVisible(false);
-        lbX.setVisible(false);
-        lbCarregando.setVisible(true);
-        lbPlacar.setText("Aguardando Oponente...");
-        lbPlacar.setFont(new Font("Tahoma",0,23));
-        aguardarAdversario();
-    } */
-
-
-    /*public JogadorDTO aguardarAdversario() {
-        MyThread mt = new MyThread(jogador);
-        mt.start();
-        do {
-            System.out.println("In main thread.");
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException exc) {
-                System.out.println("Main thread interrupted.");
-            }
-        }while (mt.getAdversario() == null);
-        System.out.println("Main thread ending.");
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-    }*/
 }

@@ -51,4 +51,9 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
     public RetornoValidacao retornaAdversario(JogadorDTO jogador) throws RemoteException {
         return facadeJogador.adversario(jogador);
     }
+
+    @Override
+    public RetornoValidacao iniciarPartida(JogadorDTO jogador, JogadorDTO adversario) throws RemoteException {
+        return facadeJogo.iniciarPartida(jogador,adversario);
+    }
 }

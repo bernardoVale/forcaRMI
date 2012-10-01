@@ -21,7 +21,6 @@ public class Jogo implements IBean{
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
-
     public Jogo() {
     }
 

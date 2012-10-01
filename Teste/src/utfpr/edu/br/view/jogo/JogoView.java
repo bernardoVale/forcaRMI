@@ -1,0 +1,43 @@
+package utfpr.edu.br.view.jogo;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: bernardo
+ * Date: 27/09/12
+ * Time: 19:36
+ */
+public interface JogoView {
+
+    public JLabel P1_nome();
+    public JLabel P2_nome();
+    public JLabel lbPontuacaoP1();
+    public JLabel lbPontuacaoP2();
+    public JLabel lbX();
+    public JLabel lbCarregando();
+    public JLabel lbPlacar();
+    public JPanel pLetrasErradas();
+    public JPanel pEnviar();
+    public JogadorDTO jogador();
+    public JogadorDTO adversario();
+    public void setAdversario(JogadorDTO adversario);
+    /**
+     * Organiza e mostra a tela
+     */
+    public void packAndShow(JogadorDTO jogador);
+
+    /**
+     * Limpa os campos da tela
+     */
+    public void clearFields();
+
+    /**
+     * Metodo inicial da tela, onde o jogador aguarda o oponente
+     */
+   // public void aguardandoJogador();
+
+
+
+}

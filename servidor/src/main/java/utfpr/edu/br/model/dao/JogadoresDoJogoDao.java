@@ -41,4 +41,17 @@ public class JogadoresDoJogoDao extends AbstractDao<JogadoresDoJogo> {
                 "where  j.id.jogo_id=?2 and not j.id.jogador_id =?1")
         .setParameter(1,idJogador).setParameter(2,idJogo).getSingleResult();
     }
+
+    /**
+     * Retorna a id do jogo em que os jogadores estao
+     * @param jogador
+     * @param adversario
+     * @return
+     */
+    public Integer getJogo(Long jogador,Long adversario){
+        return (Integer) em().createQuery("SELECT distinct j.id.jogo_id from JogadoresDoJogo j" +
+                " where j.id.jogador_id=?1 and j.id.jogo_id = (SELECT distinct j.id.jogo_id " +
+                "from JogadoresDoJogo j where j.id.jogador_id=?2)").
+                setParameter(1,jogador).setParameter(2,adversario).getSingleResult();
+    }
 }

@@ -5,7 +5,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import utfpr.edu.br.model.bean.Categoria;
 
-@Generated(value="EclipseLink-2.4.0.v20120608-rNA", date="2012-09-26T18:15:52")
+@Generated(value="EclipseLink-2.4.0.v20120608-rNA", date="2012-10-01T13:10:13")
 @StaticMetamodel(Palavra.class)
 public class Palavra_ { 
 

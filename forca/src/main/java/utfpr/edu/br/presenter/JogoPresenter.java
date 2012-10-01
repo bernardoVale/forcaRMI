@@ -39,8 +39,10 @@ public class JogoPresenter {
         jogoView.pLetrasErradas().setVisible(false);
         jogoView.lbX().setVisible(false);
         jogoView.lbCarregando().setVisible(true);
+        jogoView.lbPlacar().setBounds(370, 74, 288, 73);
         jogoView.lbPlacar().setText("Aguardando Oponente...");
         jogoView.lbPlacar().setFont(new Font("Tahoma", 0, 23));
+        jogoView.pEnviar().setVisible(false);
     }
     public void aguardarAdversario(){
         FindAdversario f = new FindAdversario();
@@ -49,11 +51,6 @@ public class JogoPresenter {
         } catch (Exception e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
-       /* MyThread mt = new MyThread(jogoView.jogador());
-        do {
-        }while (mt.getAdversario() == null);
-        jogoView.setAdversario(mt.getAdversario());
-        jogoView.P2_nome().setText(jogoView.adversario().getNome()); */
     }
 
     //Adiciona os listeners
@@ -66,12 +63,17 @@ public class JogoPresenter {
     public void setJogoView(JogoView jogoView) {
         this.jogoView = jogoView;
     }
+
+    /**
+     * Classe que tem a thread que fica cutucando o servidor ate que ele retorne
+     * um dto com os dados do jogadorAdversario. Isto e, quando ele entrar no jogo.
+     * @return  JogadorAdversario
+     */
     private class FindAdversario extends SwingWorker<JogadorDTO,Void>{
         RetornoValidacao rv = new RetornoValidacao(false);
         @Override
         protected JogadorDTO doInBackground() throws Exception {
             while (!rv.isOk()){
-                System.out.println("Spy");
                 rv = RMIClient.getInstance().provider().retornaAdversario(jogoView.jogador());
                 Thread.sleep(2000);
             }
@@ -84,11 +86,25 @@ public class JogoPresenter {
             try {
                 jogoView.setAdversario(get());
                 jogoView.P2_nome().setText(get().getNome());
+                habilitaCampos();
             } catch (InterruptedException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             } catch (ExecutionException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
+        }
+        private void habilitaCampos(){
+            jogoView.lbPlacar().setVisible(true);
+            jogoView.lbCarregando().setVisible(false);
+            jogoView.lbPontuacaoP1().setVisible(true);
+            jogoView.lbPontuacaoP2().setVisible(true);
+            jogoView.lbPlacar().setFont(new java.awt.Font("Tahoma", 0, 55)); // NOI18N
+            jogoView.lbPlacar().setBounds(414, 74, 288, 73);
+            jogoView.lbPlacar().setText("Placar");
+            jogoView.lbPlacar().setVisible(true);
+            jogoView.lbX().setVisible(true);
+            jogoView.pLetrasErradas().setVisible(true);
+            jogoView.pEnviar().setVisible(true);
         }
     }
 }

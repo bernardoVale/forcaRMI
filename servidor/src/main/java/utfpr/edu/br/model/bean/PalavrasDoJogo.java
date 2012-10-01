@@ -30,7 +30,9 @@ public class PalavrasDoJogo implements IBean{
         this.id = new PalavrasDoJogoID(palavra_id,jogo_id);
         this.vencedor_id = vencedor_id;
     }
-
+    public PalavrasDoJogo(int palavra_id,long jogo_id){
+        this.id = new PalavrasDoJogoID(palavra_id,jogo_id);
+    }
     public Jogo getVencedor_id() {
         return vencedor_id;
     }

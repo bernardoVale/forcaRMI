@@ -27,8 +27,6 @@ import java.rmi.RemoteException;
  */
 public class LoginActionListener {
 
-
-
     public static class AutenticarActionListener implements ActionListener {
         private LoginPresenter presenter;
         private JogoPresenter jogoPresenter;

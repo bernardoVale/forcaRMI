@@ -6,21 +6,24 @@ package utfpr.edu.br;/**
  */
 
 import utfpr.edu.br.inject.Getinjector;
-import utfpr.edu.br.model.dao.JogadoresDoJogoDao;
+import utfpr.edu.br.model.bean.Palavra;
+import utfpr.edu.br.model.dao.CategoriaDao;
+import utfpr.edu.br.model.dao.PalavraDao;
+
+import java.util.List;
 
 /**
  * @author Bernardo Vale
  */
 public class Teste {
     public static void main(String[] args) {
-        Long adversario = 0L;
-        JogadoresDoJogoDao dao =  Getinjector.getInstance().getInstance(JogadoresDoJogoDao.class);
-        adversario = dao.idAdversario(35L,1L);
-        if(adversario==0){
-            System.out.println("coco");
-        }else{
-            System.out.println("Ad"+adversario);
+        CategoriaDao daoc = Getinjector.getInstance().getInstance(CategoriaDao.class);
+        PalavraDao dao = Getinjector.getInstance().getInstance(PalavraDao.class);
+        List<Palavra> palavraList = dao.getPalavrasSorteadas(daoc.findByID(1L),3);
+        for (Palavra palavra : palavraList) {
+            System.out.println(palavra.getNome());
         }
+
     }
 
 }

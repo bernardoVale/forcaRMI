@@ -15,10 +15,8 @@
     </libraries>
     <table name="categoria" schema="public" catalog="" type="TABLE">
       <column name="id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="nome" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
-      <column name="palavras_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="nome" sqlType="varchar" length="255" precision="0" nullable="false" jdbcType="12" />
       <primary-key name="categoria_pkey" columns="id" />
-      <foreign-key name="fk_categoria_palavras_id" columns="palavras_id" ref-table="palavra" ref-schema="public" ref-catalog="" ref-columns="id" />
     </table>
     <table name="categoria_pkey" schema="public" catalog="" type="INDEX">
       <column name="id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
@@ -37,15 +35,28 @@
     </table>
     <table name="jogador" schema="public" catalog="" type="TABLE">
       <column name="id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="nome" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="nome" sqlType="varchar" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="senha" sqlType="varchar" length="255" precision="0" nullable="false" jdbcType="12" />
       <primary-key name="jogador_pkey" columns="id" />
     </table>
     <table name="jogador_pkey" schema="public" catalog="" type="INDEX">
       <column name="id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
     </table>
+    <table name="jogadoresdojogo" schema="public" catalog="" type="TABLE">
+      <column name="jogador_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="jogo_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="pontuacao" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <primary-key name="jogadoresdojogo_pkey" columns="jogador_id,jogo_id" />
+      <foreign-key name="fk_jogadoresdojogo_jogador_id" columns="jogador_id" ref-table="jogador" ref-schema="public" ref-catalog="" ref-columns="id" />
+      <foreign-key name="fk_jogadoresdojogo_jogo_id" columns="jogo_id" ref-table="jogo" ref-schema="public" ref-catalog="" ref-columns="id" />
+    </table>
+    <table name="jogadoresdojogo_pkey" schema="public" catalog="" type="INDEX">
+      <column name="jogador_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="jogo_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+    </table>
     <table name="jogo" schema="public" catalog="" type="TABLE">
       <column name="id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="numrodadas" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="numrodadas" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
       <column name="categoria_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
       <primary-key name="jogo_pkey" columns="id" />
       <foreign-key name="fk_jogo_categoria_id" columns="categoria_id" ref-table="categoria" ref-schema="public" ref-catalog="" ref-columns="id" />
@@ -67,7 +78,7 @@
     </table>
     <table name="palavra" schema="public" catalog="" type="TABLE">
       <column name="id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="nome" sqlType="varchar" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="nome" sqlType="varchar" length="255" precision="0" nullable="false" jdbcType="12" />
       <column name="categoria_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
       <primary-key name="palavra_pkey" columns="id" />
       <foreign-key name="fk_palavra_categoria_id" columns="categoria_id" ref-table="categoria" ref-schema="public" ref-catalog="" ref-columns="id" />
@@ -76,19 +87,67 @@
       <column name="id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
     </table>
     <table name="palavrasdojogo" schema="public" catalog="" type="TABLE">
-      <column name="id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="jogadorqueacertou_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
-      <column name="jogo_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
-      <column name="palavra_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
-      <primary-key name="palavrasdojogo_pkey" columns="id" />
-      <foreign-key name="fk_palavrasdojogo_jogadorqueacertou_id" columns="jogadorqueacertou_id" ref-table="jogador" ref-schema="public" ref-catalog="" ref-columns="id" />
+      <column name="palavra_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="jogo_id" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="vencedor_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <primary-key name="palavrasdojogo_pkey" columns="palavra_id,jogo_id" />
+      <foreign-key name="fk_palavrasdojogo_vencedor_id" columns="vencedor_id" ref-table="jogador" ref-schema="public" ref-catalog="" ref-columns="id" />
       <foreign-key name="fk_palavrasdojogo_jogo_id" columns="jogo_id" ref-table="jogo" ref-schema="public" ref-catalog="" ref-columns="id" />
       <foreign-key name="fk_palavrasdojogo_palavra_id" columns="palavra_id" ref-table="palavra" ref-schema="public" ref-catalog="" ref-columns="id" />
     </table>
     <table name="palavrasdojogo_pkey" schema="public" catalog="" type="INDEX">
-      <column name="id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="palavra_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="jogo_id" sqlType="int8" length="19" precision="0" nullable="true" jdbcType="-5" />
+    </table>
+    <table name="seq_categoria" schema="public" catalog="" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
     </table>
     <table name="seq_gen_sequence" schema="public" catalog="" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+    </table>
+    <table name="seq_jogador" schema="public" catalog="" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+    </table>
+    <table name="seq_jogo" schema="public" catalog="" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
+      <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="increment_by" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="max_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="min_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="cache_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="log_cnt" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="is_cycled" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+      <column name="is_called" sqlType="bool" length="1" precision="0" nullable="false" jdbcType="-7" />
+    </table>
+    <table name="seq_palavra" schema="public" catalog="" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" length="2147483647" precision="0" nullable="false" jdbcType="12" />
       <column name="last_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />
       <column name="start_value" sqlType="int8" length="19" precision="0" nullable="false" jdbcType="-5" />

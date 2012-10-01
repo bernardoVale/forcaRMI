@@ -12,4 +12,5 @@ import utfpr.edu.br.dto.JogadorDTO;
 public interface JogoFacade {
      public RetornoValidacao iniciarJogo(JogadorDTO j);
      public RetornoValidacao listaJogos();
+     public RetornoValidacao iniciarPartida(JogadorDTO jogador,JogadorDTO adversario);
 }

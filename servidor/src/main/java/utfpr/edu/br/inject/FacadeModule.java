@@ -8,10 +8,7 @@ package utfpr.edu.br.inject;
  */
 
 import com.google.inject.AbstractModule;
-import utfpr.edu.br.facade.JogadorFacade;
-import utfpr.edu.br.facade.JogadorFacadeImpl;
-import utfpr.edu.br.facade.JogoFacade;
-import utfpr.edu.br.facade.JogoFacadeImpl;
+import utfpr.edu.br.facade.*;
 
 /**
  * @author Bernardo Vale
@@ -21,5 +18,6 @@ public class FacadeModule extends AbstractModule{
     protected void configure() {
         bind(JogadorFacade.class).to(JogadorFacadeImpl.class);
         bind(JogoFacade.class).to(JogoFacadeImpl.class);
+        bind(PalavraFacade.class).to(PalavraFacadeImpl.class);
     }
 }

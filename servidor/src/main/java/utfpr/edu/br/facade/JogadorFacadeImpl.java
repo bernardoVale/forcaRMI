@@ -3,11 +3,15 @@ package utfpr.edu.br.facade;
 import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.controller.ControladorJogador;
 import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.dto.PalavraDTO;
 import utfpr.edu.br.inject.Getinjector;
 import utfpr.edu.br.model.bean.Jogador;
 import utfpr.edu.br.model.dao.JogadoresDoJogoDao;
 import utfpr.edu.br.util.Erros;
-import utfpr.edu.br.util.JogadoresSession;
+import utfpr.edu.br.util.session.JogadoresSession;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -71,8 +75,20 @@ public class JogadorFacadeImpl implements JogadorFacade{
             //todo tirar o jogo estatico e deixar dinamico
             Long idAdversario = daoJDJ.idAdversario(j.getId(),1L);
             rv = controlador.findById(idAdversario);
+            //Antes de enviar o jogador adversario eu aproveio os dados e cadastro as palavras do jogo ;)
+
             return rv;
         }
     }
+    private List<PalavraDTO> palavrasDoJogo(Long JogoId){
+        RetornoValidacao rv = new RetornoValidacao();
+        return new ArrayList<PalavraDTO>();
 
+    }
+
+    /*
+    *        JogadoresDoJogoDao daoJDJ = Getinjector.getInstance().getInstance(JogadoresDoJogoDao.class);
+        Integer jogo = daoJDJ.getJogo(jogador.getId(), adversario.getId());
+        rv = control.findById(new Long(jogo)).getObjeto();
+    */
 }

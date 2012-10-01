@@ -5,11 +5,15 @@ package utfpr.edu.br.model.dao;/**
  * Time: 20:09
  */
 
+import utfpr.edu.br.model.bean.Categoria;
 import utfpr.edu.br.model.bean.Palavra;
 
 import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 /**
  * @author Bernardo Vale
@@ -19,5 +23,41 @@ public class PalavraDao extends AbstractDao<Palavra>{
     @Inject
     public PalavraDao(Provider<EntityManager> emp) {
         super(emp,Palavra.class);
+    }
+
+    /**
+     * Me retorna um Array de palavra que serao usadas num determinado jogo.
+     * obs: As palavras NUNCA se repetiram naquele jogo.
+     * @param categoria   Categoria da palavra
+     * @param rodadas     Quantidade de rodadas, ou seja, num de palavras q vou enviar
+     * @return
+     */
+    public List<Palavra> getPalavrasSorteadas(Categoria categoria,int rodadas){
+        Long codigos[] = new Long[rodadas];//Vetor para adicionar os codigos sorteados
+        int cont=0;//variavel para verificar se tinha codigo igual no sorteio
+        List<Palavra> palavras = new ArrayList<Palavra>();
+        for(int i=0;i<rodadas;i++){
+            codigos[i] = 0L; //inicializo o vetor
+        }
+        Long totalPalavras = (Long) em().createQuery("SELECT count(p) from Palavra p where p.categoria = ?1")
+                .setParameter(1,categoria).getSingleResult();
+        System.out.println("TOtal:"+totalPalavras);
+        for(int i=1;i<=rodadas;i++){//sorteia um numero na range dos codigos q existem no banco e add na lista
+            cont = 0;
+            Random codigo = new Random();  //SOMA E SUBTRAÇAO PARA N ACHAR VALOR 0
+            Long id = new Long(codigo.nextInt(totalPalavras.intValue())+1);
+            for(int j=0;j<rodadas;j++){
+                if(codigos[j].equals(id)){ //pra nao sortear palavras iguais
+                    cont++;
+                }
+            }
+            if(cont==0){
+                codigos[i-1] = id; //adiciono no vetor de teste e ja add no array pq e um codigo valido
+                palavras.add(this.findByID(id));
+            }else{ //tem que sortear de novo
+                i = i-1;
+            }
+        }
+        return palavras;
     }
 }
