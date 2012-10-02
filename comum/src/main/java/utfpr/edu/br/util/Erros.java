@@ -14,7 +14,8 @@ public enum Erros {
     CREDENCIAIS("Nome e/ou senha incorreto(s)"),
     DADOSNAOENCONTRADOS("Não foi encontrado nenhum resultado!"),
     JOGO_LOTADO("Jogo já esta lotado!"),
-    PERSISTENCIA("Problemas na persistencia, tente novamente!");
+    PERSISTENCIA("Problemas na persistencia, tente novamente!"),
+    PALAVRA_NAO_ENCONTRADAS("Problemas ao trazer as palavras, reinicie o jogo e tente novamente!");
     private final String erro;
 
     private Erros(String erro) {

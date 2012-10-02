@@ -5,10 +5,9 @@ package utfpr.edu.br;/**
  * Time: 19:58
  */
 
+import utfpr.edu.br.controller.ControladorPalavra;
+import utfpr.edu.br.dto.PalavraDTO;
 import utfpr.edu.br.inject.Getinjector;
-import utfpr.edu.br.model.bean.Palavra;
-import utfpr.edu.br.model.dao.CategoriaDao;
-import utfpr.edu.br.model.dao.PalavraDao;
 
 import java.util.List;
 
@@ -17,11 +16,16 @@ import java.util.List;
  */
 public class Teste {
     public static void main(String[] args) {
-        CategoriaDao daoc = Getinjector.getInstance().getInstance(CategoriaDao.class);
-        PalavraDao dao = Getinjector.getInstance().getInstance(PalavraDao.class);
-        List<Palavra> palavraList = dao.getPalavrasSorteadas(daoc.findByID(1L),3);
-        for (Palavra palavra : palavraList) {
-            System.out.println(palavra.getNome());
+       RetornoValidacao rv =
+               Getinjector.getInstance().getInstance(ControladorPalavra.class).getPalavrasDoJogo(1L);
+        if(rv.isOk()){
+            List<PalavraDTO> palavras = (List<PalavraDTO>) rv.getObjeto();
+            for (PalavraDTO palavra : palavras) {
+                System.out.println("Palavra:"+palavra.getNome());
+            }
+
+        }else{
+            System.out.println(rv.getErro());
         }
 
     }

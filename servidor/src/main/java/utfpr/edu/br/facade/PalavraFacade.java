@@ -1,5 +1,6 @@
 package utfpr.edu.br.facade;
 
+import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.dto.CategoriaDTO;
 import utfpr.edu.br.dto.PalavraDTO;
 
@@ -14,5 +15,5 @@ import java.util.List;
 public interface PalavraFacade {
 
      List<PalavraDTO> sortearPalavras(Long quantidade,CategoriaDTO categoriaPalavra);
-     List<PalavraDTO> getPalavrasDoJogo(Long jogo_id);
+     RetornoValidacao getPalavrasDoJogo(Long jogo_id);
 }

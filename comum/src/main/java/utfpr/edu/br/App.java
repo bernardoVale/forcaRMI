@@ -1,9 +1,6 @@
 package utfpr.edu.br;
 
-import utfpr.edu.br.md5.Md5;
-
-import java.io.UnsupportedEncodingException;
-import java.security.NoSuchAlgorithmException;
+import utfpr.edu.br.util.StringUtil;
 
 /**
  * Hello world!
@@ -12,20 +9,15 @@ import java.security.NoSuchAlgorithmException;
 public class App 
 {
     public static void main( String[] args ){
-        try {
-            String mensagem = "Coco gelado";
-            String criptografado = Md5.MD5(mensagem);
-            String mensagem2 = "Coco gelado";
-            String criptografado2 = Md5.MD5(mensagem2);
-            if(mensagem.equals(mensagem2)&&criptografado.equals(criptografado2)){
-                System.out.println("Alegria");
-            }else{
-                System.out.println("Triste ;(");
-            }
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
+        //String palavra = "éêÉÊ";            //Maiusculo:201-202 Minusculo:233-234
+        //String palavra = "àáâãÀÁÂÃ";        //Maiusculo:192-195 Minusculo:224-227
+        //String palavra = "íÍ";             //Maiusculo:205 Minusculo:237
+        //String palavra = "óôõÓÔÕ";           //Maiusculo:211-213 Minusculo:243-245
+        //String palavra = "úÚ";                 //Maiusculo:218 Minusculo:250
+        String palavra = "àáâãÀÁÂÃéêÉÊíÍóôõÓÔÕúÚ";
+        String palavraMascarada = "";
+        char[] palavraArray = palavra.toCharArray();
+        System.out.println(StringUtil.mascararTexto(palavra));
+
     }
 }

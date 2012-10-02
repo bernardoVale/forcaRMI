@@ -85,7 +85,6 @@ public class JogoFacadeImpl implements JogoFacade{
     @Override
     public RetornoValidacao iniciarPartida(JogadorDTO jogador, JogadorDTO adversario) {
         RetornoValidacao rv;
-        List<PalavraDTO> palavras;
         JogadoresDoJogoDao daoJDJ = Getinjector.getInstance().getInstance(JogadoresDoJogoDao.class);
         Integer jogoId = daoJDJ.getJogo(jogador.getId(), adversario.getId());
         rv = control.findById(new Long(jogoId));
@@ -93,11 +92,12 @@ public class JogoFacadeImpl implements JogoFacade{
             return rv;
         }
         JogoDTO jogo = (JogoDTO) rv.getObjeto();
-        palavras = facade.getPalavrasDoJogo(jogoId.longValue());
-        return new RetornoValidacao(new DadosDoJogoDTO(jogo,palavras));
+        rv = facade.getPalavrasDoJogo(jogoId.longValue());
+        if(!rv.isOk()){
+            return rv;
+        }
+        return new RetornoValidacao(new DadosDoJogoDTO(jogo, (List<PalavraDTO>) rv.getObjeto()));
     }
-
-
     public RetornoValidacao criarNovoJogo(JogadorDTO j){
         rv = controlCat.findById(1L);
         if(!rv.isOk()){

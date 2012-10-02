@@ -2,16 +2,21 @@ package utfpr.edu.br.view.telas.jogo;
 
 
 import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.dto.JogoDTO;
+import utfpr.edu.br.dto.PalavraDTO;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.*;
+import java.util.List;
 
 public class JogoViewImpl extends JFrame implements JogoView{
 
     private JogadorDTO jogador;
     private JogadorDTO adversario;
+    private JogoDTO jogo;
+    private List<PalavraDTO> palavras;
 	private JPanel contentPane;
 
 	/**
@@ -387,6 +392,26 @@ public class JogoViewImpl extends JFrame implements JogoView{
     @Override
     public JogadorDTO adversario() {
         return adversario;
+    }
+
+    @Override
+    public JogoDTO jogo() {
+        return jogo;
+    }
+
+    @Override
+    public void setJogo(JogoDTO jogo) {
+        this.jogo = jogo;
+    }
+
+    @Override
+    public java.util.List<PalavraDTO> palavras() {
+        return palavras;
+    }
+
+    @Override
+    public void setPalavras(List<PalavraDTO> palavras) {
+        this.palavras = palavras;
     }
 
     @Override

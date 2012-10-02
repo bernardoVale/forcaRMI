@@ -26,6 +26,15 @@ public class PalavraDao extends AbstractDao<Palavra>{
     }
 
     /**
+     * Retorna uma lista de palavras que constam num determinado Jogo
+     * @param jogo_id O Jogo em questao
+     * @return  A lista
+     */
+    public List<Palavra> getPalavrasDoJogo(Long jogo_id){
+        return em().createQuery("Select p from Palavra p,PalavrasDoJogo pj where p.id=pj.id.palavra_id" +
+                " and pj.id.jogo_id=?1",Palavra.class).setParameter(1,jogo_id).getResultList();
+    }
+    /**
      * Me retorna um Array de palavra que serao usadas num determinado jogo.
      * obs: As palavras NUNCA se repetiram naquele jogo.
      * @param categoria   Categoria da palavra

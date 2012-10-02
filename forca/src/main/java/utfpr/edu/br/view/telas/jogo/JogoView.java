@@ -1,8 +1,11 @@
 package utfpr.edu.br.view.telas.jogo;
 
 import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.dto.JogoDTO;
+import utfpr.edu.br.dto.PalavraDTO;
 
 import javax.swing.*;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,6 +26,10 @@ public interface JogoView {
     public JPanel pEnviar();
     public JogadorDTO jogador();
     public JogadorDTO adversario();
+    public JogoDTO jogo();
+    public void setJogo(JogoDTO jogo);
+    public List<PalavraDTO> palavras();
+    public void setPalavras(List<PalavraDTO> palavras);
     public void setAdversario(JogadorDTO adversario);
     /**
      * Organiza e mostra a tela

@@ -9,6 +9,7 @@ import com.google.inject.AbstractModule;
 import utfpr.edu.br.controller.ControladorCategoria;
 import utfpr.edu.br.controller.ControladorJogador;
 import utfpr.edu.br.controller.ControladorJogo;
+import utfpr.edu.br.controller.ControladorPalavra;
 
 /**
  * @author Bernardo Vale
@@ -20,5 +21,6 @@ public class ControllerModule extends AbstractModule{
         bind(ControladorCategoria.class);
         bind(ControladorJogo.class);
         bind(ControladorJogador.class);
+        bind(ControladorPalavra.class);
     }
 }
