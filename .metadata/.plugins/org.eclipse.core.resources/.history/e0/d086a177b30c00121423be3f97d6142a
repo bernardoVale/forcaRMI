@@ -1,22 +1,30 @@
-package utfpr.edu.br.view.telas.jogo;
+package utfpr.edu.br.view.jogo;
 
 
-import utfpr.edu.br.dto.JogadorDTO;
-import utfpr.edu.br.dto.JogoDTO;
-import utfpr.edu.br.dto.PalavraDTO;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 
-import javax.swing.*;
+import javax.swing.ButtonGroup;
+import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import java.awt.*;
-import java.util.List;
+import javax.swing.WindowConstants;
 
 public class JogoViewImpl extends JFrame implements JogoView{
 
     private JogadorDTO jogador;
     private JogadorDTO adversario;
-    private JogoDTO jogo;
-    private List<PalavraDTO> palavras;
 	private JPanel contentPane;
 
 	/**
@@ -220,6 +228,17 @@ public class JogoViewImpl extends JFrame implements JogoView{
                         .addGap(21, 21, 21))))
         );
 
+        GroupLayout pLetrasLayout = new GroupLayout(pLetras);
+        pLetras.setLayout(pLetrasLayout);
+        pLetrasLayout.setHorizontalGroup(
+            pLetrasLayout.createParallelGroup(Alignment.LEADING)
+            .addGap(0, 814, Short.MAX_VALUE)
+        );
+        pLetrasLayout.setVerticalGroup(
+            pLetrasLayout.createParallelGroup(Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         jButton1.setFont(new Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("Enviar");
 
@@ -283,7 +302,6 @@ public class JogoViewImpl extends JFrame implements JogoView{
         panelLobby.add(P2_nome);
         panelLobby.add(pJogador2);
         panelLobby.add(pLetras);
-        pLetras.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         panelLobby.add(pEnviar);
         lbCarregando = new JLabel("");
         lbCarregando.setIcon(new ImageIcon(getClass().getResource("/carregando.gif")));
@@ -377,11 +395,6 @@ public class JogoViewImpl extends JFrame implements JogoView{
     }
 
     @Override
-    public JPanel pLetras() {
-        return pLetras;
-    }
-
-    @Override
     public JogadorDTO jogador() {
         return jogador;
     }
@@ -392,33 +405,8 @@ public class JogoViewImpl extends JFrame implements JogoView{
     }
 
     @Override
-    public JogoDTO jogo() {
-        return jogo;
-    }
-
-    @Override
-    public void setJogo(JogoDTO jogo) {
-        this.jogo = jogo;
-    }
-
-    @Override
-    public List<PalavraDTO> palavras() {
-        return palavras;
-    }
-
-    @Override
-    public void setPalavras(List<PalavraDTO> palavras) {
-        this.palavras = palavras;
-    }
-
-    @Override
     public void setAdversario(JogadorDTO adversario) {
         this.adversario = adversario;
-    }
-
-    @Override
-    public JFrame root() {
-        return this;
     }
 
     @Override

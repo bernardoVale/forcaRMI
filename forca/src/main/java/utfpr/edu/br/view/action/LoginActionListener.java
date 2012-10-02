@@ -8,7 +8,6 @@ package utfpr.edu.br.view.action;/**
 import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.builder.MensagemDirector;
 import utfpr.edu.br.builder.MensagemError;
-import utfpr.edu.br.builder.MensagemOK;
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.md5.CriptografiaLogix;
 import utfpr.edu.br.presenter.JogoPresenter;
@@ -55,13 +54,6 @@ public class LoginActionListener {
                 RetornoValidacao rv =
                         RMIClient.getInstance().provider().iniciarJogo(view.getNome(),cripto.getSenhaCriptografada());
                 if(rv.isOk()){
-                    mensagem = new MensagemDirector(new MensagemOK("Jogador pronto para jogar!"));
-                    container = mensagem.construirDialogMensagem();
-                    //Seta a posicao do container de uma maneira nao tao bela
-                    int x = view.getJFrame().getX() + view.getJFrame().getWidth()/2;
-                    int y = view.getJFrame().getY() + view.getJFrame().getHeight()/2 - container.getHeight();
-                    container.setLocation(x,y);
-                    container.setVisible(true);
                     //Ta tudo ok entao tem que chamar a view do jogo e destruir a view de login
                     view.destroy();
                     jogoPresenter.createView((JogadorDTO) rv.getObjeto());

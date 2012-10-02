@@ -26,7 +26,6 @@ public class JogoPresenter {
         jogoView.packAndShow(jogador);
         moldarTelaInicial();
         aguardarAdversario();
-        buscarDadosDoJogo();
     }
     /**
      * Metodo inicial da tela, onde o jogador aguarda o oponente

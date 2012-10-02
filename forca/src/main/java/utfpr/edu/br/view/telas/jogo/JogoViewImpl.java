@@ -41,6 +41,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	public JogoViewImpl() {
 		GridBagConstraints gridBagConstraints;
 
+        buttonGroup1 = new ButtonGroup();
         panelLobby = new JPanel();
         lbP2 = new JLabel();
         lbP2.setBounds(672, 58, 106, 28);
@@ -77,7 +78,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         pLetras.setBounds(96, 498, 814, 100);
         pEnviar = new JPanel();
         pEnviar.setBounds(96, 610, 514, 92);
-        btEnviar = new JButton();
+        jButton1 = new JButton();
         jTextField1 = new JTextField();
         jRadioButton1 = new JRadioButton();
         jRadioButton2 = new JRadioButton();
@@ -219,19 +220,8 @@ public class JogoViewImpl extends JFrame implements JogoView{
                         .addGap(21, 21, 21))))
         );
 
-        GroupLayout pLetrasLayout = new GroupLayout(pLetras);
-        pLetras.setLayout(pLetrasLayout);
-        pLetrasLayout.setHorizontalGroup(
-            pLetrasLayout.createParallelGroup(Alignment.LEADING)
-            .addGap(0, 814, Short.MAX_VALUE)
-        );
-        pLetrasLayout.setVerticalGroup(
-            pLetrasLayout.createParallelGroup(Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        btEnviar.setFont(new Font("Tahoma", 0, 24)); // NOI18N
-        btEnviar.setText("Enviar");
+        jButton1.setFont(new Font("Tahoma", 0, 24)); // NOI18N
+        jButton1.setText("Enviar");
 
         jTextField1.setFont(new Font("Tahoma", 0, 24)); // NOI18N
 
@@ -256,7 +246,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         				.addGroup(pEnviarLayout.createSequentialGroup()
         					.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
         					.addGap(18)
-        					.addComponent(btEnviar)
+        					.addComponent(jButton1)
         					.addPreferredGap(ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
         					.addComponent(btnDesistir))))
         );
@@ -268,7 +258,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         				.addComponent(jRadioButton1))
         			.addPreferredGap(ComponentPlacement.UNRELATED)
         			.addGroup(pEnviarLayout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(btEnviar, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
         				.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
         			.addContainerGap())
         		.addComponent(btnDesistir)
@@ -293,6 +283,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         panelLobby.add(P2_nome);
         panelLobby.add(pJogador2);
         panelLobby.add(pLetras);
+        pLetras.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         panelLobby.add(pEnviar);
         lbCarregando = new JLabel("");
         lbCarregando.setIcon(new ImageIcon(getClass().getResource("/carregando.gif")));
@@ -311,7 +302,8 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	}
 	 private JLabel P1_nome;
 	    private JLabel P2_nome;
-	    private JButton btEnviar;
+	    private ButtonGroup buttonGroup1;
+	    private JButton jButton1;
 	    private JRadioButton jRadioButton1;
 	    private JRadioButton jRadioButton2;
 	    private JTextField jTextField1;
@@ -385,6 +377,11 @@ public class JogoViewImpl extends JFrame implements JogoView{
     }
 
     @Override
+    public JPanel pLetras() {
+        return pLetras;
+    }
+
+    @Override
     public JogadorDTO jogador() {
         return jogador;
     }
@@ -405,7 +402,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
     }
 
     @Override
-    public java.util.List<PalavraDTO> palavras() {
+    public List<PalavraDTO> palavras() {
         return palavras;
     }
 
@@ -417,6 +414,11 @@ public class JogoViewImpl extends JFrame implements JogoView{
     @Override
     public void setAdversario(JogadorDTO adversario) {
         this.adversario = adversario;
+    }
+
+    @Override
+    public JFrame root() {
+        return this;
     }
 
     @Override

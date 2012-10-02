@@ -24,6 +24,7 @@ public interface JogoView {
     public JLabel lbPlacar();
     public JPanel pLetrasErradas();
     public JPanel pEnviar();
+    public JPanel pLetras();
     public JogadorDTO jogador();
     public JogadorDTO adversario();
     public JogoDTO jogo();
@@ -31,6 +32,7 @@ public interface JogoView {
     public List<PalavraDTO> palavras();
     public void setPalavras(List<PalavraDTO> palavras);
     public void setAdversario(JogadorDTO adversario);
+    public JFrame root();
     /**
      * Organiza e mostra a tela
      */

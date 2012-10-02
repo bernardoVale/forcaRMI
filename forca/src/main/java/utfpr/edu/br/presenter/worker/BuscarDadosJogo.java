@@ -11,6 +11,7 @@ import utfpr.edu.br.rmi.RMIClient;
 import utfpr.edu.br.view.telas.jogo.JogoView;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -46,8 +47,21 @@ public class BuscarDadosJogo extends SwingWorker<DadosDoJogoDTO,Void>{
         }
     }
 
+    /**
+     * Adiciona a palavra ao painel
+     */
     private void popularPalavra() {
-         //view.palavras().get(0).getNome();
+        JLabel letra;
+        char[] palavra =  view.palavras().get(0).getNome().toCharArray();
+        int numLetras = palavra.length;
+        for(int i=1;i<=numLetras;i++){
+            letra = new JLabel();
+            letra.setText(String.valueOf((palavra[i - 1])).toUpperCase());
+            letra.setFont(new Font("Tahoma", 0, 50));
+            view.pLetras().add(letra);
+            view.pLetras().revalidate();
+            view.root().validate();
+        }
 
     }
 }
