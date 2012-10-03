@@ -4,12 +4,6 @@
     <list default="true" id="2d7e4036-3454-4dd4-811d-5c11fa7dd43c" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/org.eclipse.jdt.core/state.dat" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/2.tree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/6.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Teste/bin/utfpr/edu/br/view/jogo/JogoViewImpl$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/presenter/AdversarioThread.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/presenter/JogoPresenter$1.class" afterPath="" />
@@ -17,7 +11,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/presenter/MyThread.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/servidor/target/classes/utfpr/edu/br/controller/ControladorCategoriaImpl.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/servidor/target/classes/utfpr/edu/br/util/JogadoresSession.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.indexes/e4/e9/b6/50/a5/ed/history.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.indexes/e4/e9/b6/50/a5/ed/history.index" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.indexes/e4/e9/b6/50/a5/69/history.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.indexes/e4/e9/b6/50/a5/69/history.index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.markers.snap" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.markers.snap" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.syncinfo.snap" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.syncinfo.snap" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.markers.snap" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.markers.snap" />
@@ -26,26 +20,26 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/2792326998.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/2792326998.index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/0.png" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/0.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teste/bin/utfpr/edu/br/view/jogo/JogoView.class" afterPath="$PROJECT_DIR$/Teste/bin/utfpr/edu/br/view/jogo/JogoView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/2.png" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/3.png" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/4.png" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/5.png" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/6.png" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Teste/2012/10/41/refactorings.history" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Teste/2012/10/41/refactorings.history" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Teste/2012/10/41/refactorings.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Teste/2012/10/41/refactorings.index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teste/bin/utfpr/edu/br/view/jogo/JogoViewImpl.class" afterPath="$PROJECT_DIR$/Teste/bin/utfpr/edu/br/view/jogo/JogoViewImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teste/bin/utfpr/edu/br/view/login/LoginView.class" afterPath="$PROJECT_DIR$/Teste/bin/utfpr/edu/br/view/login/LoginView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/presenter/worker/BuscarDadosJogo.class" afterPath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/presenter/worker/BuscarDadosJogo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/action/LoginActionListener$AutenticarActionListener.class" afterPath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/action/LoginActionListener$AutenticarActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/action/LoginActionListener.class" afterPath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/action/LoginActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/telas/jogo/JogoView.class" afterPath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/telas/jogo/JogoView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/telas/jogo/JogoViewImpl.class" afterPath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/telas/jogo/JogoViewImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/telas/login/LoginViewImpl.class" afterPath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/telas/login/LoginViewImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servidor/target/classes/utfpr/edu/br/facade/JogoFacadeImpl.class" afterPath="$PROJECT_DIR$/servidor/target/classes/utfpr/edu/br/facade/JogoFacadeImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.log" afterPath="$PROJECT_DIR$/.metadata/.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/jogo/JogoView.java" afterPath="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/jogo/JogoView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/jogo/JogoViewImpl.java" afterPath="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/jogo/JogoViewImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/login/LoginView.java" afterPath="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/login/LoginView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/dto/PalavraDTO.java" afterPath="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/dto/PalavraDTO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/BuscarDadosJogo.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/BuscarDadosJogo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/LoginActionListener.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/LoginActionListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoView.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoViewImpl.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoViewImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/facade/JogoFacadeImpl.java" afterPath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/facade/JogoFacadeImpl.java" />
     </list>
     <ignored path="forcaRMI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,6 +50,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/forcaRMI$Bootstrap.coverage" NAME="Bootstrap Coverage Results" MODIFIED="1349223357688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>utfpr.edu.br.app.*</FILTER>
+    </SUITE>
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -67,6 +66,138 @@
     <groupTables value="false" />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java" line="48" class="utfpr.edu.br.model.dao.PalavraDao" package="utfpr.edu.br.model.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java" line="50" class="utfpr.edu.br.model.dao.PalavraDao" package="utfpr.edu.br.model.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java" line="52" class="utfpr.edu.br.model.dao.PalavraDao" package="utfpr.edu.br.model.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java" line="55" class="utfpr.edu.br.model.dao.PalavraDao" package="utfpr.edu.br.model.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java" line="56" class="utfpr.edu.br.model.dao.PalavraDao" package="utfpr.edu.br.model.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java" line="58" class="utfpr.edu.br.model.dao.PalavraDao" package="utfpr.edu.br.model.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java" line="62" class="utfpr.edu.br.model.dao.PalavraDao" package="utfpr.edu.br.model.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java" line="63" class="utfpr.edu.br.model.dao.PalavraDao" package="utfpr.edu.br.model.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java" line="59" class="utfpr.edu.br.model.dao.PalavraDao" package="utfpr.edu.br.model.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java" line="69" class="utfpr.edu.br.model.dao.PalavraDao" package="utfpr.edu.br.model.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -114,8 +245,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -124,75 +255,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BuscarDadosJogo.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/BuscarDadosJogo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="36" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.5089286">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JogoViewImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoViewImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="35" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginActionListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/LoginActionListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="65" selection-start="2246" selection-end="2246" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FindAdversario.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/FindAdversario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="29" selection-start="1467" selection-end="1467" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JogoFacadeImpl.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="JogoFacadeImpl.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/facade/JogoFacadeImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="0" selection-start="3215" selection-end="3215" vertical-scroll-proportion="0.0">
+            <state line="47" column="43" selection-start="1560" selection-end="1560" vertical-scroll-proportion="-2.1652174">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/App.java">
+      <file leaf-file-name="PalavraFacadeImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/facade/PalavraFacadeImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="69" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
+            <state line="24" column="18" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/util/StringUtil.java">
+      <file leaf-file-name="PalavraDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="65" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
+            <state line="63" column="85" selection-start="2492" selection-end="2492" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JogoPresenter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java">
+      <file leaf-file-name="PalavraConverter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/converter/PalavraConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="52" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.0">
+            <state line="24" column="65" selection-start="695" selection-end="695" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -224,9 +317,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/Teste.java" />
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/controller/ControladorPalavra.java" />
-        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/facade/JogoFacadeImpl.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/LoginViewImpl.java" />
         <option value="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/login/LoginView.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/app/Application.java" />
@@ -235,11 +326,13 @@
         <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/util/StringUtil.java" />
         <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/App.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoView.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/FindAdversario.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/LoginActionListener.java" />
+        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoView.java" />
+        <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/dto/PalavraDTO.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoViewImpl.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/BuscarDadosJogo.java" />
+        <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/facade/JogoFacadeImpl.java" />
       </list>
     </option>
   </component>
@@ -333,6 +426,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -362,6 +465,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Teste" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teste" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -718,6 +839,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1115,7 +1240,91 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="forca" />
+              <option name="myItemId" value="comum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="br" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comum" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1135,22 +1344,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="presenter" />
+              <option name="myItemId" value="dto" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="worker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1176,9 +1371,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -1198,16 +1393,16 @@
       <recent name="$PROJECT_DIR$/Teste/src/resources" />
       <recent name="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/login" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/jogo" />
+      <recent name="$PROJECT_DIR$/servidor/src/main" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="utfpr.edu.br.view.telas" />
       <recent name="utfpr.edu.br.model" />
       <recent name="utfpr.edu.br.view" />
       <recent name="utfpr.edu.br.rmi" />
       <recent name="utfpr.edu.br" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/jogo" />
-      <recent name="$PROJECT_DIR$/servidor/src/main" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Application">
@@ -1251,7 +1446,15 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="servidor" />
       <envs />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1585,13 +1788,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" web_path="">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="#com.intellij.j2meplugin.run.J2MEConfigurationType" factoryName="J2ME">
       <module name="" />
       <USER_OPTIONS />
@@ -1615,6 +1811,13 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" web_path="">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" class_name="" method_name="" output_log_level="" package_name="" scope="Class">
       <option name="BCName" value="" />
       <option name="launcherParameters">
@@ -1630,15 +1833,6 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="RemoteFlashRunConfigurationType" factoryName="Flash Remote Debug">
-      <option name="BCName" value="" />
-      <option name="moduleName" value="" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -1662,20 +1856,18 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
-      <module name="" />
-      <option name="BROWSER" value="Chrome" />
+    <configuration default="true" type="RemoteFlashRunConfigurationType" factoryName="Flash Remote Debug">
+      <option name="BCName" value="" />
+      <option name="moduleName" value="" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
+      <module name="" />
+      <option name="BROWSER" value="Chrome" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1696,6 +1888,17 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1854,25 +2057,26 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.6745763" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31866464" sideWeight="0.22372882" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.8" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32542372" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.6779661" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5864407" sideWeight="0.68133533" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47118643" sideWeight="0.68133533" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.659322" sideWeight="0.31335357" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31866464" sideWeight="0.22372882" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23728813" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.65084743" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31866464" sideWeight="0.22372882" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.6491525" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39984825" sideWeight="0.6118644" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31866464" sideWeight="0.6491525" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35084745" sideWeight="0.6312595" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31866464" sideWeight="0.65084743" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34915254" sideWeight="0.6312595" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.8" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32542372" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.15254237" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1982,54 +2186,58 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/java/text/Normalizer.java">
+    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/java/awt/Font.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="8" selection-start="4732" selection-end="4732" vertical-scroll-proportion="-0.5566038" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/util/StringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="65" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/java/awt/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3277" column="48" selection-start="113473" selection-end="113473" vertical-scroll-proportion="1.8173375">
+        <state line="604" column="12" selection-start="23053" selection-end="23053" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/javax/swing/JComponent.java">
+    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4839" column="16" selection-start="182884" selection-end="182884" vertical-scroll-proportion="-0.086687304">
+        <state line="8" column="17" selection-start="151" selection-end="151" vertical-scroll-proportion="0.3115727">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="24" selection-start="930" selection-end="930" vertical-scroll-proportion="0.7589286">
+        <state line="27" column="30" selection-start="651" selection-end="651" vertical-scroll-proportion="0.3115727">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/App.java">
+    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoViewImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="69" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
+        <state line="17" column="24" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/facade/JogoFacadeImpl.java">
+    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/util/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="0" selection-start="3215" selection-end="3215" vertical-scroll-proportion="0.0">
+        <state line="30" column="25" selection-start="865" selection-end="865" vertical-scroll-proportion="0.421365">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java">
+    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/dto/PalavraDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="52" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.0">
+        <state line="16" column="94" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/BuscarDadosJogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="31" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/LoginActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="2059" selection-end="2059" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -2041,46 +2249,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/login/LoginViewImpl.java">
+    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="35" selection-start="5579" selection-end="5579" vertical-scroll-proportion="0.30340558">
+        <state line="45" column="52" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/login/LoginViewImpl.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/converter/AbstractConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.7863777">
+        <state line="38" column="0" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoViewImpl.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/rmi/RmiProviderImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="35" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/LoginActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="65" selection-start="2246" selection-end="2246" vertical-scroll-proportion="0.0">
+        <state line="38" column="0" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/jogo/JogoView.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/converter/PalavraConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="24" column="65" selection-start="695" selection-end="695" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/BuscarDadosJogo.java">
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/facade/PalavraFacadeImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="36" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.5089286">
+        <state line="24" column="18" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/model/dao/PalavraDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="85" selection-start="2492" selection-end="2492" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/facade/JogoFacadeImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="43" selection-start="1560" selection-end="1560" vertical-scroll-proportion="-2.1652174">
           <folding />
         </state>
       </provider>

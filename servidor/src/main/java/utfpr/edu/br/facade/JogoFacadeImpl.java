@@ -44,7 +44,7 @@ public class JogoFacadeImpl implements JogoFacade{
 
 
     @Override
-    public RetornoValidacao iniciarJogo(JogadorDTO j) {
+    public synchronized RetornoValidacao iniciarJogo(JogadorDTO j) {
         //todo aqui primeiramente sera criado uma categoria qualquer e um jogo qualquer so pra iniciar
         //rv = control.save(new Jogo(new Categoria("Adjetivo"),5L));
         rv = controlCat.findById(1L);
@@ -56,7 +56,7 @@ public class JogoFacadeImpl implements JogoFacade{
         Long quantidade = daoJDJ.quantidadeDeJogadores(1L);
         if(quantidade<2){     //pode salvar
           if(quantidade==0){
-              sortearESalvarPalavras();
+              sortearESalvarPalavras((CategoriaDTO)rv.getObjeto());
           }
           daoJDJ.save(new JogadoresDoJogo(j.getId(),
                   1,null));
@@ -66,10 +66,11 @@ public class JogoFacadeImpl implements JogoFacade{
         }
     }
 
-    private void sortearESalvarPalavras() {
+    private synchronized void sortearESalvarPalavras(CategoriaDTO categoria) {
         List<PalavraDTO> palavrasDoJogo;
         //traz o array das palavras sorteadas
-        palavrasDoJogo = facade.sortearPalavras(3L,(CategoriaDTO) rv.getObjeto());
+        System.out.println(categoria);
+        palavrasDoJogo = facade.sortearPalavras(3L,categoria);
         PalavrasDoJogoDao daoPalavaras = Getinjector.getInstance().getInstance(PalavrasDoJogoDao.class);
         for(int i=0;i<palavrasDoJogo.size();i++){
             //salva todas as palavras    //todo mudar para controlador

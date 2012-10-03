@@ -25,6 +25,7 @@ public interface JogoView {
     public JPanel pLetrasErradas();
     public JPanel pEnviar();
     public JPanel pLetras();
+    public JPanel pPalavras();
     public JogadorDTO jogador();
     public JogadorDTO adversario();
     public JogoDTO jogo();

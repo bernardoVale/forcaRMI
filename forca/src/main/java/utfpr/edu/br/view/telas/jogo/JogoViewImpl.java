@@ -74,8 +74,10 @@ public class JogoViewImpl extends JFrame implements JogoView{
         letra6 = new JLabel();
         letra9 = new JLabel();
         letra3 = new JLabel();
+        pPalavras = new JPanel();
+        pPalavras.setBounds(96, 498, 800, 100);
         pLetras = new JPanel();
-        pLetras.setBounds(96, 498, 814, 100);
+
         pEnviar = new JPanel();
         pEnviar.setBounds(96, 610, 514, 92);
         jButton1 = new JButton();
@@ -282,8 +284,26 @@ public class JogoViewImpl extends JFrame implements JogoView{
         panelLobby.add(lbP2);
         panelLobby.add(P2_nome);
         panelLobby.add(pJogador2);
-        panelLobby.add(pLetras);
-        pLetras.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+
+        //Adiciono as propriedades do grid para a palavra
+        GridBagLayout gbl_pPalavras = new GridBagLayout();
+        gbl_pPalavras.columnWidths = new int[]{0, 0};
+        gbl_pPalavras.rowHeights = new int[]{0, 0, 0};
+        gbl_pPalavras.columnWeights = new double[]{1.0, Double.MIN_VALUE};
+        gbl_pPalavras.rowWeights = new double[]{1.0, 1.0, Double.MIN_VALUE};
+        pPalavras.setLayout(gbl_pPalavras);
+
+        //Adiciono o painel de letras
+        GridBagConstraints gbc_pLetras = new GridBagConstraints();
+        gbc_pLetras.insets = new Insets(0, 0, 5, 0);
+        gbc_pLetras.fill = GridBagConstraints.BOTH;
+        gbc_pLetras.gridx = 0;
+        gbc_pLetras.gridy = 0;
+        pPalavras.add(pLetras, gbc_pLetras);
+
+
+
         panelLobby.add(pEnviar);
         lbCarregando = new JLabel("");
         lbCarregando.setIcon(new ImageIcon(getClass().getResource("/carregando.gif")));
@@ -298,6 +318,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         gridBagConstraints.fill = GridBagConstraints.BOTH;
         getContentPane().add(lbBackground, gridBagConstraints);
 
+        panelLobby.add(pPalavras);
         pack();
 	}
 	 private JLabel P1_nome;
@@ -326,7 +347,8 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	    private JPanel pEnviar;
 	    private JPanel pJogador1;
 	    private JPanel pJogador2;
-	    private JPanel pLetras;
+	    private JPanel pPalavras;
+        private JPanel pLetras;
 	    private JPanel pLetrasErradas;
 	    private JPanel panelLobby;
         private JLabel lbCarregando;
@@ -381,6 +403,10 @@ public class JogoViewImpl extends JFrame implements JogoView{
         return pLetras;
     }
 
+    @Override
+    public JPanel pPalavras() {
+        return pPalavras;
+    }
     @Override
     public JogadorDTO jogador() {
         return jogador;

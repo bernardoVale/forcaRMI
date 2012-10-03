@@ -1,4 +1,4 @@
-package utfpr.edu.br.view.telas.login;
+package utfpr.edu.br.view.login;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;

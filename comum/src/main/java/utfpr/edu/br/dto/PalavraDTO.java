@@ -13,6 +13,7 @@ public class PalavraDTO implements DTO{
     private Long id;
     private String nome;
     private CategoriaDTO categoria;
+    private String nomeMascarado;
 
     public PalavraDTO() {
     }
@@ -21,6 +22,13 @@ public class PalavraDTO implements DTO{
         this.id = id;
         this.nome = nome;
         this.categoria = categoria;
+    }
+
+    public PalavraDTO(Long id, String nome, CategoriaDTO categoria, String nomeMascarado) {
+        this.id = id;
+        this.nome = nome;
+        this.categoria = categoria;
+        this.nomeMascarado = nomeMascarado;
     }
 
     public Long getId() {
@@ -45,5 +53,13 @@ public class PalavraDTO implements DTO{
 
     public void setCategoria(CategoriaDTO categoria) {
         this.categoria = categoria;
+    }
+
+    public String getNomeMascarado() {
+        return nomeMascarado;
+    }
+
+    public void setNomeMascarado(String nomeMascarado) {
+        this.nomeMascarado = nomeMascarado;
     }
 }
