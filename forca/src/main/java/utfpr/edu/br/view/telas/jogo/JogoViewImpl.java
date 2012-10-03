@@ -9,6 +9,7 @@ import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 public class JogoViewImpl extends JFrame implements JogoView{
@@ -322,7 +323,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         panelLobby.add(pPalavras);
         pack();
 	}
-	 private JLabel P1_nome;
+	    private JLabel P1_nome;
 	    private JLabel P2_nome;
 	    private ButtonGroup buttonGroup1;
 	    private JButton jButton1;
@@ -353,6 +354,11 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	    private JPanel pLetrasErradas;
 	    private JPanel panelLobby;
         private JLabel lbCarregando;
+
+    @Override
+    public void addChutarLetraListener(ActionListener listener) {
+
+    }
 
     @Override
     public JLabel P1_nome() {

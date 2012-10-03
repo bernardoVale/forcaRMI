@@ -30,7 +30,7 @@ public class LoginPresenter{
         loginView.destroy();
     }
     public void setUpViewListeners() {
-       loginView.addAutenticarListener(new AutenticarActionListener(this));
+       loginView.addAutenticarListener(new AutenticarActionListener(this),new AutenticarActionListener(this));
     }
 
     public LoginView getLoginView() {

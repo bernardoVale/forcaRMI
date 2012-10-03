@@ -19,6 +19,8 @@ import utfpr.edu.br.view.telas.login.LoginView;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.rmi.RemoteException;
 
 /**
@@ -26,7 +28,7 @@ import java.rmi.RemoteException;
  */
 public class LoginActionListener {
 
-    public static class AutenticarActionListener implements ActionListener {
+    public static class AutenticarActionListener implements ActionListener,KeyListener {
         private LoginPresenter presenter;
         private JogoPresenter jogoPresenter;
         private MensagemDirector mensagem;
@@ -38,6 +40,28 @@ public class LoginActionListener {
         }
 
         public void actionPerformed(ActionEvent evt) {
+            doAutenticar();
+        }
+
+        @Override
+        public void keyTyped(KeyEvent e) {
+            //To change body of implemented methods use File | Settings | File Templates.
+        }
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+            if(e.getKeyCode() == KeyEvent.VK_ENTER){
+                doAutenticar();
+            }
+        }
+
+        private void doAutenticar(){
+
             LoginView view = presenter.getLoginView();
             if(view.getNome().equals("") || view.getSenha().equals("")){
                 mensagem = new MensagemDirector(new MensagemError("Preencha todos os campos!"));
@@ -49,8 +73,8 @@ public class LoginActionListener {
                 container.setVisible(true);
                 return ;
             }
-             try {
-                 CriptografiaLogix cripto = new CriptografiaLogix(view.getNome(),view.getSenha());
+            try {
+                CriptografiaLogix cripto = new CriptografiaLogix(view.getNome(),view.getSenha());
                 RetornoValidacao rv =
                         RMIClient.getInstance().provider().iniciarJogo(view.getNome(),cripto.getSenhaCriptografada());
                 if(rv.isOk()){
@@ -68,7 +92,7 @@ public class LoginActionListener {
                 }
             } catch (RemoteException e) {
                 e.printStackTrace();
-             }
+            }
 
         }
     }

@@ -5,6 +5,7 @@ import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
 
 import javax.swing.*;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  * Time: 19:36
  */
 public interface JogoView {
-
+    void addChutarLetraListener(ActionListener listener);
     public JLabel P1_nome();
     public JLabel P2_nome();
     public JLabel lbPontuacaoP1();

@@ -12,8 +12,6 @@ import java.awt.GridLayout;
 import javax.swing.BoxLayout;
 import java.awt.Component;
 import java.awt.FlowLayout;
-import javax.swing.UIManager;
-import java.awt.Font;
 
 
 public class JogoViewImpl extends JFrame {
@@ -48,7 +46,7 @@ public class JogoViewImpl extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel pPalavra = new JPanel();
-		pPalavra.setBounds(5, 5, 438, 89);
+		pPalavra.setBounds(5, 5, 438, 55);
 		contentPane.add(pPalavra);
 		GridBagLayout gbl_pPalavra = new GridBagLayout();
 		gbl_pPalavra.columnWidths = new int[]{438, 0};
@@ -67,13 +65,17 @@ public class JogoViewImpl extends JFrame {
 		pLetras.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
 		JLabel lblA = new JLabel("<html><u>A</u></html>");
-		lblA.setFont(new Font("Dialog", Font.BOLD, 37));
-		lblA.setForeground(UIManager.getColor("Button.foreground"));
 		
 		pLetras.add(lblA);
 		
-		JLabel label = new JLabel("_");
-		label.setFont(new Font("Dialog", Font.PLAIN, 12));
-		pLetras.add(label);
+		JPanel pAsteriscos = new JPanel();
+		GridBagConstraints gbc_pAsteriscos = new GridBagConstraints();
+		gbc_pAsteriscos.fill = GridBagConstraints.BOTH;
+		gbc_pAsteriscos.gridx = 0;
+		gbc_pAsteriscos.gridy = 1;
+		pPalavra.add(pAsteriscos, gbc_pAsteriscos);
+		
+		JLabel lblNewLabel_1 = new JLabel("-");
+		pAsteriscos.add(lblNewLabel_1);
 	}
 }

@@ -8,6 +8,7 @@ package utfpr.edu.br.presenter;/**
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.presenter.worker.BuscarDadosJogo;
 import utfpr.edu.br.presenter.worker.FindAdversario;
+import utfpr.edu.br.view.action.EnviarLetraActionListener;
 import utfpr.edu.br.view.telas.jogo.JogoView;
 
 import java.awt.*;
@@ -67,7 +68,9 @@ public class JogoPresenter {
         }
     }
     //Adiciona os listeners
-    public void setUpViewListeners() {}
+    public void setUpViewListeners() {
+        jogoView.addChutarLetraListener(new EnviarLetraActionListener(this));
+    }
 
     public JogoView getView() {
         return jogoView;

@@ -6,6 +6,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
 
 public class LoginViewImpl extends JFrame implements LoginView{
 
@@ -145,8 +146,10 @@ public class LoginViewImpl extends JFrame implements LoginView{
         return jtfJogar1.getText();
     }
     @Override
-    public void addAutenticarListener(ActionListener listener) {
+    public void addAutenticarListener(ActionListener listener,KeyListener listenerKey) {
        btJogar.addActionListener(listener);
+       jPasswordField1.addKeyListener(listenerKey);
+       jtfJogar1.addKeyListener(listenerKey);
     }
 
     @Override
