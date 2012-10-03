@@ -16,6 +16,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
     private JogadorDTO jogador;
     private JogadorDTO adversario;
     private JogoDTO jogo;
+    private boolean meuTurno = false;
     private List<PalavraDTO> palavras;
 	private JPanel contentPane;
 
@@ -440,6 +441,16 @@ public class JogoViewImpl extends JFrame implements JogoView{
     @Override
     public void setAdversario(JogadorDTO adversario) {
         this.adversario = adversario;
+    }
+
+    @Override
+    public boolean meuTurno() {
+        return meuTurno;
+    }
+
+    @Override
+    public void setMeuTurno(boolean meuTurno) {
+        this.meuTurno = meuTurno;
     }
 
     @Override

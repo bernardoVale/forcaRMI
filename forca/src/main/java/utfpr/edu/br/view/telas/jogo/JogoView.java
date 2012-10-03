@@ -33,6 +33,8 @@ public interface JogoView {
     public List<PalavraDTO> palavras();
     public void setPalavras(List<PalavraDTO> palavras);
     public void setAdversario(JogadorDTO adversario);
+    public boolean meuTurno();
+    public void setMeuTurno(boolean meuTurno);
     public JFrame root();
     /**
      * Organiza e mostra a tela

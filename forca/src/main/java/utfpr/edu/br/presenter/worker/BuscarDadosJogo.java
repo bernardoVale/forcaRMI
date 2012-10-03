@@ -7,6 +7,7 @@ package utfpr.edu.br.presenter.worker;/**
 
 import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.dto.DadosDoJogoDTO;
+import utfpr.edu.br.presenter.JogoPresenter;
 import utfpr.edu.br.rmi.RMIClient;
 import utfpr.edu.br.util.StringUtil;
 import utfpr.edu.br.view.telas.jogo.JogoView;
@@ -20,9 +21,11 @@ import java.util.concurrent.ExecutionException;
  */
 public class BuscarDadosJogo extends SwingWorker<DadosDoJogoDTO,Void>{
     private final JogoView view;
+    private final JogoPresenter presenter;
 
-    public BuscarDadosJogo(JogoView view) {
+    public BuscarDadosJogo(JogoView view, JogoPresenter presenter) {
         this.view = view;
+        this.presenter = presenter;
     }
     RetornoValidacao rv = new RetornoValidacao(false);
     @Override
@@ -42,6 +45,8 @@ public class BuscarDadosJogo extends SwingWorker<DadosDoJogoDTO,Void>{
             view.setJogo(get().getJogo());
             popularPalavra();
             mascararPalavras();
+            iniciarJogada();//Seta a vez do camarada
+
         } catch (InterruptedException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         } catch (ExecutionException e) {
@@ -64,7 +69,7 @@ public class BuscarDadosJogo extends SwingWorker<DadosDoJogoDTO,Void>{
             //letra.setText("<html><u>"+String.valueOf((palavra[i - 1])).toUpperCase()+"</u></html>");
             //letra.setFont(new Font("Tahoma", 0, 40));
             asterisco.setText("<html><u>"+asteriscoText+"</u></html>");
-            asterisco.setFont(new Font("Tahoma", 0, 40));
+            asterisco.setFont(new Font("Tahoma", 0, 50));
             view.pLetras().add(asterisco);
             view.pLetras().revalidate();
             view.root().validate();
@@ -77,6 +82,12 @@ public class BuscarDadosJogo extends SwingWorker<DadosDoJogoDTO,Void>{
                       (StringUtil.mascararTexto(view.palavras().get(i).getNome()));
             System.out.println("Nome:"+view.palavras().get(i).getNome());
             System.out.println("Mascara:"+view.palavras().get(i).getNomeMascarado());
+        }
+    }
+    private void iniciarJogada() {
+        //A regra para o jogador que começa jogando e quem tem a menor(oldfag) id ;)
+        if(view.jogador().getId()>view.adversario().getId()){
+            view.setMeuTurno(true);
         }
     }
 }

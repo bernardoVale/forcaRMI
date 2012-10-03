@@ -52,14 +52,20 @@ public class JogoPresenter {
     }
 
     public void buscarDadosDoJogo() {
-         BuscarDadosJogo worker = new BuscarDadosJogo(jogoView);
+         BuscarDadosJogo worker = new BuscarDadosJogo(jogoView,this);
         try {
             worker.execute();
         } catch (Exception e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
+    public void iniciarRodada() {
+        if(getView().meuTurno()){ //Se e meu turno eu tenho de chamar um escutador do botao chutar
 
+        }else{//Se nao e meu turno eu tenho que travar alguns componentes ate que seja meu turno
+
+        }
+    }
     //Adiciona os listeners
     public void setUpViewListeners() {}
 
