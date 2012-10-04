@@ -83,9 +83,13 @@ public class JogoViewImpl extends JFrame implements JogoView{
         pEnviar = new JPanel();
         pEnviar.setBounds(96, 610, 514, 92);
         jButton1 = new JButton();
+        jButton1.setBounds(198, 45, 88, 34);
         jTextField1 = new JTextField();
+        jTextField1.setBounds(50, 45, 130, 34);
         jRadioButton1 = new JRadioButton();
+        jRadioButton1.setBounds(199, 0, 84, 33);
         jRadioButton2 = new JRadioButton();
+        jRadioButton2.setBounds(50, 0, 104, 33);
         lbBackground = new JLabel();
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -236,38 +240,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         jRadioButton2.setText("Chutar");
         
         JButton btnDesistir = new JButton("Desistir");
-
-        GroupLayout pEnviarLayout = new GroupLayout(pEnviar);
-        pEnviarLayout.setHorizontalGroup(
-        	pEnviarLayout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(pEnviarLayout.createSequentialGroup()
-        			.addGap(50)
-        			.addGroup(pEnviarLayout.createParallelGroup(Alignment.LEADING)
-        				.addGroup(pEnviarLayout.createSequentialGroup()
-        					.addComponent(jRadioButton2)
-        					.addGap(45)
-        					.addComponent(jRadioButton1))
-        				.addGroup(pEnviarLayout.createSequentialGroup()
-        					.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
-        					.addGap(18)
-        					.addComponent(jButton1)
-        					.addPreferredGap(ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
-        					.addComponent(btnDesistir))))
-        );
-        pEnviarLayout.setVerticalGroup(
-        	pEnviarLayout.createParallelGroup(Alignment.TRAILING)
-        		.addGroup(pEnviarLayout.createSequentialGroup()
-        			.addGroup(pEnviarLayout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jRadioButton2)
-        				.addComponent(jRadioButton1))
-        			.addPreferredGap(ComponentPlacement.UNRELATED)
-        			.addGroup(pEnviarLayout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-        				.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
-        			.addContainerGap())
-        		.addComponent(btnDesistir)
-        );
-        pEnviar.setLayout(pEnviarLayout);
+        btnDesistir.setBounds(447, 62, 67, 29);
         panelLobby.setLayout(null);
 
         gridBagConstraints = new GridBagConstraints();
@@ -317,6 +290,12 @@ public class JogoViewImpl extends JFrame implements JogoView{
 
 
         panelLobby.add(pEnviar);
+        pEnviar.setLayout(null);
+        pEnviar.add(jRadioButton2);
+        pEnviar.add(jRadioButton1);
+        pEnviar.add(jTextField1);
+        pEnviar.add(jButton1);
+        pEnviar.add(btnDesistir);
         lbCarregando = new JLabel("");
         lbCarregando.setIcon(new ImageIcon(getClass().getResource("/carregando.gif")));
         lbCarregando.setBounds(447, 159, 128, 128);

@@ -60,7 +60,6 @@ public class BuscarDadosJogo extends SwingWorker<DadosDoJogoDTO,Void>{
     private void popularPalavra() {
         //JLabel letra;
         JLabel asterisco;
-        String asteriscoText = "*";
         char[] palavra =  view.palavras().get(0).getNome().toCharArray();
         int numLetras = palavra.length;
         for(int i=1;i<=numLetras;i++){
@@ -68,8 +67,9 @@ public class BuscarDadosJogo extends SwingWorker<DadosDoJogoDTO,Void>{
             asterisco = new JLabel();
             //letra.setText("<html><u>"+String.valueOf((palavra[i - 1])).toUpperCase()+"</u></html>");
             //letra.setFont(new Font("Tahoma", 0, 40));
-            asterisco.setText("<html><u>"+asteriscoText+"</u></html>");
+            asterisco.setText("<html><u>*</u></html>");
             asterisco.setFont(new Font("Tahoma", 0, 50));
+            view.palavraAtualPopulada().add(asterisco);//adiciona no vetor atual
             view.pLetras().add(asterisco);
             view.pLetras().revalidate();
             view.root().validate();

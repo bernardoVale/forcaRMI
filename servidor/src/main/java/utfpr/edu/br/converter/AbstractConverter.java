@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Converter Abstrato.
  *
- * @author Carlos A Becker
+ * @author Bernardo Vale
  */
 public abstract class AbstractConverter<B extends IBean, D extends DTO> {
 

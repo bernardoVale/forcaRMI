@@ -12,17 +12,14 @@ import javax.swing.text.MaskFormatter;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class JogoViewImpl extends JFrame implements JogoView{
 
     private JogadorDTO jogador;
     private JogadorDTO adversario;
-    private List<JLabel> palavraAtualPopulada = new ArrayList<JLabel>();
     private JogoDTO jogo;
     private boolean meuTurno = false;
-    private int rodadaAtual=1;
     private List<PalavraDTO> palavras;
 	private JPanel contentPane;
 
@@ -72,6 +69,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         lbPontuacaoP1.setBounds(400, 141, 38, 52);
         pLetrasErradas = new JPanel();
         pLetrasErradas.setBounds(360, 211, 300, 263);
+
         letra4 = new JLabel();
         letra7 = new JLabel();
         letra1 = new JLabel();
@@ -88,18 +86,10 @@ public class JogoViewImpl extends JFrame implements JogoView{
         pEnviar = new JPanel();
         pEnviar.setBounds(96, 610, 514, 92);
         jButton1 = new JButton();
-        jButton1.setBounds(198, 45, 118, 34);
-        jtfEnviar = new JFormattedTextField(setMascara("U"));
+        jtfEnviar = new JFormattedTextField();
         jtfEnviar.setBounds(50, 45, 130, 34);
-
         rbLetra = new JRadioButton();
-        rbLetra.setBounds(50, 0, 104, 33);
         rbChutar = new JRadioButton();
-        rbChutar.setBounds(199, 0, 114, 33);
-        rbLetra.setSelected(true);//padrao da letra
-        btnDesistir = new JButton();
-        btnDesistir.setBounds(417, 62, 97, 29);
-
 
         lbBackground = new JLabel();
 
@@ -252,7 +242,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         rbChutar.setFont(new Font("Tahoma", 0, 24)); // NOI18N
         rbChutar.setText("Chutar");
         
-        btnDesistir.setText("Desistir");
+        JButton btnDesistir = new JButton("Desistir");
 
         pEnviar.setLayout(null);
         pEnviar.add(jButton1);
@@ -322,7 +312,6 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	    private JButton jButton1;
 	    private JRadioButton rbLetra;
 	    private JRadioButton rbChutar;
-        private JButton btnDesistir;
 	    private JFormattedTextField jtfEnviar;
 	    private JLabel lbBackground;
 	    private JLabel lbP1;
@@ -350,16 +339,6 @@ public class JogoViewImpl extends JFrame implements JogoView{
         private JLabel lbCarregando;
 
     @Override
-    public List<JLabel> palavraAtualPopulada() {
-        return palavraAtualPopulada;
-    }
-
-    @Override
-    public void setPalavraAtualPopulada(List<JLabel> palavraAtualPopulada) {
-        this.palavraAtualPopulada = palavraAtualPopulada;
-    }
-
-    @Override
     public JFormattedTextField jtfEnviar() {
         return jtfEnviar;
     }
@@ -378,7 +357,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
 
     @Override
     public void addChutarLetraListener(ActionListener listener) {
-         jButton1.addActionListener(listener);
+
     }
 
     @Override
@@ -504,11 +483,6 @@ public class JogoViewImpl extends JFrame implements JogoView{
     @Override
     public JFrame root() {
         return this;
-    }
-
-    @Override
-    public int rodadaAtual() {
-        return rodadaAtual;
     }
 
     @Override

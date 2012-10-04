@@ -8,21 +8,14 @@ import utfpr.edu.br.dto.PalavraDTO;
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.text.MaskFormatter;
 import java.awt.*;
-import java.awt.event.ActionListener;
-import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class JogoViewImpl extends JFrame implements JogoView{
 
     private JogadorDTO jogador;
     private JogadorDTO adversario;
-    private List<JLabel> palavraAtualPopulada = new ArrayList<JLabel>();
     private JogoDTO jogo;
-    private boolean meuTurno = false;
-    private int rodadaAtual=1;
     private List<PalavraDTO> palavras;
 	private JPanel contentPane;
 
@@ -48,7 +41,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	public JogoViewImpl() {
 		GridBagConstraints gridBagConstraints;
 
-        bgRadioButton = new ButtonGroup();
+        buttonGroup1 = new ButtonGroup();
         panelLobby = new JPanel();
         lbP2 = new JLabel();
         lbP2.setBounds(672, 58, 106, 28);
@@ -82,29 +75,19 @@ public class JogoViewImpl extends JFrame implements JogoView{
         letra9 = new JLabel();
         letra3 = new JLabel();
         pPalavras = new JPanel();
-        pPalavras.setBounds(96, 498, 800, 100);
-        pLetras = new JPanel();
+        pPalavras.setBounds(96, 498,this.getWidth(),this.getHeight());
+        pPalavras.setBackground(Color.RED);
+        JPanel pLetras = new JPanel();
+        JPanel pAsterisco = new JPanel();
 
         pEnviar = new JPanel();
         pEnviar.setBounds(96, 610, 514, 92);
         jButton1 = new JButton();
-        jButton1.setBounds(198, 45, 118, 34);
-        jtfEnviar = new JFormattedTextField(setMascara("U"));
-        jtfEnviar.setBounds(50, 45, 130, 34);
-
-        rbLetra = new JRadioButton();
-        rbLetra.setBounds(50, 0, 104, 33);
-        rbChutar = new JRadioButton();
-        rbChutar.setBounds(199, 0, 114, 33);
-        rbLetra.setSelected(true);//padrao da letra
-        btnDesistir = new JButton();
-        btnDesistir.setBounds(417, 62, 97, 29);
-
-
+        jTextField1 = new JTextField();
+        jRadioButton1 = new JRadioButton();
+        jRadioButton2 = new JRadioButton();
         lbBackground = new JLabel();
 
-        bgRadioButton.add(rbLetra);
-        bgRadioButton.add(rbChutar);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new GridBagLayout());
 
@@ -244,23 +227,47 @@ public class JogoViewImpl extends JFrame implements JogoView{
         jButton1.setFont(new Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("Enviar");
 
-        jtfEnviar.setFont(new Font("Tahoma", 0, 24)); // NOI18N
+        jTextField1.setFont(new Font("Tahoma", 0, 24)); // NOI18N
 
-        rbLetra.setFont(new Font("Tahoma", 0, 24)); // NOI18N
-        rbLetra.setText("Letra");
+        jRadioButton1.setFont(new Font("Tahoma", 0, 24)); // NOI18N
+        jRadioButton1.setText("Letra");
 
-        rbChutar.setFont(new Font("Tahoma", 0, 24)); // NOI18N
-        rbChutar.setText("Chutar");
+        jRadioButton2.setFont(new Font("Tahoma", 0, 24)); // NOI18N
+        jRadioButton2.setText("Chutar");
         
-        btnDesistir.setText("Desistir");
+        JButton btnDesistir = new JButton("Desistir");
 
-        pEnviar.setLayout(null);
-        pEnviar.add(jButton1);
-        pEnviar.add(jtfEnviar);
-        pEnviar.add(rbChutar);
-        pEnviar.add(rbLetra);
-        pEnviar.add(btnDesistir);
-
+        GroupLayout pEnviarLayout = new GroupLayout(pEnviar);
+        pEnviarLayout.setHorizontalGroup(
+        	pEnviarLayout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(pEnviarLayout.createSequentialGroup()
+        			.addGap(50)
+        			.addGroup(pEnviarLayout.createParallelGroup(Alignment.LEADING)
+        				.addGroup(pEnviarLayout.createSequentialGroup()
+        					.addComponent(jRadioButton2)
+        					.addGap(45)
+        					.addComponent(jRadioButton1))
+        				.addGroup(pEnviarLayout.createSequentialGroup()
+        					.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+        					.addGap(18)
+        					.addComponent(jButton1)
+        					.addPreferredGap(ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+        					.addComponent(btnDesistir))))
+        );
+        pEnviarLayout.setVerticalGroup(
+        	pEnviarLayout.createParallelGroup(Alignment.TRAILING)
+        		.addGroup(pEnviarLayout.createSequentialGroup()
+        			.addGroup(pEnviarLayout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(jRadioButton2)
+        				.addComponent(jRadioButton1))
+        			.addPreferredGap(ComponentPlacement.UNRELATED)
+        			.addGroup(pEnviarLayout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
+        			.addContainerGap())
+        		.addComponent(btnDesistir)
+        );
+        pEnviar.setLayout(pEnviarLayout);
         panelLobby.setLayout(null);
 
         gridBagConstraints = new GridBagConstraints();
@@ -280,7 +287,6 @@ public class JogoViewImpl extends JFrame implements JogoView{
         panelLobby.add(P2_nome);
         panelLobby.add(pJogador2);
 
-
         //Adiciono as propriedades do grid para a palavra
         GridBagLayout gbl_pPalavras = new GridBagLayout();
         gbl_pPalavras.columnWidths = new int[]{0, 0};
@@ -297,6 +303,17 @@ public class JogoViewImpl extends JFrame implements JogoView{
         gbc_pLetras.gridy = 0;
         pPalavras.add(pLetras, gbc_pLetras);
 
+        JLabel lblNewLabel = new JLabel("New label");
+        pLetras.add(lblNewLabel);
+        //Adiciono o painel de asteriscos
+        GridBagConstraints gbc_pAsteriscos = new GridBagConstraints();
+        gbc_pAsteriscos.fill = GridBagConstraints.BOTH;
+        gbc_pAsteriscos.gridx = 0;
+        gbc_pAsteriscos.gridy = 1;
+        pPalavras.add(pAsterisco, gbc_pAsteriscos);
+
+        JLabel lblNewLabel_1 = new JLabel("New label");
+        pAsterisco.add(lblNewLabel_1);
 
 
         panelLobby.add(pEnviar);
@@ -316,14 +333,13 @@ public class JogoViewImpl extends JFrame implements JogoView{
         panelLobby.add(pPalavras);
         pack();
 	}
-	    private JLabel P1_nome;
+	 private JLabel P1_nome;
 	    private JLabel P2_nome;
-	    private ButtonGroup bgRadioButton;
+	    private ButtonGroup buttonGroup1;
 	    private JButton jButton1;
-	    private JRadioButton rbLetra;
-	    private JRadioButton rbChutar;
-        private JButton btnDesistir;
-	    private JFormattedTextField jtfEnviar;
+	    private JRadioButton jRadioButton1;
+	    private JRadioButton jRadioButton2;
+	    private JTextField jTextField1;
 	    private JLabel lbBackground;
 	    private JLabel lbP1;
 	    private JLabel lbP2;
@@ -345,62 +361,10 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	    private JPanel pJogador2;
 	    private JPanel pPalavras;
         private JPanel pLetras;
+        private JPanel pLetrasSubilhado;
 	    private JPanel pLetrasErradas;
 	    private JPanel panelLobby;
         private JLabel lbCarregando;
-
-    @Override
-    public List<JLabel> palavraAtualPopulada() {
-        return palavraAtualPopulada;
-    }
-
-    @Override
-    public void setPalavraAtualPopulada(List<JLabel> palavraAtualPopulada) {
-        this.palavraAtualPopulada = palavraAtualPopulada;
-    }
-
-    @Override
-    public JFormattedTextField jtfEnviar() {
-        return jtfEnviar;
-    }
-
-    @Override
-    public MaskFormatter setMascara(String mascara) {
-        MaskFormatter mask = null;
-        try {
-            mask = new MaskFormatter(mascara);
-        } catch (ParseException e) {
-
-            e.printStackTrace();
-        }
-        return mask;
-    }
-
-    @Override
-    public void addChutarLetraListener(ActionListener listener) {
-         jButton1.addActionListener(listener);
-    }
-
-    @Override
-    public void addMascaraTextoListener(ActionListener listener) {
-        rbChutar.addActionListener(listener);
-        rbLetra.addActionListener(listener);
-    }
-
-    @Override
-    public void setJtfEnviar(JFormattedTextField jtfEnviar) {
-        this.jtfEnviar = jtfEnviar;
-    }
-
-    @Override
-    public JRadioButton rbChutar() {
-        return rbChutar;
-    }
-
-    @Override
-    public JRadioButton rbLetra() {
-        return rbLetra;
-    }
 
     @Override
     public JLabel P1_nome() {
@@ -453,10 +417,6 @@ public class JogoViewImpl extends JFrame implements JogoView{
     }
 
     @Override
-    public JPanel pPalavras() {
-        return pPalavras;
-    }
-    @Override
     public JogadorDTO jogador() {
         return jogador;
     }
@@ -492,23 +452,8 @@ public class JogoViewImpl extends JFrame implements JogoView{
     }
 
     @Override
-    public boolean meuTurno() {
-        return meuTurno;
-    }
-
-    @Override
-    public void setMeuTurno(boolean meuTurno) {
-        this.meuTurno = meuTurno;
-    }
-
-    @Override
     public JFrame root() {
         return this;
-    }
-
-    @Override
-    public int rodadaAtual() {
-        return rodadaAtual;
     }
 
     @Override

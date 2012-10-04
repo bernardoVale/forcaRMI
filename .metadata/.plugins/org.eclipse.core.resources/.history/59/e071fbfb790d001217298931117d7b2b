@@ -101,8 +101,7 @@ public class JogoViewImpl extends JFrame {
 		
 		bg.add(rdbtnNewRadioButton_1);
 		bg.add(rdbtnNewRadioButton);
-		JFormattedTextField formattedTextField = new JFormattedTextField(
-				setMascara("U"));
+		JFormattedTextField formattedTextField = new JFormattedTextField();
 		GridBagConstraints gbc_formattedTextField = new GridBagConstraints();
 		gbc_formattedTextField.fill = GridBagConstraints.HORIZONTAL;
 		gbc_formattedTextField.gridx = 0;

@@ -5,6 +5,7 @@ import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
 
 import javax.swing.*;
+import javax.swing.text.MaskFormatter;
 import java.awt.event.ActionListener;
 import java.util.List;
 
@@ -15,7 +16,16 @@ import java.util.List;
  * Time: 19:36
  */
 public interface JogoView {
-    void addChutarLetraListener(ActionListener listener);
+
+    public List<JLabel> palavraAtualPopulada();
+    public void setPalavraAtualPopulada(List<JLabel> palavraAtualPopulada);
+    public JFormattedTextField jtfEnviar();
+    public MaskFormatter setMascara(String mascara);
+    public void addChutarLetraListener(ActionListener listener);
+    public void addMascaraTextoListener(ActionListener listener);
+    public void setJtfEnviar(JFormattedTextField jtfEnviar);
+    public JRadioButton rbChutar();
+    public JRadioButton rbLetra();
     public JLabel P1_nome();
     public JLabel P2_nome();
     public JLabel lbPontuacaoP1();
@@ -37,6 +47,7 @@ public interface JogoView {
     public boolean meuTurno();
     public void setMeuTurno(boolean meuTurno);
     public JFrame root();
+    public int rodadaAtual();
     /**
      * Organiza e mostra a tela
      */

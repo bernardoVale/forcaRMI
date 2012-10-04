@@ -9,9 +9,13 @@ import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.presenter.worker.BuscarDadosJogo;
 import utfpr.edu.br.presenter.worker.FindAdversario;
 import utfpr.edu.br.view.action.EnviarLetraActionListener;
+import utfpr.edu.br.view.action.MascararTextoActionListener;
 import utfpr.edu.br.view.telas.jogo.JogoView;
 
+import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Bernardo Vale
@@ -70,6 +74,7 @@ public class JogoPresenter {
     //Adiciona os listeners
     public void setUpViewListeners() {
         jogoView.addChutarLetraListener(new EnviarLetraActionListener(this));
+        jogoView.addMascaraTextoListener(new MascararTextoActionListener(this));
     }
 
     public JogoView getView() {
@@ -78,5 +83,68 @@ public class JogoPresenter {
 
     public void setJogoView(JogoView jogoView) {
         this.jogoView = jogoView;
+    }
+
+    public void atualizaPosicoesPalavra(List<Integer> posicoes,String letra){
+        int cont = 0;
+        List<JLabel> letrasLabel = new ArrayList<JLabel>();
+        for(int j=0;j<jogoView.palavraAtualPopulada().size();j++){
+            //Verifica se tem asterisco, se n tiver tem q deixar com estava,ou seja, add de novo
+            if(jogoView.palavraAtualPopulada().get(j).getText().contains("*")){
+                //verifica em todas os encontros da letra se e igual a posicao que esta na palavra
+                for(int i=0;i<posicoes.size();i++){
+                    //se for igual adiciona naquele lugar a letra
+                    if(posicoes.get(i)==j){
+                        //Agora verifica se tem acento
+                        JLabel letraNova = new JLabel();
+                        letraNova.setFont(new Font("Tahoma",0,50));
+                        letraNova.setText("<html><u>"+pegaLetraNaoMascarada(j)+"</u><html>");
+                        letrasLabel.add(letraNova);
+                    }else{
+                        //Esse contador serve para verificar se
+                        cont++;
+                    }
+                }
+            }else {
+                letrasLabel.add(jogoView.palavraAtualPopulada().get(j));
+            }
+            if(cont==posicoes.size()){
+                JLabel letraNova = new JLabel();    //adiciona asterisco
+                letraNova.setFont(new Font("Tahoma",0,50));
+                letraNova.setText("<html><u>*</u><html>");
+                letrasLabel.add(letraNova);
+            }
+            cont = 0;
+        }
+        //Pede para adicionar novamente uma lista de labels no painel palavra
+        popularPalavraNovamente(letrasLabel);
+    }
+
+    private void popularPalavraNovamente(List<JLabel> letrasLabel){
+        //Remove tudo e atualiza a tela
+        jogoView.pLetras().removeAll();
+        jogoView.pLetras().revalidate();
+        jogoView.root().validate();
+        //For que adiciona tudo de novo e atualiza a tela
+        for (JLabel jLabel : letrasLabel) {
+            System.out.println(jLabel.getText());
+             jogoView.pLetras().add(jLabel);
+             jogoView.pLetras().revalidate();
+             jogoView.root().validate();
+        }
+        //Atualiza a lista para a proxima letra ;)
+        jogoView.setPalavraAtualPopulada(letrasLabel);
+    }
+
+    /**
+     * Metodo que pega a letra nao mascarada, em caso de acentos esse metodo teve de ser implementado
+     * @param posicao Local no qual se encontra a letra
+     * @return   Letra nao mascarada
+     */
+    private String pegaLetraNaoMascarada(int posicao) {
+        String letraNaoMascarada =
+                jogoView.palavras().get(jogoView.rodadaAtual()-1).getNome().substring(posicao, posicao+1);
+        System.out.println("Mascarada:"+letraNaoMascarada);
+        return letraNaoMascarada.toUpperCase();
     }
 }

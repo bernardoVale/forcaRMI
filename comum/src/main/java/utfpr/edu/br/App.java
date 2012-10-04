@@ -2,6 +2,8 @@ package utfpr.edu.br;
 
 import utfpr.edu.br.util.StringUtil;
 
+import java.util.List;
+
 /**
  * Hello world!
  *
@@ -14,10 +16,16 @@ public class App
         //String palavra = "íÍ";             //Maiusculo:205 Minusculo:237
         //String palavra = "óôõÓÔÕ";           //Maiusculo:211-213 Minusculo:243-245
         //String palavra = "úÚ";                 //Maiusculo:218 Minusculo:250
-        String palavra = "àáâãÀÁÂÃéêÉÊíÍóôõÓÔÕúÚ";
-        String palavraMascarada = "";
-        char[] palavraArray = palavra.toCharArray();
-        System.out.println(StringUtil.mascararTexto(palavra));
-
+        String palavra = "ANASTACIA";
+        String letraChute = "S";
+        List<Integer> posicoes;
+        posicoes = StringUtil.posicoesIguais(letraChute,palavra);
+        if(posicoes==null){
+            System.out.println("Errou");
+        }else{
+            for (Integer posicao : posicoes) {
+                System.out.println("Letra "+letraChute+" na posicao:"+posicao);
+            }
+        }
     }
 }

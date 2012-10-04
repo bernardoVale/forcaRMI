@@ -101,24 +101,23 @@ public class JogoViewImpl extends JFrame {
 		
 		bg.add(rdbtnNewRadioButton_1);
 		bg.add(rdbtnNewRadioButton);
-		JFormattedTextField formattedTextField = new JFormattedTextField(
-				setMascara("U"));
+		JFormattedTextField formattedTextField = new JFormattedTextField();
 		GridBagConstraints gbc_formattedTextField = new GridBagConstraints();
 		gbc_formattedTextField.fill = GridBagConstraints.HORIZONTAL;
 		gbc_formattedTextField.gridx = 0;
 		gbc_formattedTextField.gridy = 3;
 		pPalavra.add(formattedTextField, gbc_formattedTextField);
+		
+		MaskFormatter mascara;
+		try {
+			mascara = new MaskFormatter("*");
+			mascara.setValidCharacters("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+			mascara.install(formattedTextField);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		
 
 	}
-	
-	private MaskFormatter setMascara(String mascara) {  
-	    MaskFormatter mask = null;  
-	    try {  
-	        mask = new MaskFormatter(mascara);  
-	    } catch (ParseException e) {  
-	  
-	        e.printStackTrace();  
-	    }  
-	    return mask;  
-	}  
 }

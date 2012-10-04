@@ -61,6 +61,7 @@ public class JogadorFacadeImpl implements JogadorFacade{
             }
         }
     }
+
     @Override
     public RetornoValidacao adversario(JogadorDTO j) {
         RetornoValidacao rv = new RetornoValidacao();
