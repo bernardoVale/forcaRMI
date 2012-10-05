@@ -74,7 +74,6 @@ public class BuscarDadosJogo extends SwingWorker<DadosDoJogoDTO,Void>{
             view.pLetras().revalidate();
             view.root().validate();
         }
-
     }
     public void mascararPalavras(){
         for(int i=0;i<view.palavras().size();i++){

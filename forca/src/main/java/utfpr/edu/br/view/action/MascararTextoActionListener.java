@@ -28,11 +28,35 @@ public class MascararTextoActionListener implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (presenter.getView().rbChutar().isSelected()) {
-            doMascararTexto("UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
-        } else {
+
+            doMascararTexto(buscarQuantidadeLetra());
+
+        } else{
            doMascararTexto("U");
         }
     }
+
+    /**
+     * Metodo que busca seta uma string com o "U" x vezes, onde x e o total de letras da palavra populada
+     * U = e o caracter que representa SOMENTE LETRAS MAIUSCULAS no maskformatter
+     * a quantidade de "U" e a quantidade de letras que podera ser digitada naquele campo
+     * @return  por ex "UUUUU" o usuario podera digitar ate 5 letras maiusculas
+     */
+    private String buscarQuantidadeLetra() {
+        String mascara = "";
+        char[] caracteres =  //Gambia que seta a mascara para o numero de letras que tem na palavra
+                presenter.getView().palavras().get(presenter.getView().rodadaAtual()-1).getNome().toCharArray();
+        for(int i=0;i<caracteres.length;i++){
+            mascara += "U";
+        }
+        return mascara;
+    }
+
+    /**
+     * Adiciona a mascara ao campo JTFEnviar, o campo onde o usuario digita a letra ou a palavra que quer chutar
+     *
+     * @param mascara String com a quantidade de letras que podera ser digitada
+     */
     private void doMascararTexto(String mascara){
         JFormattedTextField.AbstractFormatter ab = null;
         try {

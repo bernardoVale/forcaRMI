@@ -30,6 +30,8 @@ public class EnviarLetraActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(view.rbLetra().isSelected()){
             doEnviarLetra();
+        }else if(view.rbChutar().isSelected()){
+            doEnviarChute();
         }
     }
 
@@ -43,10 +45,29 @@ public class EnviarLetraActionListener implements ActionListener {
        List<Integer> posicoes;
        posicoes = StringUtil.posicoesIguais(letra,palavra.getNomeMascarado());
        if(posicoes==null){
+           //todo Adicionar parte do corpo ao jogador
            System.out.println("ERROU!");
            //errou a letra tem que atualizar o boneco
        }else{
            presenter.atualizaPosicoesPalavra(posicoes,letra);
+       }
+    }
+
+    /**
+     * Verifica se o jogador acertou o "chute" da palavra
+     */
+    private void doEnviarChute(){
+       String chute = view.jtfEnviar().getText();
+        System.out.println(view.jtfEnviar());
+        System.out.println(view.jtfEnviar().getText());
+       PalavraDTO palavra = view.palavras().get(view.rodadaAtual()-1);
+       if(chute.equals(palavra.getNomeMascarado().toUpperCase()) ||
+               chute.equals(palavra.getNome().toUpperCase())){
+           presenter.atualizaPalavraCerta();
+           //Acertou
+       }else{
+           //todo Adicionar parte do corpo ao jogador
+           System.out.printf("Errou feio seu fdp");
        }
     }
 

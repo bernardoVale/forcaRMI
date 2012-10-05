@@ -3,13 +3,40 @@
   <component name="ChangeListManager">
     <list default="true" id="2d7e4036-3454-4dd4-811d-5c11fa7dd43c" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/17/a031f81a260c001214a1906194f29dc9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/26/30ade3e11b0800121e8ace47a7675297" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/2d/e09bf46c1d0800121e8ace47a7675297" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/31/409e224a1e0800121e8ace47a7675297" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/4/b0643e5e1c0800121e8ace47a7675297" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/6f/1036b07f1b0800121e8ace47a7675297" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/74/a0b27d83380800121e8ace47a7675297" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/75/c0f0fa1a260c001214a1906194f29dc9" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/7a/6077fc1a260c001214a1906194f29dc9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/80/60f42fa01c0800121e8ace47a7675297" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/91/702dfa1a260c001214a1906194f29dc9" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/org.eclipse.jdt.core/state.dat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/ad/50a388331e0800121e8ace47a7675297" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/c6/70bd23681e0800121e8ace47a7675297" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/c7/403406a41d0800121e8ace47a7675297" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/ca/f094a3591e0800121e8ace47a7675297" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/df/e0bfcdb61c0800121e8ace47a7675297" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/e/3057bbe51d0800121e8ace47a7675297" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/e1/30ddeb03020900121624a3958b644d4e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/f1/c03783461b0800121e8ace47a7675297" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/f4/109a443be90800121624a3958b644d4e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.markers.snap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.syncinfo.snap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.markers.snap" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/2.tree" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/4.tree" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/5.tree" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.snap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/5.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.team.cvs.core/.running" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Teste/bin/utfpr/edu/br/view/jogo/JogoViewImpl$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/presenter/AdversarioThread.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/presenter/JogoPresenter$1.class" afterPath="" />
@@ -17,39 +44,21 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/presenter/MyThread.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/servidor/target/classes/utfpr/edu/br/controller/ControladorCategoriaImpl.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/servidor/target/classes/utfpr/edu/br/util/JogadoresSession.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.indexes/e4/history.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.indexes/e4/history.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.markers.snap" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.markers.snap" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.syncinfo.snap" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.syncinfo.snap" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.markers.snap" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.markers.snap" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.indexes/e4/e9/b6/50/a5/ed/history.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.indexes/e4/e9/b6/50/a5/ed/history.index" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.markers" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/.markers" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/org.eclipse.jdt.core/state.dat" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Teste/org.eclipse.jdt.core/state.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.snap" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.snap" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/2792326998.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/2792326998.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/0.png" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/0.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/1.png" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/2.png" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/3.png" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/5.png" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teste/bin/JogoViewImpl$1.class" afterPath="$PROJECT_DIR$/Teste/bin/JogoViewImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teste/bin/JogoViewImpl.class" afterPath="$PROJECT_DIR$/Teste/bin/JogoViewImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teste/bin/utfpr/edu/br/view/jogo/JogoViewImpl.class" afterPath="$PROJECT_DIR$/Teste/bin/utfpr/edu/br/view/jogo/JogoViewImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/telas/jogo/JogoViewImpl$1.class" afterPath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/telas/jogo/JogoViewImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/telas/jogo/JogoViewImpl.class" afterPath="$PROJECT_DIR$/forca/target/classes/utfpr/edu/br/view/telas/jogo/JogoViewImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.log" afterPath="$PROJECT_DIR$/.metadata/.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teste/src/JogoViewImpl.java" afterPath="$PROJECT_DIR$/Teste/src/JogoViewImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/jogo/JogoViewImpl.java" afterPath="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/jogo/JogoViewImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/App.java" afterPath="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/util/StringUtil.java" afterPath="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/util/StringUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench.texteditor/dialog_settings.xml" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench.texteditor/dialog_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/BuscarDadosJogo.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/BuscarDadosJogo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoView.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoViewImpl.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoViewImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/converter/AbstractConverter.java" afterPath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/converter/AbstractConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/facade/JogadorFacadeImpl.java" afterPath="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/facade/JogadorFacadeImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/MascararTextoActionListener.java" afterPath="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/MascararTextoActionListener.java" />
     </list>
     <ignored path="forcaRMI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -342,7 +351,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="89" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="155" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -355,7 +364,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="90" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="157" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -368,7 +377,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="92" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="156" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -381,7 +390,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="94" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="158" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -394,7 +403,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="96" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java" line="59" class="utfpr.edu.br.view.action.EnviarLetraActionListener" package="utfpr.edu.br.view.action">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -407,7 +416,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="98" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java" line="62" class="utfpr.edu.br.view.action.EnviarLetraActionListener" package="utfpr.edu.br.view.action">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -420,7 +429,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="99" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java" line="63" class="utfpr.edu.br.view.action.EnviarLetraActionListener" package="utfpr.edu.br.view.action">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -433,7 +442,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="100" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java" line="69" class="utfpr.edu.br.view.action.EnviarLetraActionListener" package="utfpr.edu.br.view.action">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -446,7 +455,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="101" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java" line="60" class="utfpr.edu.br.view.action.EnviarLetraActionListener" package="utfpr.edu.br.view.action">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -459,7 +468,59 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="119" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java" line="61" class="utfpr.edu.br.view.action.EnviarLetraActionListener" package="utfpr.edu.br.view.action">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java" line="65" class="utfpr.edu.br.view.action.EnviarLetraActionListener" package="utfpr.edu.br.view.action">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="122" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="123" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="125" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -485,7 +546,46 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="130" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="126" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="127" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="129" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="128" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -499,162 +599,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="131" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="132" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="104" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="108" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="111" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="112" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="113" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="114" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="110" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="144" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="146" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="145" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" line="147" class="utfpr.edu.br.presenter.JogoPresenter" package="utfpr.edu.br.presenter">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -729,9 +673,7 @@
         <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoViewImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="358" column="43" selection-start="14167" selection-end="14167" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#633#641#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -739,7 +681,16 @@
       <file leaf-file-name="BuscarDadosJogo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/BuscarDadosJogo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="39" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.0">
+            <state line="75" column="9" selection-start="2628" selection-end="2628" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MascararTextoActionListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/MascararTextoActionListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="0" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -748,10 +699,8 @@
       <file leaf-file-name="EnviarLetraActionListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="55" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="65" column="0" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -777,10 +726,11 @@
       <file leaf-file-name="JogoPresenter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="85" selection-start="3527" selection-end="3527" vertical-scroll-proportion="0.3922652">
+            <state line="131" column="0" selection-start="4976" selection-end="4976" vertical-scroll-proportion="0.24675325">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2899#2907#0" expanded="true" />
+                <element signature="e#4551#4559#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -820,14 +770,14 @@
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/facade/JogadorFacadeImpl.java" />
         <option value="$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/converter/AbstractConverter.java" />
         <option value="$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/JogoViewImpl.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/MascararTextoActionListener.java" />
         <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/App.java" />
-        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java" />
         <option value="$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/util/StringUtil.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoView.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoViewImpl.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/BuscarDadosJogo.java" />
+        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/MascararTextoActionListener.java" />
         <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java" />
+        <option value="$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java" />
       </list>
     </option>
   </component>
@@ -878,9 +828,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
     <option name="y" value="27" />
-    <option name="width" value="1366" />
-    <option name="height" value="741" />
+    <option name="width" value="1368" />
+    <option name="height" value="742" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -910,22 +861,22 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forcaRMI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1966,230 +1917,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="comum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="comum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="comum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="comum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="br" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="comum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="br" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="comum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="br" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="md5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="comum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="br" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forcaRMI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="comum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="br" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -2787,8 +2514,8 @@
       <item index="1" class="java.lang.String" itemvalue="Application.Bootstrap" />
       <item index="2" class="java.lang.String" itemvalue="Application.Teste" />
       <item index="3" class="java.lang.String" itemvalue="Query Language Console.Default" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Application" />
-      <item index="5" class="java.lang.String" itemvalue="Application.App" />
+      <item index="4" class="java.lang.String" itemvalue="Application.App" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Application" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -2897,8 +2624,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6338983" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3237288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2907,9 +2634,9 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.8" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32542372" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.6779661" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43559322" sideWeight="0.68133533" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43559322" sideWeight="0.67754173" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.659322" sideWeight="0.31335357" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2677966" sideWeight="0.36722305" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31866464" sideWeight="0.22372882" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -2918,8 +2645,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31866464" sideWeight="0.22372882" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.6491525" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39984825" sideWeight="0.6118644" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31866464" sideWeight="0.56440675" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2677966" sideWeight="0.6312595" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31866464" sideWeight="0.73220336" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2677966" sideWeight="0.62746584" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.8" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.65084743" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -3036,129 +2763,94 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/servidor/src/main/java/utfpr/edu/br/converter/PalavraConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="630" selection-end="630" vertical-scroll-proportion="0.63013697">
-          <folding />
-        </state>
+        <state line="24" column="0" selection-start="630" selection-end="630" vertical-scroll-proportion="0.63013697" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Teste/src/utfpr/edu/br/view/JogoViewImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="43" selection-start="2631" selection-end="2631" vertical-scroll-proportion="-2.3">
-          <folding />
-        </state>
+        <state line="89" column="43" selection-start="2631" selection-end="2631" vertical-scroll-proportion="-2.3" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/java/text/Format.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="25" selection-start="4767" selection-end="4767" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#15764#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="132" column="25" selection-start="4767" selection-end="4767" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/java/text/NumberFormat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="22" selection-start="6597" selection-end="6597" vertical-scroll-proportion="2.5414364">
-          <folding />
-        </state>
+        <state line="181" column="22" selection-start="6597" selection-end="6597" vertical-scroll-proportion="2.5414364" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/javax/swing/JFormattedTextField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="905" column="33" selection-start="32920" selection-end="32920" vertical-scroll-proportion="0.07735849">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/javax/swing/text/MaskFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="11" selection-start="6687" selection-end="6687" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#35987#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#17918#17933#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="905" column="33" selection-start="32920" selection-end="32920" vertical-scroll-proportion="0.07735849" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/javax/swing/text/DefaultFormatterFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="56" selection-start="3517" selection-end="3595" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/MascararTextoActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="915" selection-end="915" vertical-scroll-proportion="0.3895349">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="111" column="56" selection-start="3517" selection-end="3595" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="33" selection-start="721" selection-end="721" vertical-scroll-proportion="0.5095694">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="21" column="33" selection-start="721" selection-end="721" vertical-scroll-proportion="0.5095694" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/java/awt/Container.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="994" column="16" selection-start="38576" selection-end="38576" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="994" column="16" selection-start="38576" selection-end="38576" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="20" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="20" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoViewImpl.java">
+    <entry file="jar:///usr/lib/jvm/jdk1.7.0_04/src.zip!/javax/swing/text/MaskFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="358" column="43" selection-start="14167" selection-end="14167" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#633#641#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/util/StringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="2123" selection-end="2123" vertical-scroll-proportion="0.0">
+        <state line="193" column="22" selection-start="6833" selection-end="6833" vertical-scroll-proportion="0.12237762">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/worker/BuscarDadosJogo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="39" selection-start="2343" selection-end="2343" vertical-scroll-proportion="0.0">
+        <state line="75" column="9" selection-start="2628" selection-end="2628" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comum/src/main/java/utfpr/edu/br/util/StringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="0" selection-start="2123" selection-end="2123" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/telas/jogo/JogoViewImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="358" column="43" selection-start="14167" selection-end="14167" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/MascararTextoActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/view/action/EnviarLetraActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="55" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="65" column="0" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/forca/src/main/java/utfpr/edu/br/presenter/JogoPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="85" selection-start="3527" selection-end="3527" vertical-scroll-proportion="0.3922652">
+        <state line="131" column="0" selection-start="4976" selection-end="4976" vertical-scroll-proportion="0.24675325">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2899#2907#0" expanded="true" />
+            <element signature="e#4551#4559#0" expanded="true" />
           </folding>
         </state>
       </provider>

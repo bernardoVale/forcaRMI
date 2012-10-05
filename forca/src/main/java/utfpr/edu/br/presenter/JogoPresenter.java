@@ -119,7 +119,18 @@ public class JogoPresenter {
         //Pede para adicionar novamente uma lista de labels no painel palavra
         popularPalavraNovamente(letrasLabel);
     }
-
+    public void atualizaPalavraCerta(){
+        List<JLabel> letrasLabel = new ArrayList<JLabel>();
+        char[] array = jogoView.palavras().get(jogoView.rodadaAtual()-1).getNome()
+                .toUpperCase().toCharArray();
+        for(int j=0;j<jogoView.palavraAtualPopulada().size();j++){
+            JLabel letraNova = new JLabel();
+            letraNova.setFont(new Font("Tahoma",0,50));
+            letraNova.setText("<html><u>"+array[j]+"</u><html>");
+            letrasLabel.add(letraNova);
+        }
+        popularPalavraNovamente(letrasLabel);
+    }
     private void popularPalavraNovamente(List<JLabel> letrasLabel){
         //Remove tudo e atualiza a tela
         jogoView.pLetras().removeAll();
