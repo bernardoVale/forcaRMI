@@ -21,6 +21,8 @@ import utfpr.edu.br.util.Erros;
 import utfpr.edu.br.util.session.JogosSession;
 
 import javax.inject.Inject;
+import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -84,7 +86,7 @@ public class JogoFacadeImpl implements JogoFacade{
     }
 
     @Override
-    public RetornoValidacao iniciarPartida(JogadorDTO jogador, JogadorDTO adversario) {
+    public synchronized RetornoValidacao iniciarPartida(JogadorDTO jogador, JogadorDTO adversario) {
         RetornoValidacao rv;
         JogadoresDoJogoDao daoJDJ = Getinjector.getInstance().getInstance(JogadoresDoJogoDao.class);
         Integer jogoId = daoJDJ.getJogo(jogador.getId(), adversario.getId());
@@ -97,8 +99,45 @@ public class JogoFacadeImpl implements JogoFacade{
         if(!rv.isOk()){
             return rv;
         }
-        return new RetornoValidacao(new DadosDoJogoDTO(jogo, (List<PalavraDTO>) rv.getObjeto()));
+        //Salvar na sessao e retorna os dados ao cliente
+        return new RetornoValidacao(salvarJogoSessao
+                (jogador,adversario,jogo, (List<PalavraDTO>) rv.getObjeto()));
     }
+
+    /**
+     * Salva um jogo na sessao, um jogo ativo. A partir dele manipularemos todo um jogo
+     * @param jogador   Jogador1
+     * @param adversario  Jogador 2
+     * @param jogo  Dados do Jogo
+     * @param palavras Palavras daquele jogo
+     */
+    private synchronized JogoAtivoDTO salvarJogoSessao(JogadorDTO jogador, JogadorDTO adversario
+            , JogoDTO jogo,List<PalavraDTO> palavras) {
+        JogadorAtivoDTO jogador1 = new JogadorAtivoDTO(jogador,0);
+        JogadorAtivoDTO jogador2 = new JogadorAtivoDTO(adversario,0);
+        DadosDoJogoDTO dadosJogo = new DadosDoJogoDTO(jogo,palavras);
+        for (JogoAtivoDTO jogoAtivoDTO : JogosSession.getJogos()) {
+                //Primeiro jogador ja veio aqui e salvo meu filho, agora vai em paz
+              if(jogoAtivoDTO.getJogoDTO().getJogo().getId().equals(dadosJogo.getJogo().getId())){
+                  return jogoAtivoDTO;
+              }
+        }
+        //A regra para o jogador que começa jogando e quem tem a menor(oldfag) id ;)
+        if(jogador.getId()>adversario.getId()){
+            jogador1.setMeuTurno(false);
+            jogador2.setMeuTurno(true);
+        }else{
+            jogador1.setMeuTurno(true);
+            jogador2.setMeuTurno(false);
+        }
+        JogoAtivoDTO jogoAtivo = new JogoAtivoDTO(jogador1, jogador2, dadosJogo, new ArrayList<String>(),
+        new ArrayList<JLabel>());
+        JogosSession.getJogos().add
+                (jogoAtivo);
+        System.out.println("Quantidade de jogos:" + JogosSession.getJogos().size());
+        return jogoAtivo;
+    }
+
     public RetornoValidacao criarNovoJogo(JogadorDTO j){
         rv = controlCat.findById(1L);
         if(!rv.isOk()){
@@ -109,7 +148,7 @@ public class JogoFacadeImpl implements JogoFacade{
             return rv;
         }
         JogoDTO jogo = (JogoDTO) rv.getObjeto();
-        JogosSession.getJogos().add(jogo);
+        //JogosSession.getJogos().add(jogo);
           //salvei e obtve a copia, agora gravo na "sessao"
         JogadoresDoJogo jdj = Getinjector.getInstance().     //fixme tratar exceçoes fazendo controladora
                 getInstance(JogadoresDoJogoDao.class).save(new JogadoresDoJogo(j.getId(),

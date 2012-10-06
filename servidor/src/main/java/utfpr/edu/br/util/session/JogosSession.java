@@ -5,7 +5,7 @@ package utfpr.edu.br.util.session;/**
  * Time: 13:42
  */
 
-import utfpr.edu.br.dto.JogoDTO;
+import utfpr.edu.br.dto.JogoAtivoDTO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +14,11 @@ import java.util.List;
  * @author Bernardo Vale
  */
 public class JogosSession {
-private static List<JogoDTO> jogos;
+private static List<JogoAtivoDTO> jogos;
 
-        public static List<JogoDTO> getJogos() {
+        public static List<JogoAtivoDTO> getJogos() {
             if(jogos==null){
-                jogos = new ArrayList<JogoDTO>();
+                jogos = new ArrayList<JogoAtivoDTO>();
             }
             return jogos;
         }

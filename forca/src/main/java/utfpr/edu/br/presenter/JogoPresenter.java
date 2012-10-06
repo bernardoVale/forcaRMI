@@ -119,6 +119,10 @@ public class JogoPresenter {
         //Pede para adicionar novamente uma lista de labels no painel palavra
         popularPalavraNovamente(letrasLabel);
     }
+
+    /**
+     * Jogador ja acertou a palavra. So populo a palavra sem a mascara no JPanel!
+     */
     public void atualizaPalavraCerta(){
         List<JLabel> letrasLabel = new ArrayList<JLabel>();
         char[] array = jogoView.palavras().get(jogoView.rodadaAtual()-1).getNome()

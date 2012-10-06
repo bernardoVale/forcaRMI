@@ -84,7 +84,6 @@ public class JogadorFacadeImpl implements JogadorFacade{
     private List<PalavraDTO> palavrasDoJogo(Long JogoId){
         RetornoValidacao rv = new RetornoValidacao();
         return new ArrayList<PalavraDTO>();
-
     }
 
     /*

@@ -1,6 +1,7 @@
 package utfpr.edu.br.view.telas.jogo;
 
 import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
 
@@ -17,6 +18,8 @@ import java.util.List;
  */
 public interface JogoView {
 
+    public void setDadosJogo(JogoAtivoDTO dadosJogo);
+    public JogoAtivoDTO dadosJogo();
     public List<JLabel> palavraAtualPopulada();
     public void setPalavraAtualPopulada(List<JLabel> palavraAtualPopulada);
     public JFormattedTextField jtfEnviar();

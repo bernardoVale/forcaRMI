@@ -2,6 +2,7 @@ package utfpr.edu.br.view.telas.jogo;
 
 
 import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
 
@@ -17,6 +18,7 @@ import java.util.List;
 
 public class JogoViewImpl extends JFrame implements JogoView{
 
+    private JogoAtivoDTO dadosJogo;
     private JogadorDTO jogador;
     private JogadorDTO adversario;
     private List<JLabel> palavraAtualPopulada = new ArrayList<JLabel>();
@@ -348,6 +350,16 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	    private JPanel pLetrasErradas;
 	    private JPanel panelLobby;
         private JLabel lbCarregando;
+
+    @Override
+    public void setDadosJogo(JogoAtivoDTO dadosJogo) {
+        this.dadosJogo = dadosJogo;
+    }
+
+    @Override
+    public JogoAtivoDTO dadosJogo() {
+        return dadosJogo;
+    }
 
     @Override
     public List<JLabel> palavraAtualPopulada() {

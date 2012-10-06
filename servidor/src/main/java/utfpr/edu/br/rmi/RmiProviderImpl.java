@@ -4,6 +4,7 @@ import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.RmiProvider;
 import utfpr.edu.br.controller.ControladorCategoria;
 import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.facade.JogadorFacade;
 import utfpr.edu.br.facade.JogadorFacadeImpl;
 import utfpr.edu.br.facade.JogoFacade;
@@ -55,5 +56,10 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
     @Override
     public RetornoValidacao iniciarPartida(JogadorDTO jogador, JogadorDTO adversario) throws RemoteException {
         return facadeJogo.iniciarPartida(jogador,adversario);
+    }
+
+    @Override
+    public RetornoValidacao efetuarJogada(JogoAtivoDTO jogo) throws RemoteException {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
 }

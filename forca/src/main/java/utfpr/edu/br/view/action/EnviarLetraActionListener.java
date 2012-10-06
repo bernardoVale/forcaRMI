@@ -5,14 +5,16 @@ package utfpr.edu.br.view.action;/**
  * Time: 11:07
  */
 
-import utfpr.edu.br.dto.PalavraDTO;
 import utfpr.edu.br.presenter.JogoPresenter;
-import utfpr.edu.br.util.StringUtil;
+import utfpr.edu.br.presenter.template.EfetuarJogadaTemplate;
+import utfpr.edu.br.presenter.template.JogadaLetra;
+import utfpr.edu.br.presenter.template.JogadaPalavra;
+import utfpr.edu.br.rmi.RMIClient;
 import utfpr.edu.br.view.telas.jogo.JogoView;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
+import java.rmi.RemoteException;
 
 /**
  * @author Bernardo Vale
@@ -28,47 +30,20 @@ public class EnviarLetraActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(view.rbLetra().isSelected()){
-            doEnviarLetra();
-        }else if(view.rbChutar().isSelected()){
-            doEnviarChute();
+        EfetuarJogadaTemplate jogada = null;
+            if(view.rbLetra().isSelected()){
+                    jogada = new JogadaLetra();
+                    jogada.efetuarJogada(presenter);
+            }
+            else if(view.rbChutar().isSelected()){
+                jogada = new JogadaPalavra();
+                jogada.efetuarJogada(presenter);
+            }
+        //Atualizo o servidor para que o outro jogador receba as modificaçoes
+        try {
+            RMIClient.getInstance().provider().efetuarJogada(jogada.getJogo());
+        } catch (RemoteException e1) {
+            e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
-
-    /**
-     * Metodo onde eu verifico qual foi a letra que me enviaste e se ela costa na palavra.
-     */
-    private void doEnviarLetra(){
-       String letra = view.jtfEnviar().getText();
-       //Pego a palavra que esta sendo jogada. A da rodada atual.
-       PalavraDTO palavra = view.palavras().get(view.rodadaAtual()-1);//Rodada atual nao tem a posicao 0 por isso -1
-       List<Integer> posicoes;
-       posicoes = StringUtil.posicoesIguais(letra,palavra.getNomeMascarado());
-       if(posicoes==null){
-           //todo Adicionar parte do corpo ao jogador
-           System.out.println("ERROU!");
-           //errou a letra tem que atualizar o boneco
-       }else{
-           presenter.atualizaPosicoesPalavra(posicoes,letra);
-       }
-    }
-
-    /**
-     * Verifica se o jogador acertou o "chute" da palavra
-     */
-    private void doEnviarChute(){
-       String chute = view.jtfEnviar().getText();
-        System.out.println(view.jtfEnviar());
-        System.out.println(view.jtfEnviar().getText());
-       PalavraDTO palavra = view.palavras().get(view.rodadaAtual()-1);
-       if(chute.equals(palavra.getNomeMascarado().toUpperCase()) ||
-               chute.equals(palavra.getNome().toUpperCase())){
-           presenter.atualizaPalavraCerta();
-           //Acertou
-       }else{
-           //todo Adicionar parte do corpo ao jogador
-           System.out.printf("Errou feio seu fdp");
-       }
-    }
-
 }

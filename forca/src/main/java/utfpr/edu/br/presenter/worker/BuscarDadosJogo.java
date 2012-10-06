@@ -6,7 +6,7 @@ package utfpr.edu.br.presenter.worker;/**
  */
 
 import utfpr.edu.br.RetornoValidacao;
-import utfpr.edu.br.dto.DadosDoJogoDTO;
+import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.presenter.JogoPresenter;
 import utfpr.edu.br.rmi.RMIClient;
 import utfpr.edu.br.util.StringUtil;
@@ -19,7 +19,7 @@ import java.util.concurrent.ExecutionException;
 /**
  * @author Bernardo Vale
  */
-public class BuscarDadosJogo extends SwingWorker<DadosDoJogoDTO,Void>{
+public class BuscarDadosJogo extends SwingWorker<JogoAtivoDTO,Void>{
     private final JogoView view;
     private final JogoPresenter presenter;
 
@@ -29,23 +29,24 @@ public class BuscarDadosJogo extends SwingWorker<DadosDoJogoDTO,Void>{
     }
     RetornoValidacao rv = new RetornoValidacao(false);
     @Override
-    protected DadosDoJogoDTO doInBackground() throws Exception {
+    protected JogoAtivoDTO doInBackground() throws Exception {
         while (!rv.isOk()){
             rv = RMIClient.getInstance().provider().iniciarPartida(view.jogador(),view.adversario());
             Thread.sleep(500);
         }
-        return (DadosDoJogoDTO) rv.getObjeto();
+        return (JogoAtivoDTO) rv.getObjeto();
     }
 
     @Override
     protected void done() {
         super.done();
         try {
-            view.setPalavras(get().getPalavras());
-            view.setJogo(get().getJogo());
+            view.setDadosJogo(get());
+            view.setPalavras(get().getJogoDTO().getPalavras());
+            view.setJogo(get().getJogoDTO().getJogo());
             popularPalavra();
             mascararPalavras();
-            iniciarJogada();//Seta a vez do camarada
+            //presenter//
 
         } catch (InterruptedException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -81,12 +82,6 @@ public class BuscarDadosJogo extends SwingWorker<DadosDoJogoDTO,Void>{
                       (StringUtil.mascararTexto(view.palavras().get(i).getNome()));
             System.out.println("Nome:"+view.palavras().get(i).getNome());
             System.out.println("Mascara:"+view.palavras().get(i).getNomeMascarado());
-        }
-    }
-    private void iniciarJogada() {
-        //A regra para o jogador que começa jogando e quem tem a menor(oldfag) id ;)
-        if(view.jogador().getId()>view.adversario().getId()){
-            view.setMeuTurno(true);
         }
     }
 }
