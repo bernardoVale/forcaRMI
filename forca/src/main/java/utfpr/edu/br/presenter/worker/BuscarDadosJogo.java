@@ -46,7 +46,7 @@ public class BuscarDadosJogo extends SwingWorker<JogoAtivoDTO,Void>{
             view.setJogo(get().getJogoDTO().getJogo());
             popularPalavra();
             mascararPalavras();
-            //presenter//
+            presenter.verificarTurno();
 
         } catch (InterruptedException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.

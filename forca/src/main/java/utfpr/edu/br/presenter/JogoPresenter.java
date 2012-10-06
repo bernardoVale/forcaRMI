@@ -6,10 +6,11 @@ package utfpr.edu.br.presenter;/**
  */
 
 import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.presenter.worker.AguardarTurno;
 import utfpr.edu.br.presenter.worker.BuscarDadosJogo;
 import utfpr.edu.br.presenter.worker.FindAdversario;
-import utfpr.edu.br.view.action.EnviarLetraActionListener;
 import utfpr.edu.br.view.action.MascararTextoActionListener;
+import utfpr.edu.br.view.action.RealizarJogadaActionListener;
 import utfpr.edu.br.view.telas.jogo.JogoView;
 
 import javax.swing.*;
@@ -57,23 +58,37 @@ public class JogoPresenter {
     }
 
     public void buscarDadosDoJogo() {
-         BuscarDadosJogo worker = new BuscarDadosJogo(jogoView,this);
+        BuscarDadosJogo worker = new BuscarDadosJogo(jogoView,this);
         try {
             worker.execute();
         } catch (Exception e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
-    public void iniciarRodada() {
-        if(getView().meuTurno()){ //Se e meu turno eu tenho de chamar um escutador do botao chutar
+    public void aguardarTurno(){
+        getView().pEnviar().setVisible(false);
+        AguardarTurno worker = new AguardarTurno(this);
+        try{
+            worker.execute();
+        } catch (Exception e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
 
-        }else{//Se nao e meu turno eu tenho que travar alguns componentes ate que seja meu turno
-
+    public void verificarTurno(){
+        if(getView().dadosJogo().getJogador1().getJogador().getId().equals(getView().jogador().getId())){
+            if(!getView().dadosJogo().getJogador1().isMeuTurno()){
+                aguardarTurno();
+            }
+        }else {
+            if(!getView().dadosJogo().getJogador2().isMeuTurno()){
+               aguardarTurno();
+            }
         }
     }
     //Adiciona os listeners
     public void setUpViewListeners() {
-        jogoView.addChutarLetraListener(new EnviarLetraActionListener(this));
+        jogoView.addChutarLetraListener(new RealizarJogadaActionListener(this));
         jogoView.addMascaraTextoListener(new MascararTextoActionListener(this));
     }
 
@@ -161,5 +176,11 @@ public class JogoPresenter {
                 jogoView.palavras().get(jogoView.rodadaAtual()-1).getNome().substring(posicao, posicao+1);
         System.out.println("Mascarada:"+letraNaoMascarada);
         return letraNaoMascarada.toUpperCase();
+    }
+
+    public void atualizarTela() {
+        getView().pEnviar().setVisible(true);
+        getView().pEnviar().revalidate();
+        getView().root().validate();
     }
 }

@@ -104,6 +104,41 @@ public class JogoFacadeImpl implements JogoFacade{
                 (jogador,adversario,jogo, (List<PalavraDTO>) rv.getObjeto()));
     }
 
+    @Override
+    public synchronized RetornoValidacao efetuarJogada(JogoAtivoDTO jogo) {
+        for (int i=0;i<JogosSession.getJogos().size();i++){
+            System.out.println(JogosSession.getJogos().size());
+           if(JogosSession.getJogos().get(i).getJogoDTO().getJogo().getId()
+                   .equals(jogo.getJogoDTO().getJogo().getId())){
+               JogoAtivoDTO antigo = JogosSession.getJogos().get(i);
+               JogosSession.getJogos().remove(i);
+               JogosSession.getJogos().add(i,jogo);
+               break;
+           }
+        }
+        return new RetornoValidacao(jogo);
+    }
+
+    @Override
+    public synchronized RetornoValidacao eMeuTurno(JogadorDTO jogador, JogoDTO jogo) {
+        for (int i=0;i<JogosSession.getJogos().size();i++){
+            JogoAtivoDTO ativo = JogosSession.getJogos().get(i);
+            System.out.println(JogosSession.getJogos().size());
+            if(ativo.getJogoDTO().getJogo().getId()
+                    .equals(jogo.getId())){
+                if(ativo.getJogador1().getJogador().getId()
+                        .equals(jogador.getId())){   //e o turno do cara, entao retorna o objeto atualizado
+                    if(ativo.getJogador1().isMeuTurno()) return new RetornoValidacao(ativo);
+                    return new RetornoValidacao(false);//ainda n e seu turno baby
+                }else{//cai aqui pq quem requisitou foi o jogador2
+                    if(ativo.getJogador2().isMeuTurno()) return new RetornoValidacao(ativo);
+                    return new RetornoValidacao(false);
+                }
+            }
+        }
+        return new RetornoValidacao(false);
+    }
+
     /**
      * Salva um jogo na sessao, um jogo ativo. A partir dele manipularemos todo um jogo
      * @param jogador   Jogador1

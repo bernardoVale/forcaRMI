@@ -2,6 +2,7 @@ package utfpr.edu.br;
 
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoAtivoDTO;
+import utfpr.edu.br.dto.JogoDTO;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -20,6 +21,8 @@ public interface RmiProvider extends Remote{
     RetornoValidacao retornaAdversario(JogadorDTO jogador)throws RemoteException;
     //recebe a lista das palavras
     RetornoValidacao iniciarPartida(JogadorDTO jogador,JogadorDTO adversario)throws RemoteException;
-
     RetornoValidacao efetuarJogada(JogoAtivoDTO jogo)throws RemoteException;
+
+    //Retorno um jogoativoDTO atualizado caso seja o turno do jogadorpassado caso contrario retorna nulo
+    RetornoValidacao eMeuTurno(JogadorDTO jogador,JogoDTO jogo)throws RemoteException;
 }

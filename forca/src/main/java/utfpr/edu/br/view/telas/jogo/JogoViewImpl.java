@@ -369,6 +369,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
     @Override
     public void setPalavraAtualPopulada(List<JLabel> palavraAtualPopulada) {
         this.palavraAtualPopulada = palavraAtualPopulada;
+        dadosJogo.setPalavraAtualPopulada(palavraAtualPopulada);
     }
 
     @Override

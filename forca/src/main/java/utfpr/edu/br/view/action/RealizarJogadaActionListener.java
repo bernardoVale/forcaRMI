@@ -19,11 +19,11 @@ import java.rmi.RemoteException;
 /**
  * @author Bernardo Vale
  */
-public class EnviarLetraActionListener implements ActionListener {
+public class RealizarJogadaActionListener implements ActionListener {
     private final JogoPresenter presenter;
     private JogoView view;
 
-    public EnviarLetraActionListener(JogoPresenter presenter) {
+    public RealizarJogadaActionListener(JogoPresenter presenter) {
         this.presenter = presenter;
         this.view = presenter.getView();
     }
@@ -42,6 +42,8 @@ public class EnviarLetraActionListener implements ActionListener {
         //Atualizo o servidor para que o outro jogador receba as modificaçoes
         try {
             RMIClient.getInstance().provider().efetuarJogada(jogada.getJogo());
+            presenter.getView().setDadosJogo(jogada.getJogo());
+            presenter.verificarTurno();
         } catch (RemoteException e1) {
             e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
