@@ -21,6 +21,7 @@ import java.text.ParseException;
 
 import javax.swing.JRadioButton;
 import javax.swing.JFormattedTextField;
+import javax.swing.ImageIcon;
 
 
 public class JogoViewImpl extends JFrame {
@@ -48,66 +49,19 @@ public class JogoViewImpl extends JFrame {
 	 */
 	public JogoViewImpl() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 250, 387);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBounds(0,0,250,387);
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JPanel pPalavra = new JPanel();
-		pPalavra.setBounds(5, 5, 438, 167);
-		contentPane.add(pPalavra);
-		GridBagLayout gbl_pPalavra = new GridBagLayout();
-		gbl_pPalavra.columnWidths = new int[]{438, 0};
-		gbl_pPalavra.rowHeights = new int[]{25, 0, 25, 0, 0};
-		gbl_pPalavra.columnWeights = new double[]{1.0, Double.MIN_VALUE};
-		gbl_pPalavra.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		pPalavra.setLayout(gbl_pPalavra);
-		
-		JPanel pLetras = new JPanel();
-		GridBagConstraints gbc_pLetras = new GridBagConstraints();
-		gbc_pLetras.fill = GridBagConstraints.BOTH;
-		gbc_pLetras.insets = new Insets(0, 0, 5, 0);
-		gbc_pLetras.gridx = 0;
-		gbc_pLetras.gridy = 0;
-		pPalavra.add(pLetras, gbc_pLetras);
-		pLetras.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
-		JLabel lblA = new JLabel("<html><u>A</u></html>");
-		lblA.setFont(new Font("Dialog", Font.BOLD, 37));
-		lblA.setForeground(UIManager.getColor("Button.foreground"));
-		
-		pLetras.add(lblA);
-		
-		JLabel label = new JLabel("_");
-		label.setFont(new Font("Dialog", Font.PLAIN, 12));
-		pLetras.add(label);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBounds(0, 0, 250, 387);
+		contentPane.add(lblNewLabel);
+		lblNewLabel.setIcon(new ImageIcon("/home/bernardo/forcaRMI/forca/src/main/resources/erro_0.png"));
 		
 		ButtonGroup bg = new ButtonGroup();
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("New radio button");
-		GridBagConstraints gbc_rdbtnNewRadioButton_1 = new GridBagConstraints();
-		gbc_rdbtnNewRadioButton_1.insets = new Insets(0, 0, 5, 0);
-		gbc_rdbtnNewRadioButton_1.gridx = 0;
-		gbc_rdbtnNewRadioButton_1.gridy = 1;
-		pPalavra.add(rdbtnNewRadioButton_1, gbc_rdbtnNewRadioButton_1);
-		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("New radio button");
-		GridBagConstraints gbc_rdbtnNewRadioButton = new GridBagConstraints();
-		gbc_rdbtnNewRadioButton.insets = new Insets(0, 0, 5, 0);
-		gbc_rdbtnNewRadioButton.gridx = 0;
-		gbc_rdbtnNewRadioButton.gridy = 2;
-		pPalavra.add(rdbtnNewRadioButton, gbc_rdbtnNewRadioButton);
-		
-		
-		bg.add(rdbtnNewRadioButton_1);
-		bg.add(rdbtnNewRadioButton);
-		JFormattedTextField formattedTextField = new JFormattedTextField(
-				setMascara("U"));
-		GridBagConstraints gbc_formattedTextField = new GridBagConstraints();
-		gbc_formattedTextField.fill = GridBagConstraints.HORIZONTAL;
-		gbc_formattedTextField.gridx = 0;
-		gbc_formattedTextField.gridy = 3;
-		pPalavra.add(formattedTextField, gbc_formattedTextField);
 
 	}
 	

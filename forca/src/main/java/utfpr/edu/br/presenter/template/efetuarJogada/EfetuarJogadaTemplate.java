@@ -1,4 +1,4 @@
-package utfpr.edu.br.presenter.template;/**
+package utfpr.edu.br.presenter.template.efetuarJogada;/**
  * Created with IntelliJ IDEA.
  * User: bernardo
  * Date: 05/10/12

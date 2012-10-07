@@ -6,9 +6,9 @@ package utfpr.edu.br.view.action;/**
  */
 
 import utfpr.edu.br.presenter.JogoPresenter;
-import utfpr.edu.br.presenter.template.EfetuarJogadaTemplate;
-import utfpr.edu.br.presenter.template.JogadaLetra;
-import utfpr.edu.br.presenter.template.JogadaPalavra;
+import utfpr.edu.br.presenter.template.efetuarJogada.EfetuarJogadaTemplate;
+import utfpr.edu.br.presenter.template.efetuarJogada.JogadaLetra;
+import utfpr.edu.br.presenter.template.efetuarJogada.JogadaPalavra;
 import utfpr.edu.br.rmi.RMIClient;
 import utfpr.edu.br.view.telas.jogo.JogoView;
 

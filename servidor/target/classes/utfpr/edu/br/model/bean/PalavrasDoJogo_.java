@@ -6,7 +6,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import utfpr.edu.br.model.bean.Jogo;
 import utfpr.edu.br.model.bean.PalavrasDoJogoID;
 
-@Generated(value="EclipseLink-2.4.0.v20120608-rNA", date="2012-10-01T16:34:02")
+@Generated(value="EclipseLink-2.4.0.v20120608-rNA", date="2012-10-07T18:59:35")
 @StaticMetamodel(PalavrasDoJogo.class)
 public class PalavrasDoJogo_ { 
 

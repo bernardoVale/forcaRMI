@@ -6,6 +6,7 @@ package utfpr.edu.br.presenter;/**
  */
 
 import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.presenter.worker.AguardarTurno;
 import utfpr.edu.br.presenter.worker.BuscarDadosJogo;
 import utfpr.edu.br.presenter.worker.FindAdversario;
@@ -178,9 +179,7 @@ public class JogoPresenter {
         return letraNaoMascarada.toUpperCase();
     }
 
-    public void atualizarTela() {
-        getView().pEnviar().setVisible(true);
-        getView().pEnviar().revalidate();
-        getView().root().validate();
+    public void atualizarTela(JogoAtivoDTO atualizado) {
+        //getView().dadosJogo(),atualizado
     }
 }

@@ -38,7 +38,6 @@ public class AguardarTurno extends SwingWorker<JogoAtivoDTO,Void>{
     protected void done() {
         super.done();
         JogoAtivoDTO antigo = presenter.getView().dadosJogo();
-        presenter.getView().setDadosJogo((JogoAtivoDTO) rv.getObjeto());
-        presenter.atualizarTela();
+        presenter.atualizarTela((JogoAtivoDTO) rv.getObjeto());
     }
 }

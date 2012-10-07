@@ -5,6 +5,7 @@ import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
+import utfpr.edu.br.util.GetImagemForca;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
@@ -58,12 +59,16 @@ public class JogoViewImpl extends JFrame implements JogoView{
         P2_nome.setBounds(780, 58, 182, 28);
         pJogador1 = new JPanel();
         pJogador1.setBounds(96, 87, 250, 387);
+        lbErroJogador1 = new JLabel("");
+        lbErroJogador1.setBounds(0,0,250,387);
         P1_nome = new JLabel();
         P1_nome.setBounds(162, 58, 184, 28);
         lbP1 = new JLabel();
         lbP1.setBounds(99, 58, 66, 28);
         pJogador2 = new JPanel();
         pJogador2.setBounds(682, 87, 250, 387);
+        lbErroJogador2 = new JLabel("");
+        lbErroJogador2.setBounds(0,0,250,387);
         lbPlacar = new JLabel();
         lbPlacar.setBounds(414, 74, 288, 73);
         lbPontuacaoP2 = new JLabel();
@@ -118,33 +123,18 @@ public class JogoViewImpl extends JFrame implements JogoView{
         P2_nome.setFont(new Font("Tahoma", 0, 18)); // NOI18N
         P2_nome.setText("");
 
-        GroupLayout pJogador1Layout = new GroupLayout(pJogador1);
-        pJogador1.setLayout(pJogador1Layout);
-        pJogador1Layout.setHorizontalGroup(
-            pJogador1Layout.createParallelGroup(Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
-        );
-        pJogador1Layout.setVerticalGroup(
-            pJogador1Layout.createParallelGroup(Alignment.LEADING)
-            .addGap(0, 387, Short.MAX_VALUE)
-        );
+        lbErroJogador1.setIcon(new GetImagemForca().getImagem(3));
+        pJogador1.setLayout(null);
+        pJogador1.add(lbErroJogador1);
 
         P1_nome.setFont(new Font("Tahoma", 0, 18)); // NOI18N
         P1_nome.setText("");
 
         lbP1.setFont(new Font("Tahoma", 0, 18)); // NOI18N
         lbP1.setText("Nome:");
-
-        GroupLayout pJogador2Layout = new GroupLayout(pJogador2);
-        pJogador2.setLayout(pJogador2Layout);
-        pJogador2Layout.setHorizontalGroup(
-            pJogador2Layout.createParallelGroup(Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
-        );
-        pJogador2Layout.setVerticalGroup(
-            pJogador2Layout.createParallelGroup(Alignment.LEADING)
-            .addGap(0, 387, Short.MAX_VALUE)
-        );
+        lbErroJogador2.setIcon(new GetImagemForca().getImagem(4));
+        pJogador2.setLayout(null);
+        pJogador2.add(lbErroJogador2);
 
         lbPlacar.setFont(new Font("Tahoma", 0, 55)); // NOI18N
         lbPlacar.setText("Placar");
@@ -256,6 +246,9 @@ public class JogoViewImpl extends JFrame implements JogoView{
         
         btnDesistir.setText("Desistir");
 
+
+
+
         pEnviar.setLayout(null);
         pEnviar.add(jButton1);
         pEnviar.add(jtfEnviar);
@@ -350,6 +343,8 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	    private JPanel pLetrasErradas;
 	    private JPanel panelLobby;
         private JLabel lbCarregando;
+        private JLabel lbErroJogador1;
+        private JLabel lbErroJogador2;
 
     @Override
     public void setDadosJogo(JogoAtivoDTO dadosJogo) {
