@@ -5,11 +5,8 @@ import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
-import utfpr.edu.br.util.GetImagemForca;
 
 import javax.swing.*;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.text.MaskFormatter;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -123,18 +120,19 @@ public class JogoViewImpl extends JFrame implements JogoView{
         P2_nome.setFont(new Font("Tahoma", 0, 18)); // NOI18N
         P2_nome.setText("");
 
-        lbErroJogador1.setIcon(new GetImagemForca().getImagem(3));
         pJogador1.setLayout(null);
         pJogador1.add(lbErroJogador1);
+        pJogador1.setVisible(false);
 
         P1_nome.setFont(new Font("Tahoma", 0, 18)); // NOI18N
         P1_nome.setText("");
 
         lbP1.setFont(new Font("Tahoma", 0, 18)); // NOI18N
         lbP1.setText("Nome:");
-        lbErroJogador2.setIcon(new GetImagemForca().getImagem(4));
+
         pJogador2.setLayout(null);
         pJogador2.add(lbErroJogador2);
+        pJogador2.setVisible(false);
 
         lbPlacar.setFont(new Font("Tahoma", 0, 55)); // NOI18N
         lbPlacar.setText("Placar");
@@ -184,54 +182,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         letra3.setText("");
         letra3.setPreferredSize(new Dimension(100, 14));
 
-        GroupLayout pLetrasErradasLayout = new GroupLayout(pLetrasErradas);
-        pLetrasErradas.setLayout(pLetrasErradasLayout);
-        pLetrasErradasLayout.setHorizontalGroup(
-            pLetrasErradasLayout.createParallelGroup(Alignment.LEADING)
-            .addGroup(pLetrasErradasLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(pLetrasErradasLayout.createParallelGroup(Alignment.LEADING)
-                    .addComponent(letra7, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(letra1, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(letra4, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE))
-                .addGap(53, 53, 53)
-                .addGroup(pLetrasErradasLayout.createParallelGroup(Alignment.LEADING)
-                    .addComponent(letra8, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(letra2, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(letra5, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
-                .addGroup(pLetrasErradasLayout.createParallelGroup(Alignment.LEADING)
-                    .addComponent(letra9, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(letra3, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(letra6, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24))
-        );
-        pLetrasErradasLayout.setVerticalGroup(
-            pLetrasErradasLayout.createParallelGroup(Alignment.LEADING)
-            .addGroup(pLetrasErradasLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(pLetrasErradasLayout.createParallelGroup(Alignment.LEADING)
-                    .addGroup(pLetrasErradasLayout.createSequentialGroup()
-                        .addGroup(pLetrasErradasLayout.createParallelGroup(Alignment.BASELINE)
-                            .addComponent(letra2, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(letra3, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(pLetrasErradasLayout.createParallelGroup(Alignment.BASELINE)
-                            .addComponent(letra5, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(letra6, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(letra9, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(22, Short.MAX_VALUE))
-                    .addGroup(pLetrasErradasLayout.createSequentialGroup()
-                        .addComponent(letra1, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(letra4, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(pLetrasErradasLayout.createParallelGroup(Alignment.BASELINE)
-                            .addComponent(letra7, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(letra8, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE))
-                        .addGap(21, 21, 21))))
-        );
+        pLetrasErradas.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 
         jButton1.setFont(new Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("Enviar");
@@ -464,6 +415,27 @@ public class JogoViewImpl extends JFrame implements JogoView{
     public JPanel pPalavras() {
         return pPalavras;
     }
+
+    @Override
+    public JPanel pJogador1() {
+        return pJogador1;
+    }
+
+    @Override
+    public JLabel lbErroJogador1() {
+        return lbErroJogador1;
+    }
+
+    @Override
+    public JLabel lbErroJogador2() {
+        return lbErroJogador2;
+    }
+
+    @Override
+    public JPanel pJogador2() {
+        return pJogador2;
+    }
+
     @Override
     public JogadorDTO jogador() {
         return jogador;

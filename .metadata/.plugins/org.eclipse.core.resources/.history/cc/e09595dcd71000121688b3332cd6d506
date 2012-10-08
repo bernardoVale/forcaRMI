@@ -59,7 +59,7 @@ public class JogoViewImpl extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 240, 268);
 		contentPane.add(panel);
-		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		panel.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
 		
 		JLabel lblH = new JLabel("H");
 		lblH.setFont(new Font("SansSerif", Font.BOLD, 73));

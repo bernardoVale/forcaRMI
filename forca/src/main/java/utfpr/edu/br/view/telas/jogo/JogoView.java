@@ -40,6 +40,10 @@ public interface JogoView {
     public JPanel pEnviar();
     public JPanel pLetras();
     public JPanel pPalavras();
+    public JPanel pJogador1();
+    public JLabel lbErroJogador1();
+    public JLabel lbErroJogador2();
+    public JPanel pJogador2();
     public JogadorDTO jogador();
     public JogadorDTO adversario();
     public JogoDTO jogo();

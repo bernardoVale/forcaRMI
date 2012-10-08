@@ -7,9 +7,13 @@ package utfpr.edu.br.presenter;/**
 
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoAtivoDTO;
+import utfpr.edu.br.presenter.template.atualizarTela.AtualizarLetrasCorretas;
+import utfpr.edu.br.presenter.template.atualizarTela.AtualizarLetrasErradas;
+import utfpr.edu.br.presenter.template.atualizarTela.AtualizarTelaTemplate;
 import utfpr.edu.br.presenter.worker.AguardarTurno;
 import utfpr.edu.br.presenter.worker.BuscarDadosJogo;
 import utfpr.edu.br.presenter.worker.FindAdversario;
+import utfpr.edu.br.util.GetImagemForca;
 import utfpr.edu.br.view.action.MascararTextoActionListener;
 import utfpr.edu.br.view.action.RealizarJogadaActionListener;
 import utfpr.edu.br.view.telas.jogo.JogoView;
@@ -151,7 +155,7 @@ public class JogoPresenter {
         }
         popularPalavraNovamente(letrasLabel);
     }
-    private void popularPalavraNovamente(List<JLabel> letrasLabel){
+    public void popularPalavraNovamente(List<JLabel> letrasLabel){
         //Remove tudo e atualiza a tela
         jogoView.pLetras().removeAll();
         jogoView.pLetras().revalidate();
@@ -169,7 +173,7 @@ public class JogoPresenter {
 
     /**
      * Metodo que pega a letra nao mascarada, em caso de acentos esse metodo teve de ser implementado
-     * @param posicao Local no qual se encontra a letra
+     * @param posicao Local no qual se encontra a letra                                                  new FlowLayout(FlowLayout.CENTER, 5, 5)
      * @return   Letra nao mascarada
      */
     private String pegaLetraNaoMascarada(int posicao) {
@@ -180,6 +184,53 @@ public class JogoPresenter {
     }
 
     public void atualizarTela(JogoAtivoDTO atualizado) {
-        //getView().dadosJogo(),atualizado
+        AtualizarTelaTemplate t = null;
+        if(!atualizado.getLetrasErradas().equals(jogoView.dadosJogo().getLetrasErradas())){
+            t = new AtualizarLetrasErradas();
+
+        }else{
+            if(!atualizado.getPalavraAtualPopulada().equals(jogoView.dadosJogo().getPalavraAtualPopulada())){
+                t = new AtualizarLetrasCorretas();
+            }
+        }
+        jogoView.setDadosJogo(atualizado);
+        jogoView = t.atualizarTela(this);
+    }
+    public void atualizarForca(int atual){
+        if(atual==1){
+            getView().lbErroJogador1().setIcon(new GetImagemForca().getImagem(
+                    getView().dadosJogo().getJogador1().getQuantidadeErros()
+            ));
+            getView().lbErroJogador2().setIcon(new GetImagemForca().getImagem(
+                    getView().dadosJogo().getJogador2().getQuantidadeErros()
+            ));
+        }else{
+            getView().lbErroJogador1().setIcon(new GetImagemForca().getImagem(
+                    getView().dadosJogo().getJogador2().getQuantidadeErros()
+            ));
+            getView().lbErroJogador2().setIcon(new GetImagemForca().getImagem(
+                    getView().dadosJogo().getJogador1().getQuantidadeErros()
+            ));
+        }
+        getView().pJogador1().revalidate();
+        getView().pJogador2().revalidate();
+        getView().root().validate();
+    }
+    /*
+    * Atualiza o painel de letras erradas mediante ao JogoAtivoDTO
+     */
+    public void atualizarLetrasErrada() {
+        List<String> pErradas = getView().dadosJogo().getLetrasErradas();
+        //Remove tudo e atualiza a tela
+        jogoView.pLetrasErradas().removeAll();
+        jogoView.pLetrasErradas().revalidate();
+        jogoView.root().validate();
+        for(int i=0;i< pErradas.size();i++){
+          JLabel letra = new JLabel(pErradas.get(i));
+          letra.setFont(new Font("SansSerif", Font.BOLD, 73));
+          jogoView.pLetrasErradas().add(letra);
+          jogoView.pLetrasErradas().revalidate();
+          jogoView.root().validate();
+        }
     }
 }

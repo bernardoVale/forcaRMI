@@ -5,6 +5,8 @@ package utfpr.edu.br.presenter.template.efetuarJogada;/**
  * Time: 17:07
  */
 
+import utfpr.edu.br.util.GetImagemForca;
+
 /**
  * @author Bernardo Vale
  */
@@ -29,11 +31,23 @@ public class JogadaPalavra extends EfetuarJogadaTemplate{
     @Override
     protected void adicionarErro() {
         if(!acertou){ //Errou
-            jogo.getJogador1().setQuantidadeErros(
-                    jogo.getJogador1().getQuantidadeErros()
-                            +1
-            );
-            //todo Adiciona parte do boneco
+            if(atual==1){
+                jogo.getJogador1().setQuantidadeErros(
+                        jogo.getJogador1().getQuantidadeErros()
+                                +1
+                );
+                presenter.getView().lbErroJogador1().setIcon(new GetImagemForca().getImagem(
+                        jogo.getJogador1().getQuantidadeErros()
+                ));
+            }else {
+                jogo.getJogador2().setQuantidadeErros(
+                        jogo.getJogador2().getQuantidadeErros()
+                                +1
+                );
+                presenter.getView().lbErroJogador1().setIcon(new GetImagemForca().getImagem(
+                        jogo.getJogador2().getQuantidadeErros()
+                ));
+            }
         }
     }
 

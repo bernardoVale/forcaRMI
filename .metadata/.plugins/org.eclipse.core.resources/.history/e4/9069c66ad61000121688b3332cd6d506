@@ -49,7 +49,7 @@ public class JogoViewImpl extends JFrame {
 	 */
 	public JogoViewImpl() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 250, 311);
+		setBounds(100, 100, 250, 387);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setBounds(0,0,300,263);
@@ -57,45 +57,21 @@ public class JogoViewImpl extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 240, 268);
+		panel.setBounds(0, 0, 240, 282);
 		contentPane.add(panel);
-		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
-		JLabel lblH = new JLabel("H");
-		lblH.setFont(new Font("SansSerif", Font.BOLD, 73));
-		panel.add(lblH);
-		
-		JLabel lblD = new JLabel("D");
-		lblD.setFont(new Font("SansSerif", Font.BOLD, 73));
-		panel.add(lblD);
-		
-		JLabel lblC = new JLabel("C");
-		lblC.setFont(new Font("SansSerif", Font.BOLD, 73));
-		panel.add(lblC);
-		
-		JLabel lblD_1 = new JLabel("D");
-		lblD_1.setFont(new Font("SansSerif", Font.BOLD, 73));
-		panel.add(lblD_1);
-		
-		JLabel lblA = new JLabel("D");
-		lblA.setFont(new Font("SansSerif", Font.BOLD, 73));
+		JLabel lblA = new JLabel("A");
+		lblA.setBounds(0,0,100,20);
+		lblA.setFont(new Font("Dialog", Font.BOLD, 64));
 		panel.add(lblA);
 		
-		JLabel lblD_2 = new JLabel("D");
-		lblD_2.setFont(new Font("SansSerif", Font.BOLD, 73));
-		panel.add(lblD_2);
+		JLabel label = new JLabel("A");
+		label.setFont(new Font("Dialog", Font.BOLD, 64));
+		panel.add(label);
 		
-		JLabel lblD_3 = new JLabel("D");
-		lblD_3.setFont(new Font("SansSerif", Font.BOLD, 73));
-		panel.add(lblD_3);
-		
-		JLabel lblD_4 = new JLabel("D");
-		lblD_4.setFont(new Font("SansSerif", Font.BOLD, 73));
-		panel.add(lblD_4);
-		
-		JLabel lblD_5 = new JLabel("D");
-		lblD_5.setFont(new Font("SansSerif", Font.BOLD, 73));
-		panel.add(lblD_5);
+		JLabel label_1 = new JLabel("A");
+		label_1.setFont(new Font("Dialog", Font.BOLD, 64));
+		panel.add(label_1);
 		
 		ButtonGroup bg = new ButtonGroup();
 

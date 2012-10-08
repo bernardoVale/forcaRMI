@@ -16,6 +16,7 @@ import java.util.List;
  */
 
 public abstract class EfetuarJogadaTemplate{
+    protected int atual; //1=Jogador1 2=Jogador2
     protected List<Integer> posicoes;
     protected JogoAtivoDTO jogo;
     protected JogoPresenter presenter;
@@ -28,6 +29,7 @@ public abstract class EfetuarJogadaTemplate{
         this.jogo = presenter.getView().dadosJogo();
         this.presenter = presenter;
         preEfetuarJogada();
+        pegaJogadorAtual();
         passarVez();
         mudarPalavraPopulada();
         adicionarErro();
@@ -48,8 +50,14 @@ public abstract class EfetuarJogadaTemplate{
                 !jogo.getJogador2().isMeuTurno()
         );
     }
-
-
+    //Verica qual jogador no JogoAtivoDTO e o jogador que esta na tela
+    protected void pegaJogadorAtual(){
+        if(jogo.getJogador1().getJogador().getId().equals(presenter.getView().jogador().getId())){
+            atual = 1;
+        }else{
+            atual = 2;
+        }
+    }
     protected abstract void preEfetuarJogada();
     protected abstract void mudarPalavraPopulada();
     protected abstract void adicionarErro();

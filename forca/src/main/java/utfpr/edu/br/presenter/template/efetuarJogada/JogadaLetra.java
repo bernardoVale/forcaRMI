@@ -31,18 +31,27 @@ public class JogadaLetra extends EfetuarJogadaTemplate{
     @Override
     protected void adicionarErro() {
         if(!acertou){ //Errou
-            jogo.getJogador1().setQuantidadeErros(
-                    jogo.getJogador1().getQuantidadeErros()
-                            +1
-            );
-            //todo Adiciona parte do boneco
+            if(atual==1){
+                jogo.getJogador1().setQuantidadeErros(
+                        jogo.getJogador1().getQuantidadeErros()
+                                +1
+                );
+            }else {
+                jogo.getJogador2().setQuantidadeErros(
+                        jogo.getJogador2().getQuantidadeErros()
+                                +1
+                );
+            }
+
         }
+        presenter.atualizarForca(atual);
     }
 
     @Override
     protected void adicionarLetrasErradas() {
         if(!acertou){ //Errou
             jogo.getLetrasErradas().add(token);
+            presenter.atualizarLetrasErrada();
         } return;
     }
 }

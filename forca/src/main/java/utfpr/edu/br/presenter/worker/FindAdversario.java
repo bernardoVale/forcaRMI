@@ -9,6 +9,7 @@ import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.presenter.JogoPresenter;
 import utfpr.edu.br.rmi.RMIClient;
+import utfpr.edu.br.util.GetImagemForca;
 import utfpr.edu.br.view.telas.jogo.JogoView;
 
 import javax.swing.*;
@@ -55,6 +56,10 @@ public class FindAdversario extends SwingWorker<JogadorDTO,Void> {
     }
 
     private void habilitaCampos(){
+        jogoView.pJogador1().setVisible(true);
+        jogoView.pJogador2().setVisible(true);
+        jogoView.lbErroJogador1().setIcon(new GetImagemForca().getImagem(0));
+        jogoView.lbErroJogador2().setIcon(new GetImagemForca().getImagem(0));
         jogoView.lbPlacar().setVisible(true);
         jogoView.lbCarregando().setVisible(false);
         jogoView.lbPontuacaoP1().setVisible(true);
