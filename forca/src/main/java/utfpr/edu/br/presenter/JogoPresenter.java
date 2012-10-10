@@ -155,6 +155,33 @@ public class JogoPresenter {
         }
         popularPalavraNovamente(letrasLabel);
     }
+    /**
+     * Adiciona os asterisco ao painel de acordo com o numero de letras
+     */
+    public void popularNovaPalavra(){
+        jogoView.pLetras().removeAll();
+        jogoView.pLetras().revalidate();
+        jogoView.root().validate();
+        //remove a ultima palavra populada
+        jogoView.dadosJogo().getPalavraAtualPopulada().removeAll(
+                jogoView.dadosJogo().getPalavraAtualPopulada());
+        //JLabel letra;
+        JLabel asterisco;
+        char[] palavra =  jogoView.palavras().get(jogoView.rodadaAtual()-1).getNome().toCharArray();
+        int numLetras = palavra.length;
+        for(int i=1;i<=numLetras;i++){
+            //letra = new JLabel();
+            asterisco = new JLabel();
+            //letra.setText("<html><u>"+String.valueOf((palavra[i - 1])).toUpperCase()+"</u></html>");
+            //letra.setFont(new Font("Tahoma", 0, 40));
+            asterisco.setText("<html><u>*</u></html>");
+            asterisco.setFont(new Font("Tahoma", 0, 50));
+            jogoView.palavraAtualPopulada().add(asterisco);//adiciona no vetor atual
+            jogoView.pLetras().add(asterisco);
+            jogoView.pLetras().revalidate();
+            jogoView.root().validate();
+        }
+    }
     public void popularPalavraNovamente(List<JLabel> letrasLabel){
         //Remove tudo e atualiza a tela
         jogoView.pLetras().removeAll();

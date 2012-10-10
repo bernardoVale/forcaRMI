@@ -34,6 +34,8 @@ public abstract class EfetuarJogadaTemplate{
         mudarPalavraPopulada();
         adicionarErro();
         adicionarLetrasErradas();
+        verificaVitoria();
+        verificaDerrota();
     }
     public JogoAtivoDTO getJogo(){
         return jogo;
@@ -62,4 +64,6 @@ public abstract class EfetuarJogadaTemplate{
     protected abstract void mudarPalavraPopulada();
     protected abstract void adicionarErro();
     protected abstract void adicionarLetrasErradas();
+    protected abstract void verificaVitoria();
+    protected abstract void verificaDerrota();
 }

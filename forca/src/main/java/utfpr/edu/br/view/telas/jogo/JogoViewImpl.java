@@ -492,6 +492,11 @@ public class JogoViewImpl extends JFrame implements JogoView{
     }
 
     @Override
+    public void setRodadaAtual(int rodadaAtual) {
+        this.rodadaAtual = rodadaAtual;
+    }
+
+    @Override
     public void packAndShow(JogadorDTO jogador) {
         this.jogador = jogador;
         this.pack();

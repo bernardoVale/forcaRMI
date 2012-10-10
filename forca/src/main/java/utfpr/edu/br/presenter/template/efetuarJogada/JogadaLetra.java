@@ -54,4 +54,14 @@ public class JogadaLetra extends EfetuarJogadaTemplate{
             presenter.atualizarLetrasErrada();
         } return;
     }
+
+    @Override
+    protected void verificaVitoria() {
+
+    }
+
+    @Override
+    protected void verificaDerrota() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

@@ -12,6 +12,7 @@ import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.md5.CriptografiaLogix;
 import utfpr.edu.br.presenter.JogoPresenter;
 import utfpr.edu.br.presenter.LoginPresenter;
+import utfpr.edu.br.presenter.SalvarJogoPresenter;
 import utfpr.edu.br.rmi.RMIClient;
 import utfpr.edu.br.spring.SpringFactory;
 import utfpr.edu.br.view.telas.login.LoginView;
@@ -33,10 +34,12 @@ public class LoginActionListener {
         private JogoPresenter jogoPresenter;
         private MensagemDirector mensagem;
         private JDialog container;
+        private SalvarJogoPresenter salvarJogoPresenter;
 
         public AutenticarActionListener(LoginPresenter presenter) {
             this.presenter = presenter;
             this.jogoPresenter = (JogoPresenter) SpringFactory.getFactory().getBean("JogoPresenter");
+            this.salvarJogoPresenter = (SalvarJogoPresenter) SpringFactory.getFactory().getBean("SalvarJogoPresenter");
         }
 
         public void actionPerformed(ActionEvent evt) {
@@ -61,7 +64,7 @@ public class LoginActionListener {
         }
 
         private void doAutenticar(){
-
+            salvarJogoPresenter.createView();
             LoginView view = presenter.getLoginView();
             if(view.getNome().equals("") || view.getSenha().equals("")){
                 mensagem = new MensagemDirector(new MensagemError("Preencha todos os campos!"));
@@ -80,6 +83,7 @@ public class LoginActionListener {
                 if(rv.isOk()){
                     //Ta tudo ok entao tem que chamar a view do jogo e destruir a view de login
                     view.destroy();
+
                     jogoPresenter.createView((JogadorDTO) rv.getObjeto());
 
                 }else{

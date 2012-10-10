@@ -55,6 +55,7 @@ public interface JogoView {
     public void setMeuTurno(boolean meuTurno);
     public JFrame root();
     public int rodadaAtual();
+    public void setRodadaAtual(int rodadaAtual);
     /**
      * Organiza e mostra a tela
      */
