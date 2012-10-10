@@ -1,0 +1,59 @@
+JFDML JFormDesigner: "5.1.0.2.64" Java: "1.7.0_04" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq {par l {seq {space :p:41:p, comp label1:::p::p, space u:::p, comp lbId:::p::p}, seq l {space :::p, comp label2:::p::p, space s:::p, comp lbNumRodadas:::p::p}, seq l {space :::p, comp lb:::p::p, space :::p, comp lbJogadores:::p::p}, seq l {space :::p, comp label3:::p::p, space :::p, comp lbDificuldade:::p::p}}, space :0:0:x}, seq t {space :0:0:x, comp btEntrar:::p:167:p}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, par b {comp label1::b:p:23:p, comp lbId::b:p::p}, space :p:18:p, par l {comp label2:::p::p, comp lbNumRodadas:::p::p}, space s:::p, par b {comp lb::b:p::p, comp lbJogadores::b:p::p}, space s:::p, par b {comp label3::b:p::p, comp lbDificuldade::b:p::p}, space :::x, comp btEntrar:::p:27:p, space :::p}}"
+		} ) {
+			name: "this"
+			"background": new java.awt.Color( 153, 153, 255, 255 )
+			"border": new javax.swing.border.MatteBorder( 3, 3, 3, 3, sfield java.awt.Color black )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Sala"
+				"font": new java.awt.Font( "SansSerif", 1, 15 )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btEntrar"
+				"text": "Entrar"
+				"font": new java.awt.Font( "SansSerif", 0, 20 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Numero de Rodadas:"
+				"font": new java.awt.Font( "SansSerif", 0, 14 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lbNumRodadas"
+				"font": new java.awt.Font( "SansSerif", 0, 14 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lb"
+				"text": "Jogadores:"
+				"font": new java.awt.Font( "SansSerif", 0, 14 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Dificuldade:"
+				"font": &Font0 new java.awt.Font( "SansSerif", 0, 14 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lbDificuldade"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lbId"
+				"text": "10"
+				"font": new java.awt.Font( "SansSerif", 1, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lbJogadores"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 185, 175 )
+		} )
+	}
+}

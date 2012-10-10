@@ -5,6 +5,7 @@ import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
+import utfpr.edu.br.view.telas.lobby.LobbyViewImpl;
 
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
@@ -35,6 +36,8 @@ public class JogoViewImpl extends JFrame implements JogoView{
 				try {
 					JogoViewImpl frame = new JogoViewImpl();
 					frame.setVisible(true);
+                    LobbyViewImpl l = new LobbyViewImpl();
+                    l.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -101,6 +104,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         rbChutar = new JRadioButton();
         rbChutar.setBounds(199, 0, 114, 33);
         rbLetra.setSelected(true);//padrao da letra
+
         btnDesistir = new JButton();
         btnDesistir.setBounds(417, 62, 97, 29);
 

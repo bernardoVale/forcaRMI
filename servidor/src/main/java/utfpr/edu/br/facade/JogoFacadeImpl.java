@@ -141,7 +141,7 @@ public class JogoFacadeImpl implements JogoFacade{
 
 
     /**
-     * Salva um jogo na sessao, um jogo ativo. A partir dele manipularemos todo um jogo
+     * Salva um jogo na sessao, um jogo ativo. A partir dele manipularemos um jogo
      * @param jogador   Jogador1
      * @param adversario  Jogador 2
      * @param jogo  Dados do Jogo
