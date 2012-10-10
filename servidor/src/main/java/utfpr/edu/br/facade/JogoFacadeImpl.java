@@ -13,7 +13,6 @@ import utfpr.edu.br.dto.*;
 import utfpr.edu.br.inject.Getinjector;
 import utfpr.edu.br.model.bean.Categoria;
 import utfpr.edu.br.model.bean.JogadoresDoJogo;
-import utfpr.edu.br.model.bean.Jogo;
 import utfpr.edu.br.model.bean.PalavrasDoJogo;
 import utfpr.edu.br.model.dao.JogadoresDoJogoDao;
 import utfpr.edu.br.model.dao.PalavrasDoJogoDao;
@@ -139,6 +138,8 @@ public class JogoFacadeImpl implements JogoFacade{
         return new RetornoValidacao(false);
     }
 
+
+
     /**
      * Salva um jogo na sessao, um jogo ativo. A partir dele manipularemos todo um jogo
      * @param jogador   Jogador1
@@ -172,23 +173,17 @@ public class JogoFacadeImpl implements JogoFacade{
         System.out.println("Quantidade de jogos:" + JogosSession.getJogos().size());
         return jogoAtivo;
     }
-
-    public RetornoValidacao criarNovoJogo(JogadorDTO j){
+    @Override
+    public RetornoValidacao criarJogo(JogadorDTO jogador, JogoDTO jogo) {
         rv = controlCat.findById(1L);
-        if(!rv.isOk()){
-            return rv;
-        }//todo Quantidade de rodadas e categoria estatico. so vai rolar dinamico com lobby
-        rv = control.save(new Jogo(cv.toBean((CategoriaDTO)rv.getObjeto()),3L));
-        if(!rv.isOk()){
-            return rv;
-        }
-        JogoDTO jogo = (JogoDTO) rv.getObjeto();
-        //JogosSession.getJogos().add(jogo);
-          //salvei e obtve a copia, agora gravo na "sessao"
+        if(!rv.isOk()) return rv;
+        jogo.setCategoria((CategoriaDTO) rv.getObjeto());
+        rv = control.save(jogo);
+        if(!rv.isOk()) return rv;
+        jogo = (JogoDTO) rv.getObjeto();
         JogadoresDoJogo jdj = Getinjector.getInstance().     //fixme tratar exceçoes fazendo controladora
-                getInstance(JogadoresDoJogoDao.class).save(new JogadoresDoJogo(j.getId(),
+                getInstance(JogadoresDoJogoDao.class).save(new JogadoresDoJogo(jogador.getId(),
                 jogo.getId().intValue(),null));
-
         return new RetornoValidacao();
     }
 }

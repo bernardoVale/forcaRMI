@@ -9,6 +9,7 @@ import utfpr.edu.br.util.Dificuldade;
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.text.ParseException;
 
 import static utfpr.edu.br.util.Dificuldade.*;
@@ -119,6 +120,16 @@ public class SalvarJogoViewImpl extends JFrame implements SalvarJogoView{
             e.printStackTrace();
         }
         return mask;
+    }
+
+    @Override
+    public void addSalvarListener(ActionListener listener) {
+        btSalvar.addActionListener(listener);
+    }
+
+    @Override
+    public JFrame getJFrame() {
+        return this;
     }
 
     @Override

@@ -2,7 +2,6 @@ package utfpr.edu.br.rmi;
 
 import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.RmiProvider;
-import utfpr.edu.br.controller.ControladorCategoria;
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.dto.JogoDTO;
@@ -20,7 +19,6 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
     private static final long serialVersionUID = 1L;
     private JogadorFacade facadeJogador;
     private JogoFacade facadeJogo;
-    private ControladorCategoria categoria;
 
     protected RmiProviderImpl() throws RemoteException {
         super();
@@ -67,5 +65,10 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
     @Override
     public RetornoValidacao eMeuTurno(JogadorDTO jogador, JogoDTO jogo) throws RemoteException {
         return facadeJogo.eMeuTurno(jogador,jogo);
+    }
+
+    @Override
+    public RetornoValidacao criarJogo(JogadorDTO jogador, JogoDTO jogo) throws RemoteException {
+        return facadeJogo.criarJogo(jogador,jogo);
     }
 }

@@ -14,6 +14,7 @@ public class JogoDTO implements DTO{
     private Long numRodadas;
     private CategoriaDTO categoria;
     private Long num_Jogadores;
+    private String dificuldade;
 
     public JogoDTO(Long id, Long numRodadas, CategoriaDTO categoria) {
         this.id = id;
@@ -26,6 +27,13 @@ public class JogoDTO implements DTO{
         this.numRodadas = numRodadas;
         this.categoria = categoria;
         this.num_Jogadores = num_Jogadores;
+    }
+
+    public JogoDTO(Long id, Long numRodadas, CategoriaDTO categoria, String dificuldade) {
+        this.id = id;
+        this.numRodadas = numRodadas;
+        this.categoria = categoria;
+        this.dificuldade = dificuldade;
     }
 
     public JogoDTO() {
@@ -55,6 +63,14 @@ public class JogoDTO implements DTO{
         this.categoria = categoria;
     }
 
+    public String getDificuldade() {
+        return dificuldade;
+    }
+
+    public void setDificuldade(String dificuldade) {
+        this.dificuldade = dificuldade;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -63,8 +79,11 @@ public class JogoDTO implements DTO{
         JogoDTO jogoDTO = (JogoDTO) o;
 
         if (categoria != null ? !categoria.equals(jogoDTO.categoria) : jogoDTO.categoria != null) return false;
+        if (dificuldade != jogoDTO.dificuldade) return false;
         if (id != null ? !id.equals(jogoDTO.id) : jogoDTO.id != null) return false;
         if (numRodadas != null ? !numRodadas.equals(jogoDTO.numRodadas) : jogoDTO.numRodadas != null) return false;
+        if (num_Jogadores != null ? !num_Jogadores.equals(jogoDTO.num_Jogadores) : jogoDTO.num_Jogadores != null)
+            return false;
 
         return true;
     }
@@ -74,6 +93,8 @@ public class JogoDTO implements DTO{
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (numRodadas != null ? numRodadas.hashCode() : 0);
         result = 31 * result + (categoria != null ? categoria.hashCode() : 0);
+        result = 31 * result + (num_Jogadores != null ? num_Jogadores.hashCode() : 0);
+        result = 31 * result + (dificuldade != null ? dificuldade.hashCode() : 0);
         return result;
     }
 
@@ -83,6 +104,8 @@ public class JogoDTO implements DTO{
                 "id=" + id +
                 ", numRodadas=" + numRodadas +
                 ", categoria=" + categoria +
+                ", num_Jogadores=" + num_Jogadores +
+                ", dificuldade=" + dificuldade +
                 '}';
     }
 

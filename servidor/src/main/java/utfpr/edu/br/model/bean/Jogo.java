@@ -18,7 +18,7 @@ public class Jogo implements IBean{
     @SequenceGenerator(allocationSize = 1, name = "seq_jogo", sequenceName = "seq_jogo")
     private Long id;
     private Long numRodadas;
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade = CascadeType.REFRESH)
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
     public Jogo() {
@@ -45,6 +45,10 @@ public class Jogo implements IBean{
 
     public Long getNumRodadas() {
         return numRodadas;
+    }
+
+    public void setNumRodadas(Long numRodadas) {
+        this.numRodadas = numRodadas;
     }
 
     public Categoria getCategoria() {

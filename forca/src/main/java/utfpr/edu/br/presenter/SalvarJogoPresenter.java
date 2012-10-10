@@ -5,6 +5,8 @@ package utfpr.edu.br.presenter;/**
  * Time: 22:41
  */
 
+import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.view.action.SalvarJogoActionListener;
 import utfpr.edu.br.view.telas.lobby.SalvarJogoView;
 
 /**
@@ -24,8 +26,9 @@ public class SalvarJogoPresenter {
         this.setUpViewListeners();
         view.packAndShow();
     }
-    public void setUpViewListeners(){
-
+    public void setUpViewListeners(){                //todo Quando lobby estiver pronto passar jogador dinamico
+        view.addSalvarListener(new SalvarJogoActionListener.SalvarJogoAction(this,
+                new JogadorDTO(71L,"joao","160147162158000000000000")));
     }
 
     public void setView(SalvarJogoView view) {

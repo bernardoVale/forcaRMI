@@ -5,7 +5,6 @@ import utfpr.edu.br.controller.ControladorJogador;
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.PalavraDTO;
 import utfpr.edu.br.inject.Getinjector;
-import utfpr.edu.br.model.bean.Jogador;
 import utfpr.edu.br.model.dao.JogadoresDoJogoDao;
 import utfpr.edu.br.util.Erros;
 import utfpr.edu.br.util.session.JogadoresSession;
@@ -34,7 +33,7 @@ public class JogadorFacadeImpl implements JogadorFacade{
      */
     @Override
     public RetornoValidacao saveJogador(String nome,String senha){
-       return controlador.save(new Jogador(nome,senha));
+       return controlador.save(new JogadorDTO(nome,senha));
     }
 
     /**

@@ -2,6 +2,7 @@ package utfpr.edu.br.view.telas.lobby;
 
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
+import java.awt.event.ActionListener;
 
 /**
  * Interface para a a view do JDialog de criacao de um jogo
@@ -12,6 +13,8 @@ public interface SalvarJogoView {
     public JComboBox cbDificuldade();
     public JButton btSalvar();
     public MaskFormatter setMascara(String mascara);
+    public void addSalvarListener(ActionListener listener);
+    public JFrame getJFrame();
     /**
      * Organiza e mostra a tela
      */

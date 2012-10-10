@@ -68,13 +68,13 @@ public abstract class AbstractControlador<T extends IBean,O extends DTO, D exten
     /**
      * Salva um objeto e commita.
      *
-     * @param bean
+     * @param dto
      */
-    public RetornoValidacao save(T bean)
+    public RetornoValidacao save(O dto)
     {
         try
         {
-            return new RetornoValidacao(converter.toDTO(dao.save(bean)));
+            return new RetornoValidacao(converter.toDTO(dao.save(converter.toBean(dto))));
 
         }
         catch(Exception e)
