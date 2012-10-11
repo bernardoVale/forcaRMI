@@ -34,7 +34,7 @@ public class FindAdversario extends SwingWorker<JogadorDTO,Void> {
     @Override
     protected JogadorDTO doInBackground() throws Exception {
         while (!rv.isOk()){
-            rv = RMIClient.getInstance().provider().retornaAdversario(jogoView.jogador());
+            rv = RMIClient.getInstance().provider().retornaAdversario(jogoView.jogador(),jogoView.jogo());
             Thread.sleep(2000);
         }
         return (JogadorDTO) rv.getObjeto();

@@ -18,7 +18,7 @@ public interface RmiProvider extends Remote{
     //loga no sistema e cria o jogo e as palavras
     RetornoValidacao iniciarJogo(String nome,String senha)throws RemoteException;
     RetornoValidacao popularJogos() throws RemoteException;
-    RetornoValidacao retornaAdversario(JogadorDTO jogador)throws RemoteException;
+    RetornoValidacao retornaAdversario(JogadorDTO jogador,JogoDTO jogo)throws RemoteException;
     //recebe a lista das palavras
     RetornoValidacao iniciarPartida(JogadorDTO jogador,JogadorDTO adversario)throws RemoteException;
     RetornoValidacao efetuarJogada(JogoAtivoDTO jogo)throws RemoteException;

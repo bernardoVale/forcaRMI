@@ -2,6 +2,7 @@ package utfpr.edu.br.facade;
 
 import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.dto.JogoDTO;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,6 +13,6 @@ import utfpr.edu.br.dto.JogadorDTO;
 public interface JogadorFacade {
     public RetornoValidacao saveJogador(String nome,String senha);
     public RetornoValidacao autenticar(String nome,String senha);
-    public RetornoValidacao adversario(JogadorDTO j);
+    public RetornoValidacao adversario(JogadorDTO j,JogoDTO jogo);
 
 }

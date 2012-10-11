@@ -3,6 +3,7 @@ package utfpr.edu.br.facade;
 import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.controller.ControladorJogador;
 import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
 import utfpr.edu.br.inject.Getinjector;
 import utfpr.edu.br.model.dao.JogadoresDoJogoDao;
@@ -62,18 +63,17 @@ public class JogadorFacadeImpl implements JogadorFacade{
     }
 
     @Override
-    public RetornoValidacao adversario(JogadorDTO j) {
+    public RetornoValidacao adversario(JogadorDTO j,JogoDTO jogo) {
         RetornoValidacao rv = new RetornoValidacao();
         JogadoresDoJogoDao daoJDJ = Getinjector.getInstance().getInstance(JogadoresDoJogoDao.class);
-        Long quantidade = daoJDJ.quantidadeDeJogadores(1L);
+        Long quantidade = daoJDJ.quantidadeDeJogadores(jogo.getId());
         if(quantidade!=2){
             //Faço isso pra nao retorna NoResultException
             //Ou seja so procuro o idAdversario se houver adversario
            rv.setOk(false);
            return rv;
         }else{
-            //todo tirar o jogo estatico e deixar dinamico
-            Long idAdversario = daoJDJ.idAdversario(j.getId(),1L);
+            Long idAdversario = daoJDJ.idAdversario(j.getId(),jogo.getId());
             rv = controlador.findById(idAdversario);
             //Antes de enviar o jogador adversario eu aproveio os dados e cadastro as palavras do jogo ;)
 

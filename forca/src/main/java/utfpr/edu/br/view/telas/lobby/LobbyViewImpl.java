@@ -5,8 +5,6 @@
 package utfpr.edu.br.view.telas.lobby;
 
 import utfpr.edu.br.dto.JogadorDTO;
-import utfpr.edu.br.dto.JogoDTO;
-import utfpr.edu.br.view.telas.lobby.painelPartida.PainelPartida;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,26 +17,9 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
     private JogadorDTO jogador;
     public LobbyViewImpl() {
         initComponents();
-        /*btCriarSala.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                doTentarPopular();
-            }
-        });  */
     }
 
-    private void doTentarPopular() {
-        JogoDTO jogo = new JogoDTO();
-        jogo.setNumRodadas(3L);
-        jogo.setDificuldade("Fácil");
-        jogo.setId(15L);
-        jogo.setNum_Jogadores(1L);
-        PainelPartida p = new PainelPartida(jogo);
-        pJogos.add(p);
-        p.setVisible(true);
-        pJogos.revalidate();
-        this.validate();
-    }
+
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -48,6 +29,7 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
         label3 = new JLabel();
         lbJogador = new JLabel();
         btCriarSala = new JButton();
+        btAtualizar = new JButton();
         pJogos = new JPanel();
 
         //======== this ========
@@ -82,6 +64,9 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
             //---- btCriarSala ----
             btCriarSala.setText("Criar Sala");
 
+            //---- btAtualizar ----
+            btAtualizar.setText("Atualizar");
+
             GroupLayout pTopLayout = new GroupLayout(pTop);
             pTop.setLayout(pTopLayout);
             pTopLayout.setHorizontalGroup(
@@ -98,7 +83,9 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
                                 .addComponent(lbJogador))
                             .addGroup(pTopLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(btCriarSala, GroupLayout.PREFERRED_SIZE, 119, GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btCriarSala, GroupLayout.PREFERRED_SIZE, 119, GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btAtualizar, GroupLayout.PREFERRED_SIZE, 120, GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(287, Short.MAX_VALUE))
             );
             pTopLayout.setVerticalGroup(
@@ -110,7 +97,9 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
                             .addComponent(label3)
                             .addComponent(lbJogador))
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
-                        .addComponent(btCriarSala))
+                        .addGroup(pTopLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(btCriarSala)
+                                .addComponent(btAtualizar)))
             );
         }
         contentPane.add(pTop);
@@ -148,6 +137,7 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
     private JLabel label3;
     private JLabel lbJogador;
     private JButton btCriarSala;
+    private JButton btAtualizar;
     private JPanel pJogos;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
@@ -177,8 +167,18 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
     }
 
     @Override
+    public JButton btAtualizar() {
+        return btAtualizar;
+    }
+
+    @Override
     public void addCriarSalaListener(ActionListener listener) {
         btCriarSala.addActionListener(listener);
+    }
+
+    @Override
+    public void addAtualizarSalaListener(ActionListener listener) {
+        btAtualizar.addActionListener(listener);
     }
 
     @Override

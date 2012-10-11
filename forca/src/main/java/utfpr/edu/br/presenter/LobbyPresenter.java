@@ -7,7 +7,7 @@ package utfpr.edu.br.presenter;/**
 
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoDTO;
-import utfpr.edu.br.presenter.worker.ListarJogo;
+import utfpr.edu.br.view.action.AtualizarSalaActionListener;
 import utfpr.edu.br.view.action.CriarSalaActionListener;
 import utfpr.edu.br.view.telas.lobby.LobbyView;
 import utfpr.edu.br.view.telas.lobby.painelPartida.PainelPartida;
@@ -36,20 +36,11 @@ public class LobbyPresenter {
         view.packAndShow();
         view.lbJogador().setText(jogador.getNome());
         this.setUpViewListeners();
-        buscarJogos();
-    }
-
-    public void buscarJogos() {
-        ListarJogo worker = new ListarJogo(this);
-        try {
-            worker.execute();
-        } catch (Exception e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
     }
 
     public void setUpViewListeners() {
        view.addCriarSalaListener(new CriarSalaActionListener.CriarSalaAction(view.jogador()));
+       view.addAtualizarSalaListener(new AtualizarSalaActionListener.AtualizarSalaAction(this));
     }
 
     public void setView(LobbyView View) {
@@ -61,15 +52,17 @@ public class LobbyPresenter {
     }
 
     public void exibirJogos(List<JogoDTO> jogos){
+        int i=1; //Numero da sala
         if(this.jogos!=jogos){
             this.jogos = jogos;
             view.pJogos().removeAll();
             view.pJogos().revalidate();
             view.root().validate();
             for (JogoDTO jogo : this.jogos) {
-                view.pJogos().add(new PainelPartida(jogo));
+                view.pJogos().add(new PainelPartida(jogo,i,view.jogador()));
                 view.pJogos().revalidate();
                 view.root().validate();
+                i++;
             }
         }
     }

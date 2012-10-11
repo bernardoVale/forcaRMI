@@ -31,7 +31,7 @@ public class ListarJogo extends SwingWorker<List<JogoDTO>,Void> {
     protected List<JogoDTO> doInBackground() throws Exception {
         while (!rv.isOk()){
             rv = RMIClient.getInstance().provider().listarJogos();
-            Thread.sleep(10000);
+            Thread.sleep(400);
             if(rv.getErro()!=null){
                 JOptionPane.showMessageDialog(presenter.getView().root(),rv.getErro());
             }

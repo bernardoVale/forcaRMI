@@ -4,26 +4,46 @@
 
 package utfpr.edu.br.view.telas.lobby.painelPartida;
 
+import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoDTO;
+import utfpr.edu.br.presenter.JogoPresenter;
+import utfpr.edu.br.spring.SpringFactory;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * @author Bernardo Vale
  */
 public class PainelPartida extends JPanel {
-    public PainelPartida(JogoDTO jogo) {
+    private final JogoPresenter presenter;
+    private JogoDTO jogo;
+    private JogadorDTO jogador;
+    public PainelPartida(JogoDTO jogo,int i,JogadorDTO jogador) {
         initComponents();
-        popularJogo(jogo);
-
+        popularJogo(jogo,i);
+        setUpListener();
+        presenter = (JogoPresenter) SpringFactory.getFactory().getBean("JogoPresenter");
+        this.jogo = jogo;
+        this.jogador = jogador;
     }
 
-    private void popularJogo(JogoDTO jogo) {
+    private void setUpListener() {
+        btEntrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                presenter.createView(jogador,jogo);
+            }
+        });
+    }
+
+    private void popularJogo(JogoDTO jogo,int i) {
         lbNumRodadas.setText(jogo.getNumRodadas().toString());
         lbDificuldade.setText(jogo.getDificuldade());
-        lbId.setText(jogo.getId().toString());
+        lbId.setText(""+i);
         lbJogadores.setText(jogo.getNum_Jogadores()+"/"+"2");
     }
 

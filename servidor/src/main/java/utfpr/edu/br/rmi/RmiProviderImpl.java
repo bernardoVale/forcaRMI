@@ -35,9 +35,6 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
     @Override
     public RetornoValidacao iniciarJogo(String nome,String senha) throws RemoteException {
         RetornoValidacao rv = facadeJogador.autenticar(nome,senha);
-       /*if(rv.isOk()){ //todo Retirei a criacao do jogo, se der zebra e aqui que explode
-           return facadeJogo.iniciarJogo((JogadorDTO) rv.getObjeto());
-       } */
        return rv;
     }
 
@@ -48,8 +45,8 @@ public class RmiProviderImpl extends UnicastRemoteObject implements RmiProvider 
     }
 
     @Override
-    public RetornoValidacao retornaAdversario(JogadorDTO jogador) throws RemoteException {
-        return facadeJogador.adversario(jogador);
+    public RetornoValidacao retornaAdversario(JogadorDTO jogador,JogoDTO jogo) throws RemoteException {
+        return facadeJogador.adversario(jogador,jogo);
     }
 
     @Override

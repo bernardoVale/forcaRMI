@@ -18,7 +18,9 @@ public interface LobbyView {
      public void setJogador(JogadorDTO jogador);
      public JLabel lbJogador();
      public JButton btCriarSala();
+     public JButton btAtualizar();
      public void addCriarSalaListener(ActionListener listener);
+     public void addAtualizarSalaListener(ActionListener listener);
      public void packAndShow();
      public JFrame root();
 
