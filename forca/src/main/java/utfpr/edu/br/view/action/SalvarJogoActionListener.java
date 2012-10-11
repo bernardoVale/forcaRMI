@@ -10,8 +10,10 @@ import utfpr.edu.br.builder.MensagemDirector;
 import utfpr.edu.br.builder.MensagemError;
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoDTO;
+import utfpr.edu.br.presenter.JogoPresenter;
 import utfpr.edu.br.presenter.SalvarJogoPresenter;
 import utfpr.edu.br.rmi.RMIClient;
+import utfpr.edu.br.spring.SpringFactory;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -29,10 +31,12 @@ public class SalvarJogoActionListener {
         private JDialog container;
         private MensagemDirector mensagem;
         private RetornoValidacao rv;
+        private JogoPresenter jogoPresenter;
 
         public SalvarJogoAction(SalvarJogoPresenter presenter, JogadorDTO jogador) {
             this.presenter = presenter;
             this.jogador = jogador;
+            jogoPresenter = (JogoPresenter) SpringFactory.getFactory().getBean("JogoPresenter");
         }
 
         @Override
@@ -69,6 +73,8 @@ public class SalvarJogoActionListener {
                     container.setLocation(x,y);
                     container.setVisible(true);
                 }else{
+                    jogoPresenter.createView(jogador,jogo);
+                    presenter.destroy();
                     //abre a tela do jogo com o jogador
                     //fecha essa tela
                 }

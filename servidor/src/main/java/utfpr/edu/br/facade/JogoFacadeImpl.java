@@ -184,6 +184,11 @@ public class JogoFacadeImpl implements JogoFacade{
         JogadoresDoJogo jdj = Getinjector.getInstance().     //fixme tratar exceçoes fazendo controladora
                 getInstance(JogadoresDoJogoDao.class).save(new JogadoresDoJogo(jogador.getId(),
                 jogo.getId().intValue(),null));
-        return new RetornoValidacao();
+        return new RetornoValidacao(jogo);
+    }
+
+    @Override
+    public RetornoValidacao listarJogos() {
+        return control.listaJogos();
     }
 }

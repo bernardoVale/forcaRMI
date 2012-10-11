@@ -7,6 +7,7 @@ package utfpr.edu.br.presenter;/**
 
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoAtivoDTO;
+import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.presenter.template.atualizarTela.AtualizarLetrasCorretas;
 import utfpr.edu.br.presenter.template.atualizarTela.AtualizarLetrasErradas;
 import utfpr.edu.br.presenter.template.atualizarTela.AtualizarTelaTemplate;
@@ -32,9 +33,9 @@ public class JogoPresenter {
     public JogoPresenter() {
     }
 
-    public void createView(JogadorDTO jogador) {
+    public void createView(JogadorDTO jogador,JogoDTO jogo) {
         this.setUpViewListeners();
-        jogoView.packAndShow(jogador);
+        jogoView.packAndShow(jogador,jogo);
         moldarTelaInicial();
         aguardarAdversario();
     }

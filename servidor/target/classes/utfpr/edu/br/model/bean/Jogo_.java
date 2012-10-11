@@ -5,12 +5,13 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import utfpr.edu.br.model.bean.Categoria;
 
-@Generated(value="EclipseLink-2.4.0.v20120608-rNA", date="2012-10-10T11:01:03")
+@Generated(value="EclipseLink-2.4.0.v20120608-rNA", date="2012-10-10T19:31:16")
 @StaticMetamodel(Jogo.class)
 public class Jogo_ { 
 
     public static volatile SingularAttribute<Jogo, Long> id;
     public static volatile SingularAttribute<Jogo, Categoria> categoria;
     public static volatile SingularAttribute<Jogo, Long> numRodadas;
+    public static volatile SingularAttribute<Jogo, String> dificuldade;
 
 }

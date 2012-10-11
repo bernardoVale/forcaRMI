@@ -16,6 +16,8 @@ public interface JogoFacade {
      public RetornoValidacao listaJogos();
      public RetornoValidacao iniciarPartida(JogadorDTO jogador,JogadorDTO adversario);
      public RetornoValidacao efetuarJogada(JogoAtivoDTO jogo);
-    public RetornoValidacao eMeuTurno(JogadorDTO jogador, JogoDTO jogo);
-    public RetornoValidacao criarJogo(JogadorDTO jogador, JogoDTO jogo);
+     public RetornoValidacao eMeuTurno(JogadorDTO jogador, JogoDTO jogo);
+     public RetornoValidacao criarJogo(JogadorDTO jogador, JogoDTO jogo);
+     public RetornoValidacao listarJogos();
+
 }

@@ -1,4 +1,4 @@
-package utfpr.edu.br.view.telas.lobby;
+package utfpr.edu.br.view.telas.lobby.salvarJogo;
 
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
@@ -15,6 +15,7 @@ public interface SalvarJogoView {
     public MaskFormatter setMascara(String mascara);
     public void addSalvarListener(ActionListener listener);
     public JFrame getJFrame();
+    void destroy();
     /**
      * Organiza e mostra a tela
      */

@@ -20,11 +20,12 @@ import java.util.List;
  * @author Bernardo Vale
  */
 public class JogoDao extends AbstractDao<Jogo> {
-     private JogoConverter cv;
+     private final JogoConverter cv;
 
     @Inject
-    public JogoDao(Provider<EntityManager> emp) {
+    public JogoDao(Provider<EntityManager> emp, JogoConverter cv) {
         super(emp, Jogo.class);
+        this.cv = cv;
     }
     public List<JogoDTO> listaJogo()throws NoResultException,Exception{
        List<JogoDTO> lista = new ArrayList<JogoDTO>();

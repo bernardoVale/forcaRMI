@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Tue Oct 09 23:37:24 BRT 2012
  */
 
-package utfpr.edu.br.view.telas.lobby;
+package utfpr.edu.br.view.telas.lobby.salvarJogo;
 
 import utfpr.edu.br.util.Dificuldade;
 
@@ -143,5 +143,11 @@ public class SalvarJogoViewImpl extends JFrame implements SalvarJogoView{
         cbDificuldade.addItem(Dificuldade.NORMAL.d());
         cbDificuldade.addItem(MAGAYVER.d());
         cbDificuldade.addItem(FILHO_DE_OSIRIS.d());
+    }
+
+    @Override
+    public void destroy() {
+        this.setVisible(false);
+        this.dispose();
     }
 }

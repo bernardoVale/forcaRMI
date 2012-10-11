@@ -8,6 +8,7 @@ import utfpr.edu.br.model.dao.JogoDao;
 import utfpr.edu.br.util.Erros;
 
 import javax.inject.Inject;
+import javax.persistence.NoResultException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -35,7 +36,11 @@ public class ControladorJogo extends AbstractControlador<Jogo,JogoDTO,JogoDao>{
         RetornoValidacao rv = new RetornoValidacao();
         try {
             rv.setObjeto(dao.listaJogo());
-        } catch (Exception e) {
+        }catch (NoResultException e){
+            rv.setErro(Erros.DADOSNAOENCONTRADOS.nome());
+            e.printStackTrace();
+        }
+        catch (Exception e) {
             rv.setErro(Erros.PERSISTENCIA.nome());
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }

@@ -5,24 +5,25 @@ package utfpr.edu.br;/**
  * Time: 19:58
  */
 
+import utfpr.edu.br.controller.ControladorJogo;
+import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.inject.Getinjector;
-import utfpr.edu.br.model.bean.Categoria;
-import utfpr.edu.br.model.bean.JogadoresDoJogo;
-import utfpr.edu.br.model.bean.Jogo;
-import utfpr.edu.br.model.dao.JogadoresDoJogoDao;
-import utfpr.edu.br.model.dao.JogoDao;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Bernardo Vale
  */
 public class Teste {
     public static void main(String[] args) {
-        JogadoresDoJogoDao dao = Getinjector.getInstance().getInstance(JogadoresDoJogoDao.class);
-        Jogo j = new Jogo();
-        j.setCategoria(new Categoria(1L,"Adjetivo"));
-        j.setNumRodadas(3L);
-        dao.save(new JogadoresDoJogo(71L,
-                Getinjector.getInstance().getInstance(JogoDao.class).save(j).getId().intValue(),null));
+        ControladorJogo cv = Getinjector.getInstance().getInstance(ControladorJogo.class);
+        List<JogoDTO> jogos = new ArrayList<JogoDTO>();
+        jogos = (List<JogoDTO>) cv.listaJogos().getObjeto();
+        for (JogoDTO jogo : jogos) {
+            System.out.println(jogo.toString());
+        }
+
     }
 
 }

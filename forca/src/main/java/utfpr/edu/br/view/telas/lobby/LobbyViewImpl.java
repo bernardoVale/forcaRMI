@@ -4,26 +4,27 @@
 
 package utfpr.edu.br.view.telas.lobby;
 
+import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.view.telas.lobby.painelPartida.PainelPartida;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
  * @author Bernardo Vale
  */
-public class LobbyViewImpl extends JFrame {
+public class LobbyViewImpl extends JFrame implements LobbyView{
+    private JogadorDTO jogador;
     public LobbyViewImpl() {
         initComponents();
-        button1.addActionListener(new ActionListener() {
+        /*btCriarSala.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 doTentarPopular();
             }
-        });
+        });  */
     }
 
     private void doTentarPopular() {
@@ -33,9 +34,9 @@ public class LobbyViewImpl extends JFrame {
         jogo.setId(15L);
         jogo.setNum_Jogadores(1L);
         PainelPartida p = new PainelPartida(jogo);
-        panel1.add(p);
+        pJogos.add(p);
         p.setVisible(true);
-        panel1.revalidate();
+        pJogos.revalidate();
         this.validate();
     }
 
@@ -45,9 +46,9 @@ public class LobbyViewImpl extends JFrame {
         pTop = new JPanel();
         label2 = new JLabel();
         label3 = new JLabel();
-        jogador = new JLabel();
-        button1 = new JButton();
-        panel1 = new JPanel();
+        lbJogador = new JLabel();
+        btCriarSala = new JButton();
+        pJogos = new JPanel();
 
         //======== this ========
         setTitle("Forca 1.0 - Sala de Espera");
@@ -74,12 +75,12 @@ public class LobbyViewImpl extends JFrame {
             label3.setText("Jogador: ");
             label3.setFont(new Font("SansSerif", Font.PLAIN, 36));
 
-            //---- jogador ----
-            jogador.setText("hogakii");
-            jogador.setFont(new Font("SansSerif", Font.PLAIN, 36));
+            //---- lbJogador ----
+            lbJogador.setText("hogakii");
+            lbJogador.setFont(new Font("SansSerif", Font.PLAIN, 36));
 
-            //---- button1 ----
-            button1.setText("Criar Sala");
+            //---- btCriarSala ----
+            btCriarSala.setText("Criar Sala");
 
             GroupLayout pTopLayout = new GroupLayout(pTop);
             pTop.setLayout(pTopLayout);
@@ -94,10 +95,10 @@ public class LobbyViewImpl extends JFrame {
                                 .addContainerGap()
                                 .addComponent(label3)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jogador))
+                                .addComponent(lbJogador))
                             .addGroup(pTopLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(button1, GroupLayout.PREFERRED_SIZE, 119, GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btCriarSala, GroupLayout.PREFERRED_SIZE, 119, GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(287, Short.MAX_VALUE))
             );
             pTopLayout.setVerticalGroup(
@@ -107,20 +108,20 @@ public class LobbyViewImpl extends JFrame {
                         .addComponent(label2)
                         .addGroup(pTopLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                             .addComponent(label3)
-                            .addComponent(jogador))
+                            .addComponent(lbJogador))
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
-                        .addComponent(button1))
+                        .addComponent(btCriarSala))
             );
         }
         contentPane.add(pTop);
         pTop.setBounds(0, 0, 1090, 175);
 
-        //======== panel1 ========
+        //======== pJogos ========
         {
-            panel1.setLayout(new FlowLayout(FlowLayout.LEFT));
+            pJogos.setLayout(new FlowLayout(FlowLayout.LEFT));
         }
-        contentPane.add(panel1);
-        panel1.setBounds(0, 175, 1090, 460);
+        contentPane.add(pJogos);
+        pJogos.setBounds(0, 175, 1090, 460);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -145,8 +146,49 @@ public class LobbyViewImpl extends JFrame {
     private JPanel pTop;
     private JLabel label2;
     private JLabel label3;
-    private JLabel jogador;
-    private JButton button1;
-    private JPanel panel1;
+    private JLabel lbJogador;
+    private JButton btCriarSala;
+    private JPanel pJogos;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
+
+    @Override
+    public JPanel pJogos() {
+        return pJogos;
+    }
+
+    @Override
+    public JogadorDTO jogador() {
+        return jogador;
+    }
+
+    @Override
+    public void setJogador(JogadorDTO jogador) {
+        this.jogador = jogador;
+    }
+
+    @Override
+    public JLabel lbJogador() {
+        return lbJogador;
+    }
+
+    @Override
+    public JButton btCriarSala() {
+        return btCriarSala;
+    }
+
+    @Override
+    public void addCriarSalaListener(ActionListener listener) {
+        btCriarSala.addActionListener(listener);
+    }
+
+    @Override
+    public void packAndShow() {
+        this.pack();
+        this.setVisible(true);
+    }
+
+    @Override
+    public JFrame root() {
+        return this;
+    }
 }

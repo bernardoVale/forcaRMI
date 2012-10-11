@@ -59,7 +59,7 @@ public interface JogoView {
     /**
      * Organiza e mostra a tela
      */
-    public void packAndShow(JogadorDTO jogador);
+    public void packAndShow(JogadorDTO jogador,JogoDTO jogo);
 
     /**
      * Limpa os campos da tela

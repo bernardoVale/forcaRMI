@@ -17,12 +17,14 @@ public class JogoConverter extends AbstractConverter<Jogo,JogoDTO>{
     @Override
     public Jogo toBean(JogoDTO dto) {
         catConv = new CategoriaConverter();
-        return new Jogo(dto.getId(),dto.getNumRodadas(),catConv.toBean(dto.getCategoria()));
+        return new Jogo(dto.getId(),dto.getNumRodadas(),catConv.toBean(dto.getCategoria())
+                ,dto.getDificuldade());
     }
 
     @Override
     public JogoDTO toDTO(Jogo bean) {
         catConv = new CategoriaConverter();
-        return new JogoDTO(bean.getId(),bean.getNumRodadas(),catConv.toDTO(bean.getCategoria()));
+        return new JogoDTO(bean.getId(),bean.getNumRodadas(),catConv.toDTO(bean.getCategoria())
+        ,bean.getDificuldade());
     }
 }

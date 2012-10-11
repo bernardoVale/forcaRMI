@@ -16,6 +16,12 @@
         </property>
     </bean>
 
+    <bean id="LobbyPresenter" class="utfpr.edu.br.presenter.LobbyPresenter" singleton="false">
+        <property name="View">
+            <ref local="LobbyView"/>
+        </property>
+    </bean>
+
     <bean id="SalvarJogoPresenter" class="utfpr.edu.br.presenter.SalvarJogoPresenter" singleton="false">
         <property name="View">
             <ref local="SalvarJogoView"/>
@@ -25,7 +31,8 @@
     <!-- Classe responsável por renderizar os dados graficamente -->
     <bean id="LoginView" class="utfpr.edu.br.view.telas.login.LoginViewImpl" singleton="false"/>
     <bean id="JogoView" class="utfpr.edu.br.view.telas.jogo.JogoViewImpl" singleton="false"/>
-    <bean id="SalvarJogoView" class="utfpr.edu.br.view.telas.lobby.SalvarJogoViewImpl" singleton="false">
+    <bean id="SalvarJogoView" class="utfpr.edu.br.view.telas.lobby.salvarJogo.SalvarJogoViewImpl" singleton="false"/>
+    <bean id="LobbyView" class="utfpr.edu.br.view.telas.lobby.LobbyViewImpl" singleton="false">
     </bean>
 
 </beans>

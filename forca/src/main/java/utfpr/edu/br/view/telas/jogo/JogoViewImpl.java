@@ -501,8 +501,9 @@ public class JogoViewImpl extends JFrame implements JogoView{
     }
 
     @Override
-    public void packAndShow(JogadorDTO jogador) {
+    public void packAndShow(JogadorDTO jogador,JogoDTO jogo) {
         this.jogador = jogador;
+        this.jogo = jogo;
         this.pack();
         this.setVisible(true);
     }

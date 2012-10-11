@@ -25,6 +25,9 @@ public interface RmiProvider extends Remote{
 
     //Retorno um jogoativoDTO atualizado caso seja o turno do jogadorpassado caso contrario retorna nulo
     RetornoValidacao eMeuTurno(JogadorDTO jogador,JogoDTO jogo)throws RemoteException;
-
+    //Cria um novo jogo e adiciona o o jogador a aquele jogo
     RetornoValidacao criarJogo(JogadorDTO jogador, JogoDTO jogo) throws RemoteException;
+
+    //Retorna todos os jogos e a quantidade de jogadores neles contido
+    RetornoValidacao listarJogos() throws RemoteException;
 }
