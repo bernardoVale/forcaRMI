@@ -45,8 +45,9 @@ public class JogoFacadeImpl implements JogoFacade{
 
 
     @Override
+    @Deprecated                  //Nao usa mais esse metodo
     public synchronized RetornoValidacao iniciarJogo(JogadorDTO j) {
-        //todo aqui primeiramente sera criado uma categoria qualquer e um jogo qualquer so pra iniciar
+
         //rv = control.save(new Jogo(new Categoria("Adjetivo"),5L));
         rv = controlCat.findById(1L);
         //rv = controlCat.findByKey("nome","Adjetivo");
@@ -57,7 +58,7 @@ public class JogoFacadeImpl implements JogoFacade{
         Long quantidade = daoJDJ.quantidadeDeJogadores(1L);
         if(quantidade<2){     //pode salvar
           if(quantidade==0){
-              sortearESalvarPalavras((CategoriaDTO)rv.getObjeto());
+              //sortearESalvarPalavras((CategoriaDTO)rv.getObjeto());
           }
           daoJDJ.save(new JogadoresDoJogo(j.getId(),
                   1,null));
@@ -67,15 +68,14 @@ public class JogoFacadeImpl implements JogoFacade{
         }
     }
 
-    private synchronized void sortearESalvarPalavras(CategoriaDTO categoria) {
+    private synchronized void sortearESalvarPalavras(JogoDTO jogo) {
         List<PalavraDTO> palavrasDoJogo;
         //traz o array das palavras sorteadas
-        System.out.println(categoria);
-        palavrasDoJogo = facade.sortearPalavras(3L,categoria);
+        palavrasDoJogo = facade.sortearPalavras(jogo.getNumRodadas(),jogo.getCategoria());
         PalavrasDoJogoDao daoPalavaras = Getinjector.getInstance().getInstance(PalavrasDoJogoDao.class);
         for(int i=0;i<palavrasDoJogo.size();i++){
             //salva todas as palavras    //todo mudar para controlador
-            daoPalavaras.save(new PalavrasDoJogo(palavrasDoJogo.get(i).getId().intValue(),1L));
+            daoPalavaras.save(new PalavrasDoJogo(palavrasDoJogo.get(i).getId().intValue(),jogo.getId()));
         }
     }
 
@@ -85,16 +85,10 @@ public class JogoFacadeImpl implements JogoFacade{
     }
 
     @Override
-    public synchronized RetornoValidacao iniciarPartida(JogadorDTO jogador, JogadorDTO adversario) {
-        RetornoValidacao rv;
-        JogadoresDoJogoDao daoJDJ = Getinjector.getInstance().getInstance(JogadoresDoJogoDao.class);
-        Integer jogoId = daoJDJ.getJogo(jogador.getId(), adversario.getId());
-        rv = control.findById(new Long(jogoId));
-        if(!rv.isOk()){
-            return rv;
-        }
-        JogoDTO jogo = (JogoDTO) rv.getObjeto();
-        rv = facade.getPalavrasDoJogo(jogoId.longValue());
+    public synchronized RetornoValidacao iniciarPartida(JogadorDTO jogador, JogadorDTO adversario
+    ,JogoDTO jogo) {
+
+        rv = facade.getPalavrasDoJogo(jogo.getId().longValue());
         if(!rv.isOk()){
             return rv;
         }
@@ -175,12 +169,15 @@ public class JogoFacadeImpl implements JogoFacade{
     }
     @Override
     public RetornoValidacao criarJogo(JogadorDTO jogador, JogoDTO jogo) {
-        rv = controlCat.findById(1L);
-        if(!rv.isOk()) return rv;
-        jogo.setCategoria((CategoriaDTO) rv.getObjeto());
-        rv = control.save(jogo);
-        if(!rv.isOk()) return rv;
-        jogo = (JogoDTO) rv.getObjeto();
+        if(jogo.getId()==null){                //Cria o jogo, ou se, for outro jogador so da update
+            rv = controlCat.findById(1L);
+            if(!rv.isOk()) return rv;
+            jogo.setCategoria((CategoriaDTO) rv.getObjeto());
+            rv = control.save(jogo);
+            if(!rv.isOk()) return rv;
+            jogo = (JogoDTO) rv.getObjeto();
+            sortearESalvarPalavras(jogo);
+        }
         JogadoresDoJogo jdj = Getinjector.getInstance().     //fixme tratar exceçoes fazendo controladora
                 getInstance(JogadoresDoJogoDao.class).save(new JogadoresDoJogo(jogador.getId(),
                 jogo.getId().intValue(),null));

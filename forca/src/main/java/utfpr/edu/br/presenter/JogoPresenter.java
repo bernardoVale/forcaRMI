@@ -14,6 +14,7 @@ import utfpr.edu.br.presenter.template.atualizarTela.AtualizarTelaTemplate;
 import utfpr.edu.br.presenter.worker.AguardarTurno;
 import utfpr.edu.br.presenter.worker.BuscarDadosJogo;
 import utfpr.edu.br.presenter.worker.FindAdversario;
+import utfpr.edu.br.presenter.worker.PopularJogador;
 import utfpr.edu.br.util.GetImagemForca;
 import utfpr.edu.br.view.action.MascararTextoActionListener;
 import utfpr.edu.br.view.action.RealizarJogadaActionListener;
@@ -37,8 +38,21 @@ public class JogoPresenter {
         this.setUpViewListeners();
         jogoView.packAndShow(jogador,jogo);
         moldarTelaInicial();
-        aguardarAdversario();
+        entrarNoJogo();
     }
+
+    /**
+     * Adiciona o jogador no jogo
+     */
+    private void entrarNoJogo() {
+        PopularJogador worker = new PopularJogador(this);
+        try {
+            worker.execute();
+        } catch (Exception e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
     /**
      * Metodo inicial da tela, onde o jogador aguarda o oponente
      */

@@ -50,7 +50,6 @@ public class PalavraDao extends AbstractDao<Palavra>{
         }
         Long totalPalavras = (Long) em().createQuery("SELECT count(p) from Palavra p where p.categoria = ?1")
                 .setParameter(1,categoria).getSingleResult();
-        System.out.println("TOtal:"+totalPalavras);
         for(int i=1;i<=rodadas;i++){//sorteia um numero na range dos codigos q existem no banco e add na lista
             cont = 0;
             Random codigo = new Random();  //SOMA E SUBTRAÇAO PARA N ACHAR VALOR 0

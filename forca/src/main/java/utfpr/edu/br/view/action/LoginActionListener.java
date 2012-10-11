@@ -10,7 +10,6 @@ import utfpr.edu.br.builder.MensagemDirector;
 import utfpr.edu.br.builder.MensagemError;
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.md5.CriptografiaLogix;
-import utfpr.edu.br.presenter.JogoPresenter;
 import utfpr.edu.br.presenter.LobbyPresenter;
 import utfpr.edu.br.presenter.LoginPresenter;
 import utfpr.edu.br.rmi.RMIClient;
@@ -31,14 +30,12 @@ public class LoginActionListener {
 
     public static class AutenticarActionListener implements ActionListener,KeyListener {
         private LoginPresenter presenter;
-        private JogoPresenter jogoPresenter;
         private LobbyPresenter lobbyPresenter;
         private MensagemDirector mensagem;
         private JDialog container;
 
         public AutenticarActionListener(LoginPresenter presenter) {
             this.presenter = presenter;
-            this.jogoPresenter = (JogoPresenter) SpringFactory.getFactory().getBean("JogoPresenter");
             this.lobbyPresenter = (LobbyPresenter) SpringFactory.getFactory().getBean("LobbyPresenter");
         }
 
@@ -83,7 +80,6 @@ public class LoginActionListener {
                     //Ta tudo ok entao tem que chamar a view do jogo e destruir a view de login
                     view.destroy();
                     lobbyPresenter.createView((JogadorDTO) rv.getObjeto());
-                    //jogoPresenter.createView((JogadorDTO) rv.getObjeto());
 
                 }else{
                     mensagem = new MensagemDirector(new MensagemError(rv.getErro()));

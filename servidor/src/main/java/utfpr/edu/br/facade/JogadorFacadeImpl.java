@@ -63,8 +63,8 @@ public class JogadorFacadeImpl implements JogadorFacade{
     }
 
     @Override
-    public RetornoValidacao adversario(JogadorDTO j,JogoDTO jogo) {
-        RetornoValidacao rv = new RetornoValidacao();
+    public synchronized RetornoValidacao adversario(JogadorDTO j,JogoDTO jogo) {
+        RetornoValidacao rv = new RetornoValidacao();    //todo criador da sala vem com id null
         JogadoresDoJogoDao daoJDJ = Getinjector.getInstance().getInstance(JogadoresDoJogoDao.class);
         Long quantidade = daoJDJ.quantidadeDeJogadores(jogo.getId());
         if(quantidade!=2){

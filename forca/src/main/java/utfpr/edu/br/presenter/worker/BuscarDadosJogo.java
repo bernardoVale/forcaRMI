@@ -31,7 +31,7 @@ public class BuscarDadosJogo extends SwingWorker<JogoAtivoDTO,Void>{
     @Override
     protected JogoAtivoDTO doInBackground() throws Exception {
         while (!rv.isOk()){
-            rv = RMIClient.getInstance().provider().iniciarPartida(view.jogador(),view.adversario());
+            rv = RMIClient.getInstance().provider().iniciarPartida(view.jogador(),view.adversario(),view.jogo());
             Thread.sleep(500);
         }
         return (JogoAtivoDTO) rv.getObjeto();

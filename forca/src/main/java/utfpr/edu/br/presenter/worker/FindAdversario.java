@@ -33,7 +33,7 @@ public class FindAdversario extends SwingWorker<JogadorDTO,Void> {
     RetornoValidacao rv = new RetornoValidacao(false);
     @Override
     protected JogadorDTO doInBackground() throws Exception {
-        while (!rv.isOk()){
+        while (!rv.isOk()){                //todo jogo esta indo nulo
             rv = RMIClient.getInstance().provider().retornaAdversario(jogoView.jogador(),jogoView.jogo());
             Thread.sleep(2000);
         }

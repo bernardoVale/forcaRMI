@@ -12,13 +12,11 @@ import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.presenter.JogoPresenter;
 import utfpr.edu.br.presenter.SalvarJogoPresenter;
-import utfpr.edu.br.rmi.RMIClient;
 import utfpr.edu.br.spring.SpringFactory;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.rmi.RemoteException;
 
 /**
  * @author Bernardo Vale
@@ -58,26 +56,12 @@ public class SalvarJogoActionListener {
                 container.setLocation(x,y);
                 container.setVisible(true);
             }else{
-                try {
-                    rv = RMIClient.getInstance().provider().criarJogo(jogador,jogo);
-                } catch (RemoteException e1) {
-                    e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                }
-                if(!rv.isOk()){
-                    mensagem = new MensagemDirector(new MensagemError(rv.getErro()));
-                    container = mensagem.construirDialogMensagem();
-                    //Seta a posicao do container de uma maneira nao tao bela
-                    int x = presenter.getView().getJFrame().getX() + presenter.getView().getJFrame().getWidth()/2;
-                    int y = presenter.getView().getJFrame().getY() +
-                            presenter.getView().getJFrame().getHeight()/2 - container.getHeight();
-                    container.setLocation(x,y);
-                    container.setVisible(true);
-                }else{
-                    jogoPresenter.createView(jogador,jogo);
-                    presenter.destroy();
+                   jogoPresenter.createView(jogador,jogo);
+                   presenter.destroy();
                     //abre a tela do jogo com o jogador
                     //fecha essa tela
-                }
+                    //todo fechar o lobby
+
             }
         }
     }
