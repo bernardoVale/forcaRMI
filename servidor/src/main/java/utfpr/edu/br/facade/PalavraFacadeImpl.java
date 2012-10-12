@@ -10,6 +10,8 @@ import utfpr.edu.br.controller.ControladorPalavra;
 import utfpr.edu.br.converter.CategoriaConverter;
 import utfpr.edu.br.converter.PalavraConverter;
 import utfpr.edu.br.dto.CategoriaDTO;
+import utfpr.edu.br.dto.JogadorDTO;
+import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
 import utfpr.edu.br.model.dao.PalavraDao;
 
@@ -43,5 +45,10 @@ public class PalavraFacadeImpl implements PalavraFacade{
     @Override
     public RetornoValidacao getPalavrasDoJogo(Long jogo_id) {
         return controller.getPalavrasDoJogo(jogo_id);
+    }
+
+    @Override
+    public void salvarPalavraCorreta(JogadorDTO jogador, PalavraDTO palavra, JogoDTO jogo) {
+        controller.salvarPalavraCorreta(jogador,palavra,jogo);
     }
 }

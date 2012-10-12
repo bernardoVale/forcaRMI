@@ -28,12 +28,13 @@ public abstract class EfetuarJogadaTemplate{
     public void efetuarJogada(JogoPresenter presenter){
         this.jogo = presenter.getView().dadosJogo();
         this.presenter = presenter;
-        preEfetuarJogada();
         pegaJogadorAtual();
+        preEfetuarJogada();
         passarVez();
         mudarPalavraPopulada();
         adicionarErro();
         adicionarLetrasErradas();
+        atualizarPontuacao();
         verificaVitoria();
         verificaDerrota();
     }
@@ -59,6 +60,9 @@ public abstract class EfetuarJogadaTemplate{
         }else{
             atual = 2;
         }
+    }
+    protected void atualizarPontuacao(){
+       presenter.atualizarPlacar(atual);
     }
     protected abstract void preEfetuarJogada();
     protected abstract void mudarPalavraPopulada();

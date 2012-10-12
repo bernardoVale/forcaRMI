@@ -72,11 +72,11 @@ public class JogoViewImpl extends JFrame implements JogoView{
         lbPlacar = new JLabel();
         lbPlacar.setBounds(414, 74, 288, 73);
         lbPontuacaoP2 = new JLabel();
-        lbPontuacaoP2.setBounds(560, 141, 38, 52);
+        lbPontuacaoP2.setBounds(560, 141, 48, 52);
         lbX = new JLabel();
         lbX.setBounds(473, 137, 38, 60);
         lbPontuacaoP1 = new JLabel();
-        lbPontuacaoP1.setBounds(400, 141, 38, 52);
+        lbPontuacaoP1.setBounds(400, 141, 48, 52);
         pLetrasErradas = new JPanel();
         pLetrasErradas.setBounds(360, 211, 300, 263);
         letra4 = new JLabel();

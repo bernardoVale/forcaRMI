@@ -57,15 +57,23 @@ public class JogadaPalavra extends EfetuarJogadaTemplate{
     @Override
     protected void verificaVitoria() {
         if(acertou){ //todo verificar se ja finalizou o jogo dps atualizar o placar
-            //Mudo a orientaçao da jogada
-            presenter.getView().setRodadaAtual(presenter.getView().rodadaAtual() + 1);
-            //populo a nova palavra
-            presenter.popularNovaPalavra();
-            //Mando a acao para que o servidor intenda o que e necessario ser gravado
-            if(atual==1){
-                jogo.setAcao(new AcaoDTO(Acao.PALAVRA_CORRETA,jogo.getJogador1().getJogador()));
-            }else{
-                jogo.setAcao(new AcaoDTO(Acao.PALAVRA_CORRETA,jogo.getJogador2().getJogador()));
+            if(!(jogo.getJogoDTO().getJogo().getNumRodadas()==(presenter.getView().rodadaAtual()+1))){
+                //Mudo a orientaçao da jogada
+                presenter.getView().setRodadaAtual(presenter.getView().rodadaAtual() + 1);
+                //populo a nova palavra
+                presenter.popularNovaPalavra();
+                //Mando a acao para que o servidor intenda o que e necessario ser gravado
+                if(atual==1){
+                    jogo.setAcao(new AcaoDTO(jogo.getJogador1().getJogador(),Acao.PALAVRA_CORRETA,palavraAtual));
+                }else{
+                    jogo.setAcao(new AcaoDTO(jogo.getJogador2().getJogador(),Acao.PALAVRA_CORRETA,palavraAtual));
+                }
+            }else{ //todo acabou o jogo
+                if(atual==1){
+                    jogo.setAcao(new AcaoDTO(Acao.FIM_JOGO,jogo.getJogador1().getJogador()));
+                }else{
+                    jogo.setAcao(new AcaoDTO(Acao.FIM_JOGO,jogo.getJogador1().getJogador()));
+                }
             }
         }
     }

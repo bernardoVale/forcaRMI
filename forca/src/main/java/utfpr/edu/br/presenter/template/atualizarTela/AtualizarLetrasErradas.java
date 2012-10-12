@@ -18,6 +18,7 @@ import java.util.List;
 public class AtualizarLetrasErradas extends AtualizarTelaTemplate{
     @Override
     protected void atualizarPlacar() {
+        presenter.atualizarPlacar(atual);
         //A partida ainda nao acabou
     }
 

@@ -275,4 +275,23 @@ public class JogoPresenter {
           jogoView.root().validate();
         }
     }
+
+    public void atualizarPlacar(int atual){
+        if(atual==1){
+            jogoView.lbPontuacaoP1().setText(
+                   String.valueOf(jogoView.dadosJogo().getJogador1().getPontuacao())
+            );
+            jogoView.lbPontuacaoP2().setText(
+                    String.valueOf(jogoView.dadosJogo().getJogador2().getPontuacao())
+            );
+        }else{
+            jogoView.lbPontuacaoP1().setText(
+                    String.valueOf(jogoView.dadosJogo().getJogador2().getPontuacao())
+            );
+            jogoView.lbPontuacaoP2().setText(
+                    String.valueOf(jogoView.dadosJogo().getJogador1().getPontuacao())
+            );
+        }
+
+    }
 }

@@ -4,6 +4,7 @@ import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.converter.JogoConverter;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.model.bean.Jogo;
+import utfpr.edu.br.model.dao.JogadoresDoJogoDao;
 import utfpr.edu.br.model.dao.JogoDao;
 import utfpr.edu.br.util.Erros;
 
@@ -18,17 +19,20 @@ import javax.persistence.NoResultException;
  */
 public class ControladorJogo extends AbstractControlador<Jogo,JogoDTO,JogoDao>{
     private final JogoDao dao;
+    private final JogadoresDoJogoDao daoJogadores;
     private final JogoConverter converter;
     /**
      * Mesmo caso do Dao, tem que tirar o clazz e colocar a classe manualmente
      *
      * @param dao
+     * @param daoJogadores
      * @param converter
      */
     @Inject
-    public ControladorJogo(JogoDao dao, JogoConverter converter) {
+    public ControladorJogo(JogoDao dao, JogadoresDoJogoDao daoJogadores, JogoConverter converter) {
         super(dao,Jogo.class, converter);
         this.dao = dao;
+        this.daoJogadores = daoJogadores;
         this.converter = converter;
     }
 

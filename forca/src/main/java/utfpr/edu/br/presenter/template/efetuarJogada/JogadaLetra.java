@@ -20,8 +20,26 @@ public class JogadaLetra extends EfetuarJogadaTemplate{
         //Rodada atual nao tem a posicao 0 por isso -1
         posicoes =
                 StringUtil.posicoesIguais(token, palavraAtual.getNomeMascarado());
-        if(posicoes==null)acertou=false;
-        else acertou=true;
+        if(posicoes==null){
+            acertou=false;
+            if(atual==1) { //Atribui pontuaçao -2 pois errou a letra
+                jogo.getJogador1().setPontuacao((-2)+jogo
+                        .getJogador1().getPontuacao());
+            }else{
+                jogo.getJogador2().setPontuacao((-2)+jogo
+                        .getJogador2().getPontuacao());
+            }
+        }
+        else {
+            acertou=true;
+            if(atual==1) { //Atribui pontuaçao +2 para cada letra correta
+                jogo.getJogador1().setPontuacao((posicoes.size()*2)+jogo
+                        .getJogador1().getPontuacao());
+            }else{
+                jogo.getJogador2().setPontuacao((posicoes.size()*2)+jogo
+                        .getJogador2().getPontuacao());
+            }
+        }
     }
     @Override
     protected void mudarPalavraPopulada() {

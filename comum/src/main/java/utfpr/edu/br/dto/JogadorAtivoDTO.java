@@ -18,11 +18,25 @@ public class JogadorAtivoDTO implements Serializable {
     private JogadorDTO jogador;
     private boolean meuTurno;
     private int quantidadeErros;
+    private int pontuacao;
 
     public JogadorAtivoDTO(JogadorDTO jogador, boolean meuTurno, int quantidadeErros) {
         this.jogador = jogador;
         this.meuTurno = meuTurno;
         this.quantidadeErros = quantidadeErros;
+    }
+
+    public JogadorAtivoDTO(JogadorDTO jogador, boolean meuTurno, int quantidadeErros, int pontuacao) {
+        this.jogador = jogador;
+        this.meuTurno = meuTurno;
+        this.quantidadeErros = quantidadeErros;
+        this.pontuacao = pontuacao;
+    }
+
+    public JogadorAtivoDTO(JogadorDTO jogador, int quantidadeErros, int pontuacao) {
+        this.jogador = jogador;
+        this.quantidadeErros = quantidadeErros;
+        this.pontuacao = pontuacao;
     }
 
     public JogadorAtivoDTO(JogadorDTO jogador, int quantidadeErros) {
@@ -54,12 +68,45 @@ public class JogadorAtivoDTO implements Serializable {
         this.quantidadeErros = quantidadeErros;
     }
 
+    public int getPontuacao() {
+        return pontuacao;
+    }
+
+    public void setPontuacao(int pontuacao) {
+        this.pontuacao = pontuacao;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof JogadorAtivoDTO)) return false;
+
+        JogadorAtivoDTO that = (JogadorAtivoDTO) o;
+
+        if (meuTurno != that.meuTurno) return false;
+        if (pontuacao != that.pontuacao) return false;
+        if (quantidadeErros != that.quantidadeErros) return false;
+        if (jogador != null ? !jogador.equals(that.jogador) : that.jogador != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = jogador != null ? jogador.hashCode() : 0;
+        result = 31 * result + (meuTurno ? 1 : 0);
+        result = 31 * result + quantidadeErros;
+        result = 31 * result + pontuacao;
+        return result;
+    }
+
     @Override
     public String toString() {
         return "JogadorAtivoDTO{" +
                 "jogador=" + jogador +
                 ", meuTurno=" + meuTurno +
                 ", quantidadeErros=" + quantidadeErros +
+                ", pontuacao=" + pontuacao +
                 '}';
     }
 }

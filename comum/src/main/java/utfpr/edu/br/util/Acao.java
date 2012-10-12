@@ -8,7 +8,13 @@ package utfpr.edu.br.util;
  */
 public enum Acao {
 
-    PALAVRA_CORRETA, //Jogador ganhou, entao, salvar jogador que acertou a palavra
-    DERROTA,  //Algum jogador perdeu.
-    MODIFICAO;//Nao precisa fazer nada no servidor, so alterou o painel
+    PALAVRA_CORRETA(1), //Jogador ganhou, entao, salvar jogador que acertou a palavra
+    DERROTA(2),  //Algum jogador perdeu.
+    MODIFICAO(3),//Nao precisa fazer nada no servidor, so alterou o painel
+    FIM_JOGO(4); //Nao existe mais palavras, o jogo acabou
+
+
+    Acao(int i) {
+
+    }
 }

@@ -18,6 +18,7 @@ public class AcaoDTO implements Serializable {
 
     private JogadorDTO jogador;
     private Acao acao;
+    private PalavraDTO palavra;
 
     public AcaoDTO() {
     }
@@ -25,6 +26,12 @@ public class AcaoDTO implements Serializable {
     public AcaoDTO(Acao acao, JogadorDTO jogador) {
         this.acao = acao;
         this.jogador = jogador;
+    }
+
+    public AcaoDTO(JogadorDTO jogador, Acao acao, PalavraDTO palavra) {
+        this.jogador = jogador;
+        this.acao = acao;
+        this.palavra = palavra;
     }
 
     public JogadorDTO getJogador() {
@@ -41,5 +48,13 @@ public class AcaoDTO implements Serializable {
 
     public void setAcao(Acao acao) {
         this.acao = acao;
+    }
+
+    public PalavraDTO getPalavra() {
+        return palavra;
+    }
+
+    public void setPalavra(PalavraDTO palavra) {
+        this.palavra = palavra;
     }
 }

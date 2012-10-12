@@ -12,6 +12,7 @@ public class AtualizarLetrasCorretas extends AtualizarTelaTemplate{
 
     @Override
     protected void atualizarPlacar() {
+        presenter.atualizarPlacar(atual);
     }
 
     @Override

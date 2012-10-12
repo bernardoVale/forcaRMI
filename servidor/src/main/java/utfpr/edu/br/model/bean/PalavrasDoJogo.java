@@ -22,24 +22,27 @@ public class PalavrasDoJogo implements IBean{
     //Quando termina a rodada, efetua um update e add a id do jogador que acertou a palavra
     @ManyToOne
     @JoinColumn(name = "vencedor_id")
-    private Jogo vencedor_id;
+    private Jogador vencedor_id;
 
     public PalavrasDoJogo() {}
 
-    public PalavrasDoJogo(int palavra_id,long jogo_id,Jogo vencedor_id) {
+    public PalavrasDoJogo(int palavra_id,long jogo_id,Jogador vencedor_id) {
         this.id = new PalavrasDoJogoID(palavra_id,jogo_id);
         this.vencedor_id = vencedor_id;
     }
+
     public PalavrasDoJogo(int palavra_id,long jogo_id){
         this.id = new PalavrasDoJogoID(palavra_id,jogo_id);
     }
-    public Jogo getVencedor_id() {
+
+    public Jogador getVencedor_id() {
         return vencedor_id;
     }
 
-    public void setVencedor_id(Jogo vencedor_id) {
+    public void setVencedor_id(Jogador vencedor_id) {
         this.vencedor_id = vencedor_id;
     }
+
     @Override
     public Long getId() {
         return null;

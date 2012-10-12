@@ -16,6 +16,7 @@ import utfpr.edu.br.model.bean.JogadoresDoJogo;
 import utfpr.edu.br.model.bean.PalavrasDoJogo;
 import utfpr.edu.br.model.dao.JogadoresDoJogoDao;
 import utfpr.edu.br.model.dao.PalavrasDoJogoDao;
+import utfpr.edu.br.util.Acao;
 import utfpr.edu.br.util.Erros;
 import utfpr.edu.br.util.session.JogosSession;
 
@@ -109,6 +110,13 @@ public class JogoFacadeImpl implements JogoFacade{
                break;
            }
         }
+        if(!(jogo.getAcao()==null)){
+            if(jogo.getAcao().getAcao() == Acao.PALAVRA_CORRETA){
+                facade.salvarPalavraCorreta(jogo.getAcao().getJogador(),jogo.getAcao().getPalavra(),
+                        jogo.getJogoDTO().getJogo());
+            }
+        }
+        //verificar acoes
         return new RetornoValidacao(jogo);
     }
 
@@ -136,6 +144,7 @@ public class JogoFacadeImpl implements JogoFacade{
 
     /**
      * Salva um jogo na sessao, um jogo ativo. A partir dele manipularemos um jogo
+     * Se ja foi salvo, eu so retorno o jogo para o jogador
      * @param jogador   Jogador1
      * @param adversario  Jogador 2
      * @param jogo  Dados do Jogo
@@ -143,8 +152,8 @@ public class JogoFacadeImpl implements JogoFacade{
      */
     private synchronized JogoAtivoDTO salvarJogoSessao(JogadorDTO jogador, JogadorDTO adversario
             , JogoDTO jogo,List<PalavraDTO> palavras) {
-        JogadorAtivoDTO jogador1 = new JogadorAtivoDTO(jogador,0);
-        JogadorAtivoDTO jogador2 = new JogadorAtivoDTO(adversario,0);
+        JogadorAtivoDTO jogador1 = new JogadorAtivoDTO(jogador,0,0);
+        JogadorAtivoDTO jogador2 = new JogadorAtivoDTO(adversario,0,0);
         DadosDoJogoDTO dadosJogo = new DadosDoJogoDTO(jogo,palavras);
         for (JogoAtivoDTO jogoAtivoDTO : JogosSession.getJogos()) {
                 //Primeiro jogador ja veio aqui e salvo meu filho, agora vai em paz
