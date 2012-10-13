@@ -15,6 +15,7 @@ import utfpr.edu.br.view.telas.lobby.salvarJogo.SalvarJogoView;
 public class SalvarJogoPresenter {
     private SalvarJogoView view;
     private JogadorDTO jogador;
+    private LobbyPresenter lobby;
 
     public SalvarJogoPresenter(SalvarJogoView view) {
         this.view = view;
@@ -23,13 +24,14 @@ public class SalvarJogoPresenter {
     public SalvarJogoPresenter() {
     }
 
-    public void createView(JogadorDTO jogador) {
+    public void createView(JogadorDTO jogador,LobbyPresenter lobby) {
         this.jogador = jogador;
+        this.lobby = lobby;
         this.setUpViewListeners();
         view.packAndShow();
     }
     public void setUpViewListeners(){
-        view.addSalvarListener(new SalvarJogoActionListener.SalvarJogoAction(this,jogador));
+        view.addSalvarListener(new SalvarJogoActionListener.SalvarJogoAction(this,jogador,lobby));
     }
 
     public void setView(SalvarJogoView view) {

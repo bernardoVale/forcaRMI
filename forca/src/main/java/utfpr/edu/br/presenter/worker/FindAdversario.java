@@ -65,7 +65,7 @@ public class FindAdversario extends SwingWorker<JogadorDTO,Void> {
         jogoView.lbPontuacaoP1().setVisible(true);
         jogoView.lbPontuacaoP2().setVisible(true);
         jogoView.lbPlacar().setFont(new java.awt.Font("Tahoma", 0, 55)); // NOI18N
-        jogoView.lbPlacar().setBounds(414, 74, 288, 73);
+        jogoView.lbPlacar().setBounds(414, 37, 288, 73);
         jogoView.lbPlacar().setText("Placar");
         jogoView.lbPlacar().setVisible(true);
         jogoView.lbX().setVisible(true);

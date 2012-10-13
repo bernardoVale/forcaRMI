@@ -7,16 +7,11 @@ new FormModel {
 			name: "this"
 			"title": "Forca 1.0 - Sala de Espera"
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq {par l {seq {space :p:280:p, comp label2:::p::p}, seq l {space :::p, comp label3:::p::p, space :::p, comp lbJogador:::p::p}, seq l {space :::p, comp btCriarSala:::p:119:p, space s:::p, comp btAtualizar:::p:120:p}}, space ::287:x}}"
-				"$verticalGroup": "par l {seq l {space :::p, comp label2:::p::p, par b {comp label3::b:p::p, comp lbJogador::b:p::p}, space ::19:x, par b {comp btCriarSala::b:p::p, comp btAtualizar::b:p::p}}}"
+				"$horizontalGroup": "par l {seq {par l {seq l {space :177:808:x, comp btAtualizar:::p:120:p, space :p:26:p}, seq l {comp label3:::p::p, space :::p, comp lbJogador:::p::p, space ::648:x}}, comp btCriarSala:::p:130:p, space :::p}}"
+				"$verticalGroup": "par l {seq {par b {comp label3::b:p::p, comp lbJogador::b:p::p}, space :0:0:x}, seq {space :::p, par l {seq t {comp btCriarSala::::0:x, space :::p}, seq l {space :p:100:p, comp btAtualizar:::p::p, space :14::x}}}}"
 			} ) {
 				name: "pTop"
 				"opaque": false
-				add( new FormComponent( "javax.swing.JLabel" ) {
-					name: "label2"
-					"text": "Sala de Espera"
-					"font": new java.awt.Font( "SansSerif", 0, 70 )
-				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "label3"
 					"text": "Jogador: "
@@ -29,7 +24,13 @@ new FormModel {
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "btCriarSala"
-					"text": "Criar Sala"
+					"icon": new com.jformdesigner.model.SwingIcon( 1, "/home/bernardo/forcaRMI/forca/src/main/resources/icone_Novo_Jogo.png" )
+					"focusPainted": false
+					"borderPainted": false
+					"opaque": false
+					"maximumSize": new java.awt.Dimension( 130, 130 )
+					"minimumSize": new java.awt.Dimension( 130, 130 )
+					"preferredSize": new java.awt.Dimension( 130, 130 )
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "btAtualizar"
@@ -39,17 +40,17 @@ new FormModel {
 				"x": 0
 				"y": 0
 				"width": 1090
-				"height": 175
+				"height": 145
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
 				"alignment": 0
 			} ) {
 				name: "pJogos"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 0
-				"y": 175
+				"x": 5
+				"y": 140
 				"width": 1090
-				"height": 460
+				"height": 500
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

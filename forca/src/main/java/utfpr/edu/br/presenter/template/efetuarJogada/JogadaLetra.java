@@ -23,10 +23,10 @@ public class JogadaLetra extends EfetuarJogadaTemplate{
         if(posicoes==null){
             acertou=false;
             if(atual==1) { //Atribui pontuaçao -2 pois errou a letra
-                jogo.getJogador1().setPontuacao((-2)+jogo
+                jogo.getJogador1().setPontuacao((-1)+jogo
                         .getJogador1().getPontuacao());
             }else{
-                jogo.getJogador2().setPontuacao((-2)+jogo
+                jogo.getJogador2().setPontuacao((-1)+jogo
                         .getJogador2().getPontuacao());
             }
         }

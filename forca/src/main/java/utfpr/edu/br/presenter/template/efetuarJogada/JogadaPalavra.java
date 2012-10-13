@@ -8,6 +8,8 @@ package utfpr.edu.br.presenter.template.efetuarJogada;/**
 import utfpr.edu.br.dto.AcaoDTO;
 import utfpr.edu.br.util.Acao;
 
+import javax.swing.*;
+
 /**
  * @author Bernardo Vale
  */
@@ -20,14 +22,34 @@ public class JogadaPalavra extends EfetuarJogadaTemplate{
         palavraAtual = presenter.getView().palavras().get(presenter.getView().rodadaAtual()-1);
 
         if(token.equals(palavraAtual.getNomeMascarado().toUpperCase()) ||
-                token.equals(palavraAtual.getNome().toUpperCase()))
+                token.equals(palavraAtual.getNome().toUpperCase())){
             acertou = true;
-        else acertou = false;
+            if(atual==1) { //Atribui pontuaçao +10, acertou a palavra. DPs tem que mudar
+                jogo.getJogador1().setPontuacao((+10)+jogo
+                        .getJogador1().getPontuacao());
+            }else{
+                jogo.getJogador2().setPontuacao((+10)+jogo
+                        .getJogador2().getPontuacao());
+            }
+        }
+        else{
+            acertou = false;
+            if(atual==1) { //Atribui pontuaçao -4 pois chutou palavra errada
+                jogo.getJogador1().setPontuacao((-4)+jogo
+                        .getJogador1().getPontuacao());
+            }else{
+                jogo.getJogador2().setPontuacao((-4)+jogo
+                        .getJogador2().getPontuacao());
+            }
+        }
     }
 
     @Override
     protected void mudarPalavraPopulada() {
-        if(acertou) presenter.atualizaPalavraCerta();
+        JOptionPane.showMessageDialog(presenter.getView().root(),
+                jogo.getJogoDTO().getPalavras().get(presenter.getView().rodadaAtual()-1).getNome()
+                ,"Acertou",JOptionPane.INFORMATION_MESSAGE);
+        if(acertou) presenter.popularNovaPalavra();
     }
 
     @Override
@@ -60,8 +82,6 @@ public class JogadaPalavra extends EfetuarJogadaTemplate{
             if(!(jogo.getJogoDTO().getJogo().getNumRodadas()==(presenter.getView().rodadaAtual()+1))){
                 //Mudo a orientaçao da jogada
                 presenter.getView().setRodadaAtual(presenter.getView().rodadaAtual() + 1);
-                //populo a nova palavra
-                presenter.popularNovaPalavra();
                 //Mando a acao para que o servidor intenda o que e necessario ser gravado
                 if(atual==1){
                     jogo.setAcao(new AcaoDTO(jogo.getJogador1().getJogador(),Acao.PALAVRA_CORRETA,palavraAtual));
@@ -71,9 +91,11 @@ public class JogadaPalavra extends EfetuarJogadaTemplate{
             }else{ //todo acabou o jogo
                 if(atual==1){
                     jogo.setAcao(new AcaoDTO(Acao.FIM_JOGO,jogo.getJogador1().getJogador()));
+
                 }else{
                     jogo.setAcao(new AcaoDTO(Acao.FIM_JOGO,jogo.getJogador1().getJogador()));
                 }
+                JOptionPane.showMessageDialog(presenter.getView().root(),"Fim do Jogo!");
             }
         }
     }

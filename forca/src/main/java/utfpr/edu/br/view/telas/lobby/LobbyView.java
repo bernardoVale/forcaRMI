@@ -23,5 +23,6 @@ public interface LobbyView {
      public void addAtualizarSalaListener(ActionListener listener);
      public void packAndShow();
      public JFrame root();
+     public void destroy();
 
 }

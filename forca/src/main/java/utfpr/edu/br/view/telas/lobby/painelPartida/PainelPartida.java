@@ -7,6 +7,7 @@ package utfpr.edu.br.view.telas.lobby.painelPartida;
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.presenter.JogoPresenter;
+import utfpr.edu.br.presenter.LobbyPresenter;
 import utfpr.edu.br.spring.SpringFactory;
 
 import javax.swing.*;
@@ -20,13 +21,15 @@ import java.awt.event.ActionListener;
  */
 public class PainelPartida extends JPanel {
     private final JogoPresenter presenter;
+    private final LobbyPresenter lobby;
     private JogoDTO jogo;
     private JogadorDTO jogador;
-    public PainelPartida(JogoDTO jogo,int i,JogadorDTO jogador) {
+    public PainelPartida(JogoDTO jogo,int i,JogadorDTO jogador,LobbyPresenter lobby) {
         initComponents();
         popularJogo(jogo,i);
         setUpListener();
         presenter = (JogoPresenter) SpringFactory.getFactory().getBean("JogoPresenter");
+        this.lobby = lobby;
         this.jogo = jogo;
         this.jogador = jogador;
     }
@@ -35,6 +38,7 @@ public class PainelPartida extends JPanel {
         btEntrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                lobby.destroy();
                 presenter.createView(jogador,jogo);
             }
         });

@@ -5,7 +5,7 @@ import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
-import utfpr.edu.br.view.telas.lobby.LobbyViewImpl;
+import utfpr.edu.br.view.telas.jogo.pontuacaoPanel.PainelPontuacao;
 
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
@@ -36,8 +36,6 @@ public class JogoViewImpl extends JFrame implements JogoView{
 				try {
 					JogoViewImpl frame = new JogoViewImpl();
 					frame.setVisible(true);
-                    LobbyViewImpl l = new LobbyViewImpl();
-                    l.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -70,24 +68,9 @@ public class JogoViewImpl extends JFrame implements JogoView{
         lbErroJogador2 = new JLabel("");
         lbErroJogador2.setBounds(0,0,250,387);
         lbPlacar = new JLabel();
-        lbPlacar.setBounds(414, 74, 288, 73);
-        lbPontuacaoP2 = new JLabel();
-        lbPontuacaoP2.setBounds(560, 141, 48, 52);
-        lbX = new JLabel();
-        lbX.setBounds(473, 137, 38, 60);
-        lbPontuacaoP1 = new JLabel();
-        lbPontuacaoP1.setBounds(400, 141, 48, 52);
+        lbPlacar.setBounds(414, 37, 288, 73);
         pLetrasErradas = new JPanel();
         pLetrasErradas.setBounds(360, 211, 300, 263);
-        letra4 = new JLabel();
-        letra7 = new JLabel();
-        letra1 = new JLabel();
-        letra2 = new JLabel();
-        letra5 = new JLabel();
-        letra8 = new JLabel();
-        letra6 = new JLabel();
-        letra9 = new JLabel();
-        letra3 = new JLabel();
         pPalavras = new JPanel();
         pPalavras.setBounds(96, 498, 800, 100);
         pLetras = new JPanel();
@@ -107,8 +90,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
 
         btnDesistir = new JButton();
         btnDesistir.setBounds(417, 62, 97, 29);
-
-
+        pPont = new PainelPontuacao();
         lbBackground = new JLabel();
 
         bgRadioButton.add(rbLetra);
@@ -141,51 +123,9 @@ public class JogoViewImpl extends JFrame implements JogoView{
         lbPlacar.setFont(new Font("Tahoma", 0, 55)); // NOI18N
         lbPlacar.setText("Placar");
 
-        lbPontuacaoP2.setFont(new Font("Tahoma", 0, 60)); // NOI18N
-        lbPontuacaoP2.setText("0");
 
-        lbX.setFont(new Font("Tahoma", 0, 60)); // NOI18N
-        lbX.setText("x");
 
-        lbPontuacaoP1.setFont(new Font("Tahoma", 0, 60)); // NOI18N
-        lbPontuacaoP1.setText("0");
-
-        letra4.setFont(new Font("Tahoma", 0, 60)); // NOI18N
-        letra4.setText("");
-        letra4.setPreferredSize(new Dimension(100, 14));
-
-        letra7.setFont(new Font("Tahoma", 0, 60)); // NOI18N
-        letra7.setText("");
-        letra7.setPreferredSize(new Dimension(100, 14));
-
-        letra1.setFont(new Font("Tahoma", 0, 60)); // NOI18N
-        letra1.setText("");
-        letra1.setPreferredSize(new Dimension(100, 14));
-
-        letra2.setFont(new Font("Tahoma", 0, 60)); // NOI18N
-        letra2.setText("");
-        letra2.setPreferredSize(new Dimension(100, 14));
-
-        letra5.setFont(new Font("Tahoma", 0, 60)); // NOI18N
-        letra5.setText("");
-        letra5.setPreferredSize(new Dimension(100, 14));
-
-        letra8.setFont(new Font("Tahoma", 0, 60)); // NOI18N
-        letra8.setText("");
-        letra8.setPreferredSize(new Dimension(100, 14));
-
-        letra6.setFont(new Font("Tahoma", 0, 60)); // NOI18N
-        letra6.setText("");
-        letra6.setPreferredSize(new Dimension(100, 14));
-
-        letra9.setFont(new Font("Tahoma", 0, 60)); // NOI18N
-        letra9.setText("");
-        letra9.setPreferredSize(new Dimension(100, 14));
-
-        letra3.setFont(new Font("Tahoma", 0, 60)); // NOI18N
-        letra3.setText("");
-        letra3.setPreferredSize(new Dimension(100, 14));
-
+        pPont.setBounds(new Rectangle(new Point(420,110),pPont.getPreferredSize()));
         pLetrasErradas.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 
         jButton1.setFont(new Font("Tahoma", 0, 24)); // NOI18N
@@ -219,16 +159,28 @@ public class JogoViewImpl extends JFrame implements JogoView{
         gridBagConstraints.fill = GridBagConstraints.BOTH;
         getContentPane().add(panelLobby, gridBagConstraints);
         panelLobby.add(pJogador1);
+        panelLobby.add(pPont);
         panelLobby.add(lbP1);
         panelLobby.add(P1_nome);
-        panelLobby.add(lbPontuacaoP1);
-        panelLobby.add(lbX);
-        panelLobby.add(lbPontuacaoP2);
         panelLobby.add(pLetrasErradas);
         panelLobby.add(lbPlacar);
         panelLobby.add(lbP2);
         panelLobby.add(P2_nome);
         panelLobby.add(pJogador2);
+
+        { // compute preferred size
+            Dimension preferredSize = new Dimension();
+            for(int i = 0; i < panelLobby.getComponentCount(); i++) {
+                Rectangle bounds = panelLobby.getComponent(i).getBounds();
+                preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+            }
+            Insets insets = panelLobby.getInsets();
+            preferredSize.width += insets.right;
+            preferredSize.height += insets.bottom;
+            panelLobby.setMinimumSize(preferredSize);
+            panelLobby.setPreferredSize(preferredSize);
+        }
 
 
         //Adiciono as propriedades do grid para a palavra
@@ -256,7 +208,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         lbCarregando.setVisible(false);
         panelLobby.add(lbCarregando);
 
-        lbBackground.setIcon(new ImageIcon("/home/bernardo/forcaRMI/forca/src/main/resources/presentation_background.jpg")); // NOI18N
+        lbBackground.setIcon(new ImageIcon(getClass().getResource("/presentation_background.jpg"))); // NOI18N
         gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -278,18 +230,6 @@ public class JogoViewImpl extends JFrame implements JogoView{
 	    private JLabel lbP1;
 	    private JLabel lbP2;
 	    private JLabel lbPlacar;
-	    private JLabel lbPontuacaoP1;
-	    private JLabel lbPontuacaoP2;
-	    private JLabel lbX;
-	    private JLabel letra1;
-	    private JLabel letra2;
-	    private JLabel letra3;
-	    private JLabel letra4;
-	    private JLabel letra5;
-	    private JLabel letra6;
-	    private JLabel letra7;
-	    private JLabel letra8;
-	    private JLabel letra9;
 	    private JPanel pEnviar;
 	    private JPanel pJogador1;
 	    private JPanel pJogador2;
@@ -300,6 +240,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         private JLabel lbCarregando;
         private JLabel lbErroJogador1;
         private JLabel lbErroJogador2;
+        private PainelPontuacao pPont;
 
     @Override
     public void setDadosJogo(JogoAtivoDTO dadosJogo) {
@@ -377,17 +318,17 @@ public class JogoViewImpl extends JFrame implements JogoView{
 
     @Override
     public JLabel lbPontuacaoP1() {
-        return lbPontuacaoP1;
+        return pPont.getLbPontuacaoP1();
     }
 
     @Override
     public JLabel lbPontuacaoP2() {
-        return lbPontuacaoP2;
+        return pPont.getLbPontuacaoP2();
     }
 
     @Override
     public JLabel lbX() {
-        return lbX;
+        return pPont.getlbX();
     }
 
     @Override

@@ -39,7 +39,7 @@ public class LobbyPresenter {
     }
 
     public void setUpViewListeners() {
-       view.addCriarSalaListener(new CriarSalaActionListener.CriarSalaAction(view.jogador()));
+       view.addCriarSalaListener(new CriarSalaActionListener.CriarSalaAction(view.jogador(),this));
        view.addAtualizarSalaListener(new AtualizarSalaActionListener.AtualizarSalaAction(this));
     }
 
@@ -59,11 +59,14 @@ public class LobbyPresenter {
             view.pJogos().revalidate();
             view.root().validate();
             for (JogoDTO jogo : this.jogos) {
-                view.pJogos().add(new PainelPartida(jogo,i,view.jogador()));
+                view.pJogos().add(new PainelPartida(jogo,i,view.jogador(),this));
                 view.pJogos().revalidate();
                 view.root().validate();
                 i++;
             }
         }
+    }
+    public void destroy(){
+        view.destroy();
     }
 }
