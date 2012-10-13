@@ -24,6 +24,7 @@ public class JogoAtivoDTO implements Serializable{
     private List<String> letrasErradas;
     private List<JLabel> palavraAtualPopulada;
     private AcaoDTO acao;
+    private int rodadaAtual;
 
     public JogoAtivoDTO() {
     }
@@ -57,7 +58,17 @@ public class JogoAtivoDTO implements Serializable{
         this.palavraAtualPopulada = palavraAtualPopulada;
     }
 
-    public List<JLabel> getPalavraAtualPopulada() {
+    public JogoAtivoDTO(JogadorAtivoDTO jogador1, JogadorAtivoDTO jogador2,
+                        DadosDoJogoDTO jogoDTO, List<String> letrasErradas,
+                         List<JLabel> palavraAtualPopulada, int rodadaAtual) {
+        this.jogador1 = jogador1;
+        this.jogador2 = jogador2;
+        this.jogoDTO = jogoDTO;
+        this.letrasErradas = letrasErradas;
+        this.palavraAtualPopulada = palavraAtualPopulada;
+        this.rodadaAtual = rodadaAtual;
+    }
+       public List<JLabel> getPalavraAtualPopulada() {
         return palavraAtualPopulada;
     }
 
@@ -102,5 +113,13 @@ public class JogoAtivoDTO implements Serializable{
 
     public void setAcao(AcaoDTO acao) {
         this.acao = acao;
+    }
+
+    public int getRodadaAtual() {
+        return rodadaAtual;
+    }
+
+    public void setRodadaAtual(int rodadaAtual) {
+        this.rodadaAtual = rodadaAtual;
     }
 }

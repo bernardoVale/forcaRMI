@@ -46,10 +46,12 @@ public class JogadaPalavra extends EfetuarJogadaTemplate{
 
     @Override
     protected void mudarPalavraPopulada() {
-        JOptionPane.showMessageDialog(presenter.getView().root(),
-                jogo.getJogoDTO().getPalavras().get(presenter.getView().rodadaAtual()-1).getNome()
-                ,"Acertou",JOptionPane.INFORMATION_MESSAGE);
-        if(acertou) presenter.popularNovaPalavra();
+        if(acertou){
+            JOptionPane.showMessageDialog(presenter.getView().root(),
+                    jogo.getJogoDTO().getPalavras().get(presenter.getView().rodadaAtual()-1).getNome()
+                    ,"Acertou",JOptionPane.INFORMATION_MESSAGE);
+            //presenter.popularNovaPalavra();
+        }
     }
 
     @Override
@@ -79,9 +81,11 @@ public class JogadaPalavra extends EfetuarJogadaTemplate{
     @Override
     protected void verificaVitoria() {
         if(acertou){ //todo verificar se ja finalizou o jogo dps atualizar o placar
-            if(!(jogo.getJogoDTO().getJogo().getNumRodadas()==(presenter.getView().rodadaAtual()+1))){
+            if(!(jogo.getJogoDTO().getJogo().getNumRodadas()==(presenter.getView().rodadaAtual()))){
                 //Mudo a orientaçao da jogada
                 presenter.getView().setRodadaAtual(presenter.getView().rodadaAtual() + 1);
+                jogo.setRodadaAtual(presenter.getView().rodadaAtual());
+                presenter.popularNovaPalavra();
                 //Mando a acao para que o servidor intenda o que e necessario ser gravado
                 if(atual==1){
                     jogo.setAcao(new AcaoDTO(jogo.getJogador1().getJogador(),Acao.PALAVRA_CORRETA,palavraAtual));

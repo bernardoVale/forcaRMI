@@ -10,6 +10,7 @@ import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.presenter.template.atualizarTela.AtualizarLetrasCorretas;
 import utfpr.edu.br.presenter.template.atualizarTela.AtualizarLetrasErradas;
+import utfpr.edu.br.presenter.template.atualizarTela.AtualizarPalavraCorreta;
 import utfpr.edu.br.presenter.template.atualizarTela.AtualizarTelaTemplate;
 import utfpr.edu.br.presenter.worker.AguardarTurno;
 import utfpr.edu.br.presenter.worker.BuscarDadosJogo;
@@ -180,6 +181,9 @@ public class JogoPresenter {
         //remove a ultima palavra populada
         jogoView.dadosJogo().getPalavraAtualPopulada().removeAll(
                 jogoView.dadosJogo().getPalavraAtualPopulada());
+        jogoView.palavraAtualPopulada().removeAll(
+                jogoView.palavraAtualPopulada()
+        );
         //JLabel letra;
         JLabel asterisco;
         char[] palavra =  jogoView.palavras().get(jogoView.rodadaAtual()-1).getNome().toCharArray();
@@ -196,6 +200,7 @@ public class JogoPresenter {
             jogoView.pLetras().revalidate();
             jogoView.root().validate();
         }
+        jogoView.dadosJogo().setPalavraAtualPopulada(jogoView.palavraAtualPopulada());
     }
     public void popularPalavraNovamente(List<JLabel> letrasLabel){
         //Remove tudo e atualiza a tela
@@ -234,6 +239,13 @@ public class JogoPresenter {
             if(!atualizado.getPalavraAtualPopulada().equals(jogoView.dadosJogo().getPalavraAtualPopulada())){
                 t = new AtualizarLetrasCorretas();
             }
+        }   //Mudar Palavra
+        if(jogoView.rodadaAtual()!=atualizado.getRodadaAtual()){
+            jogoView.setRodadaAtual(
+                    atualizado.getRodadaAtual()
+            );
+            t = new AtualizarPalavraCorreta();
+                         //todo
         }
         jogoView.setDadosJogo(atualizado);
         jogoView = t.atualizarTela(this);

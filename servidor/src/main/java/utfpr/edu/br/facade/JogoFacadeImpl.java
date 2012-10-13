@@ -170,7 +170,7 @@ public class JogoFacadeImpl implements JogoFacade{
             jogador2.setMeuTurno(false);
         }
         JogoAtivoDTO jogoAtivo = new JogoAtivoDTO(jogador1, jogador2, dadosJogo, new ArrayList<String>(),
-        new ArrayList<JLabel>());
+        new ArrayList<JLabel>(),1);
         JogosSession.getJogos().add
                 (jogoAtivo);
         System.out.println("Quantidade de jogos:" + JogosSession.getJogos().size());
