@@ -66,5 +66,6 @@ public class MascararTextoActionListener implements ActionListener{
         }
         DefaultFormatterFactory factory = new DefaultFormatterFactory(ab);
         presenter.getView().jtfEnviar().setFormatterFactory(factory);
+        presenter.getView().jtfEnviar().setText("");
     }
 }

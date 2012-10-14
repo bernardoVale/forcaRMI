@@ -16,16 +16,15 @@ public class AtualizarPalavraCorreta extends AtualizarTelaTemplate{
 
     @Override
     protected void atualizarLetrasErradas() {
-        //nop
+        presenter.atualizarLetrasErrada();
     }
 
     @Override
     protected void atualizarPalavraPopulada() {
         presenter.popularNovaPalavra();
     }
-
     @Override
     protected void atualizarForca() {
-        //nop
+        presenter.atualizarForca(atual);
     }
 }

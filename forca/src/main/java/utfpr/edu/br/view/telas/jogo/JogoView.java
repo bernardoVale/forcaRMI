@@ -4,6 +4,7 @@ import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
+import utfpr.edu.br.view.telas.jogo.pontuacaoPanel.PainelPontuacao;
 
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
@@ -18,6 +19,7 @@ import java.util.List;
  */
 public interface JogoView {
 
+    public PainelPontuacao pPont();
     public void setDadosJogo(JogoAtivoDTO dadosJogo);
     public JogoAtivoDTO dadosJogo();
     public List<JLabel> palavraAtualPopulada();
@@ -56,6 +58,8 @@ public interface JogoView {
     public JFrame root();
     public int rodadaAtual();
     public void setRodadaAtual(int rodadaAtual);
+    public void addClearFieldListener(ActionListener listener);
+    public void voltarAoLobby(JogadorDTO jogador);
     /**
      * Organiza e mostra a tela
      */

@@ -5,6 +5,8 @@ import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.dto.JogoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
+import utfpr.edu.br.presenter.LobbyPresenter;
+import utfpr.edu.br.spring.SpringFactory;
 import utfpr.edu.br.view.telas.jogo.pontuacaoPanel.PainelPontuacao;
 
 import javax.swing.*;
@@ -243,6 +245,11 @@ public class JogoViewImpl extends JFrame implements JogoView{
         private PainelPontuacao pPont;
 
     @Override
+    public PainelPontuacao pPont() {
+        return pPont;
+    }
+
+    @Override
     public void setDadosJogo(JogoAtivoDTO dadosJogo) {
         this.dadosJogo = dadosJogo;
     }
@@ -439,6 +446,19 @@ public class JogoViewImpl extends JFrame implements JogoView{
     @Override
     public void setRodadaAtual(int rodadaAtual) {
         this.rodadaAtual = rodadaAtual;
+    }
+
+    @Override
+    public void addClearFieldListener(ActionListener listener) {
+        jtfEnviar.addActionListener(listener);
+    }
+
+    @Override
+    public void voltarAoLobby(JogadorDTO jogador) {
+        this.dispose();
+        this.setVisible(false);
+        LobbyPresenter lobby = (LobbyPresenter) SpringFactory.getFactory().getBean("LobbyPresenter");
+        lobby.createView(jogador);
     }
 
     @Override

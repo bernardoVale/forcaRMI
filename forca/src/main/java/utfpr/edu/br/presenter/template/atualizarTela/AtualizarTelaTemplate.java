@@ -6,7 +6,10 @@ package utfpr.edu.br.presenter.template.atualizarTela;/**
  */
 
 import utfpr.edu.br.presenter.JogoPresenter;
+import utfpr.edu.br.util.Acao;
 import utfpr.edu.br.view.telas.jogo.JogoView;
+
+import javax.swing.*;
 
 /**
  * @author Bernardo Vale
@@ -17,6 +20,7 @@ public abstract class AtualizarTelaTemplate {
 
     public JogoView atualizarTela(JogoPresenter presenter){
         this.presenter = presenter;
+        verAcao();
         pegaJogadorAtual();
         visualizarPaineis();
         atualizarLetrasErradas();
@@ -24,6 +28,22 @@ public abstract class AtualizarTelaTemplate {
         atualizarForca();
         atualizarPlacar();
         return this.presenter.getView();
+    }
+
+    private void verAcao() {
+        if(!(presenter.getView().dadosJogo().getAcao()==null)){
+            if(presenter.getView().dadosJogo().getAcao().getAcao() == Acao.DERROTA){
+                JOptionPane.showMessageDialog(presenter.getView().root(),
+                        "Palavra era:"+presenter.getView().palavras().get(
+                                presenter.getView().rodadaAtual()-2
+                        ).getNome(),"Oponente enforcou :D",JOptionPane.INFORMATION_MESSAGE);
+            }
+            if(presenter.getView().dadosJogo().getAcao().getAcao() == Acao.FIM_JOGO){
+                JOptionPane.showMessageDialog(presenter.getView().root(),
+                        "Acabou ;(","Fim do Jogo",JOptionPane.INFORMATION_MESSAGE);
+
+            }
+        }
     }
 
     protected abstract void atualizarPlacar();

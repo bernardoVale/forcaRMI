@@ -33,7 +33,7 @@ public class FindAdversario extends SwingWorker<JogadorDTO,Void> {
     RetornoValidacao rv = new RetornoValidacao(false);
     @Override
     protected JogadorDTO doInBackground() throws Exception {
-        while (!rv.isOk()){                //todo jogo esta indo nulo
+        while (!rv.isOk()){
             rv = RMIClient.getInstance().provider().retornaAdversario(jogoView.jogador(),jogoView.jogo());
             Thread.sleep(2000);
         }
@@ -62,6 +62,7 @@ public class FindAdversario extends SwingWorker<JogadorDTO,Void> {
         jogoView.lbErroJogador2().setIcon(new GetImagemForca().getImagem(0));
         jogoView.lbPlacar().setVisible(true);
         jogoView.lbCarregando().setVisible(false);
+        jogoView.pPont().setVisible(true);
         jogoView.lbPontuacaoP1().setVisible(true);
         jogoView.lbPontuacaoP2().setVisible(true);
         jogoView.lbPlacar().setFont(new java.awt.Font("Tahoma", 0, 55)); // NOI18N

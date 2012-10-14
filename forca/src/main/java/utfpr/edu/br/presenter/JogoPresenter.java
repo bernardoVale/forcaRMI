@@ -8,17 +8,17 @@ package utfpr.edu.br.presenter;/**
 import utfpr.edu.br.dto.JogadorDTO;
 import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.dto.JogoDTO;
-import utfpr.edu.br.presenter.template.atualizarTela.AtualizarLetrasCorretas;
-import utfpr.edu.br.presenter.template.atualizarTela.AtualizarLetrasErradas;
-import utfpr.edu.br.presenter.template.atualizarTela.AtualizarPalavraCorreta;
-import utfpr.edu.br.presenter.template.atualizarTela.AtualizarTelaTemplate;
+import utfpr.edu.br.presenter.template.atualizarTela.*;
 import utfpr.edu.br.presenter.worker.AguardarTurno;
 import utfpr.edu.br.presenter.worker.BuscarDadosJogo;
 import utfpr.edu.br.presenter.worker.FindAdversario;
 import utfpr.edu.br.presenter.worker.PopularJogador;
+import utfpr.edu.br.util.Acao;
 import utfpr.edu.br.util.GetImagemForca;
+import utfpr.edu.br.util.MascararUtil;
 import utfpr.edu.br.view.action.MascararTextoActionListener;
 import utfpr.edu.br.view.action.RealizarJogadaActionListener;
+import utfpr.edu.br.view.action.TextFieldEnviarActionListener;
 import utfpr.edu.br.view.telas.jogo.JogoView;
 
 import javax.swing.*;
@@ -68,6 +68,7 @@ public class JogoPresenter {
         jogoView.lbPlacar().setText("Aguardando Oponente...");
         jogoView.lbPlacar().setFont(new Font("Tahoma", 0, 23));
         jogoView.pEnviar().setVisible(false);
+        jogoView.pPont().setVisible(false);
     }
     public void aguardarAdversario(){
         FindAdversario f = new FindAdversario(jogoView,this);
@@ -111,6 +112,7 @@ public class JogoPresenter {
     public void setUpViewListeners() {
         jogoView.addChutarLetraListener(new RealizarJogadaActionListener(this));
         jogoView.addMascaraTextoListener(new MascararTextoActionListener(this));
+        jogoView.addClearFieldListener(new TextFieldEnviarActionListener.LimparTextFieldAction(this));
     }
 
     public JogoView getView() {
@@ -155,22 +157,6 @@ public class JogoPresenter {
         //Pede para adicionar novamente uma lista de labels no painel palavra
         popularPalavraNovamente(letrasLabel);
     }
-
-    /**
-     * Jogador ja acertou a palavra. So populo a palavra sem a mascara no JPanel!
-     */
-    public void atualizaPalavraCerta(){
-        List<JLabel> letrasLabel = new ArrayList<JLabel>();
-        char[] array = jogoView.palavras().get(jogoView.rodadaAtual()-1).getNome()
-                .toUpperCase().toCharArray();
-        for(int j=0;j<jogoView.palavraAtualPopulada().size();j++){
-            JLabel letraNova = new JLabel();
-            letraNova.setFont(new Font("Tahoma",0,50));
-            letraNova.setText("<html><u>"+array[j]+"</u><html>");
-            letrasLabel.add(letraNova);
-        }
-        popularPalavraNovamente(letrasLabel);
-    }
     /**
      * Adiciona os asterisco ao painel de acordo com o numero de letras
      */
@@ -201,6 +187,11 @@ public class JogoPresenter {
             jogoView.root().validate();
         }
         jogoView.dadosJogo().setPalavraAtualPopulada(jogoView.palavraAtualPopulada());
+        jogoView.jtfEnviar().setFormatterFactory(MascararUtil.doMascararTexto(
+                jogoView.dadosJogo().getJogoDTO().getPalavras().get(
+                        jogoView.rodadaAtual()-1
+                ).getNome()
+        ));
     }
     public void popularPalavraNovamente(List<JLabel> letrasLabel){
         //Remove tudo e atualiza a tela
@@ -231,24 +222,42 @@ public class JogoPresenter {
     }
 
     public void atualizarTela(JogoAtivoDTO atualizado) {
-        AtualizarTelaTemplate t = null;
-        if(!atualizado.getLetrasErradas().equals(jogoView.dadosJogo().getLetrasErradas())){
-            t = new AtualizarLetrasErradas();
-
-        }else{
-            if(!atualizado.getPalavraAtualPopulada().equals(jogoView.dadosJogo().getPalavraAtualPopulada())){
+        AtualizarTelaTemplate t = null;    //todo mudar isso para acao
+        switch (atualizado.getAcao().getAcao()) {
+            case PALAVRA_CORRETA:
+                jogoView.setRodadaAtual(
+                        atualizado.getRodadaAtual()
+                );
+                t = new AtualizarPalavraCorreta();
+                break;
+            case DERROTA:
+                jogoView.setRodadaAtual(
+                        atualizado.getRodadaAtual()
+                );
+                t = new AtualizarDerrota();
+                break;
+            case MODIFICAO:
+                break;
+            case FIM_JOGO:
+                JOptionPane.showMessageDialog(jogoView.root(),
+                        "Acabou ;(", "Fim do Jogo", JOptionPane.INFORMATION_MESSAGE);
+                jogoView.voltarAoLobby(jogoView.jogador());
+                break;
+            case ERROU_LETRA:
+                t = new AtualizarLetrasErradas();
+                break;
+            case ACERTOU_LETRA:
                 t = new AtualizarLetrasCorretas();
-            }
-        }   //Mudar Palavra
-        if(jogoView.rodadaAtual()!=atualizado.getRodadaAtual()){
-            jogoView.setRodadaAtual(
-                    atualizado.getRodadaAtual()
-            );
-            t = new AtualizarPalavraCorreta();
-                         //todo
+                break;
+            case PALAVRA_ERRADA:
+                t = new AtualizarPalavraErrada();
+                break;
         }
-        jogoView.setDadosJogo(atualizado);
-        jogoView = t.atualizarTela(this);
+        if(!(atualizado.getAcao().getAcao()== Acao.FIM_JOGO)){
+            jogoView.setDadosJogo(atualizado);
+            jogoView = t.atualizarTela(this);
+        }
+
     }
     public void atualizarForca(int atual){
         if(atual==1){

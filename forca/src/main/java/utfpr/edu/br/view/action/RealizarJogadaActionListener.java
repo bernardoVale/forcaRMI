@@ -10,6 +10,7 @@ import utfpr.edu.br.presenter.template.efetuarJogada.EfetuarJogadaTemplate;
 import utfpr.edu.br.presenter.template.efetuarJogada.JogadaLetra;
 import utfpr.edu.br.presenter.template.efetuarJogada.JogadaPalavra;
 import utfpr.edu.br.rmi.RMIClient;
+import utfpr.edu.br.util.Acao;
 import utfpr.edu.br.view.telas.jogo.JogoView;
 
 import java.awt.event.ActionEvent;
@@ -39,11 +40,15 @@ public class RealizarJogadaActionListener implements ActionListener {
                 jogada = new JogadaPalavra();
                 jogada.efetuarJogada(presenter);
             }
+
         //Atualizo o servidor para que o outro jogador receba as modificaçoes
         try {
+            view.jtfEnviar().setText("");
             RMIClient.getInstance().provider().efetuarJogada(jogada.getJogo());
             presenter.getView().setDadosJogo(jogada.getJogo());
-            presenter.verificarTurno();
+            if(!(jogada.getJogo().getAcao().getAcao()== Acao.FIM_JOGO)){
+                presenter.verificarTurno();
+            }
         } catch (RemoteException e1) {
             e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }

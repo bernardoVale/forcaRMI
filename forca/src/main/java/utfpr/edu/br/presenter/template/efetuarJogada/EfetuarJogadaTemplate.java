@@ -9,6 +9,7 @@ import utfpr.edu.br.dto.JogoAtivoDTO;
 import utfpr.edu.br.dto.PalavraDTO;
 import utfpr.edu.br.presenter.JogoPresenter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -64,6 +65,19 @@ public abstract class EfetuarJogadaTemplate{
     protected void atualizarPontuacao(){
        presenter.atualizarPlacar(atual);
     }
+
+
+    /**
+     * Jogador acertou a palavra, limparemos agora os dados remanentes da ultima partida
+     */
+    protected void limparDadosJogo() {
+        jogo.getJogador1().setQuantidadeErros(0);
+        jogo.getJogador2().setQuantidadeErros(0);
+        jogo.setLetrasErradas(new ArrayList<String>());
+        presenter.atualizarForca(atual);
+        presenter.atualizarLetrasErrada();
+    }
+
     protected abstract void preEfetuarJogada();
     protected abstract void mudarPalavraPopulada();
     protected abstract void adicionarErro();

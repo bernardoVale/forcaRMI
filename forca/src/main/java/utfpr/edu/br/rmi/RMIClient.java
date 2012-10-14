@@ -24,7 +24,7 @@ public class RMIClient {
         {
             ourInstance = new RMIClient();
             try {
-                provider = (RmiProvider) Naming.lookup("rmi://localhost:1099/ForcaRMIService");
+                provider = (RmiProvider) Naming.lookup("rmi://192.168.1.2:1099/ForcaRMIService");
             } catch (NotBoundException e) {
                 e.printStackTrace();
             } catch (MalformedURLException e) {

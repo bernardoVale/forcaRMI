@@ -16,6 +16,7 @@ import java.util.List;
  * @author Bernardo Vale
  */
 public class AtualizarLetrasErradas extends AtualizarTelaTemplate{
+
     @Override
     protected void atualizarPlacar() {
         presenter.atualizarPlacar(atual);
@@ -31,7 +32,7 @@ public class AtualizarLetrasErradas extends AtualizarTelaTemplate{
         j.pLetrasErradas().revalidate();
         j.root().validate();
         for(int i=0;i< pErradas.size();i++){
-            JLabel letra = new JLabel(pErradas.get(i));
+            JLabel letra = new JLabel(pErradas.get(i).trim());
             letra.setFont(new Font("SansSerif", Font.BOLD, 73));
             j.pLetrasErradas().add(letra);
             j.pLetrasErradas().revalidate();
