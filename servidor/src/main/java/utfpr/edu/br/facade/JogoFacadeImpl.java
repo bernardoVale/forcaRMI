@@ -114,6 +114,11 @@ public class JogoFacadeImpl implements JogoFacade{
             if(jogo.getAcao().getAcao() == Acao.PALAVRA_CORRETA){
                 facade.salvarPalavraCorreta(jogo.getAcao().getJogador(),jogo.getAcao().getPalavra(),
                         jogo.getJogoDTO().getJogo());
+            }else{  //CadastrarPontuacoes
+                if(jogo.getAcao().getAcao() == Acao.FIM_JOGO){
+                     control.cadastrarPontuacaoFinal(jogo.getJogador1(),jogo.getJogador2()
+                     ,jogo.getJogoDTO().getJogo());
+                }
             }
         }
         //verificar acoes

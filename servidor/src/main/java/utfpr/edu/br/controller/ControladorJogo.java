@@ -2,7 +2,9 @@ package utfpr.edu.br.controller;
 
 import utfpr.edu.br.RetornoValidacao;
 import utfpr.edu.br.converter.JogoConverter;
+import utfpr.edu.br.dto.JogadorAtivoDTO;
 import utfpr.edu.br.dto.JogoDTO;
+import utfpr.edu.br.model.bean.JogadoresDoJogo;
 import utfpr.edu.br.model.bean.Jogo;
 import utfpr.edu.br.model.dao.JogadoresDoJogoDao;
 import utfpr.edu.br.model.dao.JogoDao;
@@ -49,5 +51,12 @@ public class ControladorJogo extends AbstractControlador<Jogo,JogoDTO,JogoDao>{
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
         return rv;
+    }
+
+    public void cadastrarPontuacaoFinal(JogadorAtivoDTO jogador1, JogadorAtivoDTO jogador2, JogoDTO jogo) {
+        daoJogadores.update(new JogadoresDoJogo(jogador1.getJogador().getId(),jogo.getId().intValue(),
+                new Long(jogador1.getPontuacao())));
+        daoJogadores.update(new JogadoresDoJogo(jogador2.getJogador().getId(),jogo.getId().intValue(),
+                new Long(jogador2.getPontuacao())));
     }
 }
