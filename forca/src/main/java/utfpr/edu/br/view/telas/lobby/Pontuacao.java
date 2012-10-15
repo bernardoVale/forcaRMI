@@ -29,6 +29,8 @@ public class Pontuacao extends JFrame {
 
         //======== panel1 ========
         {
+            panel1.setFocusable(false);
+            panel1.setOpaque(false);
 
             // JFormDesigner evaluation mark
             panel1.setBorder(new javax.swing.border.CompoundBorder(
@@ -46,6 +48,7 @@ public class Pontuacao extends JFrame {
             //---- lbPontuacaoP1 ----
             lbPontuacaoP1.setText("-10");
             lbPontuacaoP1.setFont(new Font("SansSerif", Font.PLAIN, 60));
+            lbPontuacaoP1.setOpaque(true);
             panel1.add(lbPontuacaoP1, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 0, 10), 0, 0));
@@ -53,6 +56,7 @@ public class Pontuacao extends JFrame {
             //---- lbX ----
             lbX.setText("x");
             lbX.setFont(new Font("SansSerif", Font.PLAIN, 60));
+            lbX.setOpaque(true);
             panel1.add(lbX, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 0, 10), 0, 0));
@@ -60,6 +64,7 @@ public class Pontuacao extends JFrame {
             //---- lbPontuacaoP2 ----
             lbPontuacaoP2.setText("-10");
             lbPontuacaoP2.setFont(new Font("SansSerif", Font.PLAIN, 60));
+            lbPontuacaoP2.setOpaque(true);
             panel1.add(lbPontuacaoP2, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 0, 0), 0, 0));

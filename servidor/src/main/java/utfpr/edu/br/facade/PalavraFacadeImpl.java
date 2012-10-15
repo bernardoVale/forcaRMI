@@ -38,8 +38,10 @@ public class PalavraFacadeImpl implements PalavraFacade{
     }
 
     @Override
-    public List<PalavraDTO> sortearPalavras(Long quantidade, CategoriaDTO categoriaPalavra) {
-        return cvPalavra.toDTOList(dao.getPalavrasSorteadas(cv.toBean(categoriaPalavra),quantidade.intValue()));
+    public List<PalavraDTO> sortearPalavras(Long quantidade, CategoriaDTO categoriaPalavra,
+    String dificuldade) {
+        return cvPalavra.toDTOList(dao.getPalavrasSorteadas(cv.toBean(categoriaPalavra),quantidade.intValue(),
+                dificuldade));
     }
 
     @Override

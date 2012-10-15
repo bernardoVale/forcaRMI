@@ -32,6 +32,7 @@ public class PainelPartida extends JPanel {
         this.lobby = lobby;
         this.jogo = jogo;
         this.jogador = jogador;
+        mudarBotao();
     }
 
     private void setUpListener() {
@@ -50,7 +51,15 @@ public class PainelPartida extends JPanel {
         lbId.setText(""+i);
         lbJogadores.setText(jogo.getNum_Jogadores()+"/"+"2");
     }
-
+    private void mudarBotao(){
+        if(jogo.getNum_Jogadores()==2){
+            btEntrar.setText("Lotado");
+            btEntrar.setEnabled(false);
+        }else{
+            btEntrar.setText("Entrar");
+            btEntrar.setEnabled(true);
+        }
+    }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         // Generated using JFormDesigner Evaluation license - Bernardo Vale

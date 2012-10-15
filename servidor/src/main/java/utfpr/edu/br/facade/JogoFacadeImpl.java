@@ -70,9 +70,10 @@ public class JogoFacadeImpl implements JogoFacade{
     }
 
     private synchronized void sortearESalvarPalavras(JogoDTO jogo) {
+
         List<PalavraDTO> palavrasDoJogo;
         //traz o array das palavras sorteadas
-        palavrasDoJogo = facade.sortearPalavras(jogo.getNumRodadas(),jogo.getCategoria());
+        palavrasDoJogo = facade.sortearPalavras(jogo.getNumRodadas(),jogo.getCategoria(),jogo.getDificuldade());
         PalavrasDoJogoDao daoPalavaras = Getinjector.getInstance().getInstance(PalavrasDoJogoDao.class);
         for(int i=0;i<palavrasDoJogo.size();i++){
             //salva todas as palavras    //todo mudar para controlador

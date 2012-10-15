@@ -76,7 +76,6 @@ public class JogoViewImpl extends JFrame implements JogoView{
         pPalavras = new JPanel();
         pPalavras.setBounds(96, 498, 800, 100);
         pLetras = new JPanel();
-
         pEnviar = new JPanel();
         pEnviar.setBounds(96, 610, 514, 92);
         jButton1 = new JButton();
@@ -93,6 +92,7 @@ public class JogoViewImpl extends JFrame implements JogoView{
         btnDesistir = new JButton();
         btnDesistir.setBounds(417, 62, 97, 29);
         pPont = new PainelPontuacao();
+        pPont.setOpaque(false);
         lbBackground = new JLabel();
 
         bgRadioButton.add(rbLetra);

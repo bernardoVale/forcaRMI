@@ -14,15 +14,19 @@ new FormModel {
 				"$alignTop": true
 			} ) {
 				name: "panel1"
+				"focusable": false
+				"opaque": false
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "lbPontuacaoP1"
 					"text": "-10"
 					"font": &Font0 new java.awt.Font( "SansSerif", 0, 60 )
+					"opaque": true
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "lbX"
 					"text": "x"
 					"font": #Font0
+					"opaque": true
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 					"gridx": 1
 				} )
@@ -30,6 +34,7 @@ new FormModel {
 					name: "lbPontuacaoP2"
 					"text": "-10"
 					"font": #Font0
+					"opaque": true
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 					"gridx": 2
 				} )

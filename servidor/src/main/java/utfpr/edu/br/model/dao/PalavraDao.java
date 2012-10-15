@@ -41,7 +41,27 @@ public class PalavraDao extends AbstractDao<Palavra>{
      * @param rodadas     Quantidade de rodadas, ou seja, num de palavras q vou enviar
      * @return
      */
-    public List<Palavra> getPalavrasSorteadas(Categoria categoria,int rodadas){
+    public List<Palavra> getPalavrasSorteadas(Categoria categoria,int rodadas,String dificuldade){
+        int max = 0;
+        int min = 0;
+        if(dificuldade.equals("Fácil")){
+           max = 5;
+        }else{
+            if(dificuldade.equals("Normal")){
+                max = 8;
+                min = 6;
+            }else{
+                if(dificuldade.equals("Magayver")){
+                     max = 12;
+                     min = 9;
+                }else{
+                    if(dificuldade.equals("Filho de Osíris")){
+                       min = 13; //Aqui o cara e fera d+
+                       max = 99;
+                    }
+                }
+            }
+        }
         Long codigos[] = new Long[rodadas];//Vetor para adicionar os codigos sorteados
         int cont=0;//variavel para verificar se tinha codigo igual no sorteio
         List<Palavra> palavras = new ArrayList<Palavra>();
@@ -60,12 +80,23 @@ public class PalavraDao extends AbstractDao<Palavra>{
                 }
             }
             if(cont==0){
-                codigos[i-1] = id; //adiciono no vetor de teste e ja add no array pq e um codigo valido
-                palavras.add(this.findByID(id));
+
+                Palavra p = this.findByID(id);
+                if(!verificaDificuldade(max,min,p)){
+                    i--;
+                }else{
+                    codigos[i-1] = id;
+                    palavras.add(p);
+                }
             }else{ //tem que sortear de novo
                 i = i-1;
             }
         }
         return palavras;
+    }
+
+    private boolean verificaDificuldade(int max, int min, Palavra p) {
+        char[] palavra = p.getNome().toCharArray();
+        return palavra.length <= max && palavra.length >= min;
     }
 }

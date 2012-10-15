@@ -7,6 +7,7 @@ package utfpr.edu.br.view.telas.lobby;
 import utfpr.edu.br.dto.JogadorDTO;
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
@@ -29,6 +30,7 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
         lbJogador = new JLabel();
         btCriarSala = new JButton();
         btAtualizar = new JButton();
+        scrollPane1 = new JScrollPane();
         pJogos = new JPanel();
 
         //======== this ========
@@ -50,11 +52,11 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
 
             //---- label3 ----
             label3.setText("Jogador: ");
-            label3.setFont(new Font("SansSerif", Font.PLAIN, 36));
+            label3.setFont(new Font("Garuda", Font.PLAIN, 36));
 
             //---- lbJogador ----
             lbJogador.setText("hogakii");
-            lbJogador.setFont(new Font("SansSerif", Font.PLAIN, 36));
+            lbJogador.setFont(new Font("Garuda", Font.PLAIN, 36));
 
             //---- btCriarSala ----
             btCriarSala.setIcon(new ImageIcon("/home/bernardo/forcaRMI/forca/src/main/resources/icone_Novo_Jogo.png"));
@@ -74,46 +76,54 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
                 pTopLayout.createParallelGroup()
                     .addGroup(pTopLayout.createSequentialGroup()
                         .addGroup(pTopLayout.createParallelGroup()
-                                .addGroup(pTopLayout.createSequentialGroup()
-                                        .addGap(177, 808, Short.MAX_VALUE)
-                                        .addComponent(btAtualizar, GroupLayout.PREFERRED_SIZE, 120, GroupLayout.PREFERRED_SIZE)
-                                        .addGap(26, 26, 26))
-                                .addGroup(pTopLayout.createSequentialGroup()
-                                        .addComponent(label3)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lbJogador)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 648, Short.MAX_VALUE)))
+                            .addGroup(pTopLayout.createSequentialGroup()
+                                .addGap(177, 808, Short.MAX_VALUE)
+                                .addComponent(btAtualizar, GroupLayout.PREFERRED_SIZE, 120, GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26))
+                            .addGroup(pTopLayout.createSequentialGroup()
+                                .addComponent(label3)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbJogador)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 648, Short.MAX_VALUE)))
                         .addComponent(btCriarSala, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
             );
             pTopLayout.setVerticalGroup(
                 pTopLayout.createParallelGroup()
                     .addGroup(pTopLayout.createSequentialGroup()
-                            .addGroup(pTopLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                    .addComponent(label3)
-                                    .addComponent(lbJogador))
-                            .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(pTopLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                            .addComponent(label3)
+                            .addComponent(lbJogador))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(pTopLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(pTopLayout.createParallelGroup()
-                                .addGroup(GroupLayout.Alignment.TRAILING, pTopLayout.createSequentialGroup()
-                                        .addComponent(btCriarSala, GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
-                                        .addContainerGap())
-                                .addGroup(pTopLayout.createSequentialGroup()
-                                        .addGap(100, 100, 100)
-                                        .addComponent(btAtualizar)
-                                        .addContainerGap())))
+                            .addGroup(GroupLayout.Alignment.TRAILING, pTopLayout.createSequentialGroup()
+                                .addComponent(btCriarSala, GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                                .addContainerGap())
+                            .addGroup(pTopLayout.createSequentialGroup()
+                                .addGap(100, 100, 100)
+                                .addComponent(btAtualizar)
+                                .addContainerGap())))
             );
         }
         contentPane.add(pTop);
         pTop.setBounds(0, 0, 1090, 145);
 
-        //======== pJogos ========
+        //======== scrollPane1 ========
         {
-            pJogos.setLayout(new FlowLayout(FlowLayout.LEFT));
+            scrollPane1.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+            //======== pJogos ========
+            {
+                pJogos.setBorder(new TitledBorder(null, "Lista de Jogos", TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION,
+                    new Font("Garuda", Font.BOLD, 20), new Color(0, 169, 179)));
+                pJogos.setLayout(new FlowLayout(FlowLayout.LEFT));
+            }
+            scrollPane1.setViewportView(pJogos);
         }
-        contentPane.add(pJogos);
-        pJogos.setBounds(5, 140, 1090, 500);
+        contentPane.add(scrollPane1);
+        scrollPane1.setBounds(5, 155, 1070, 475);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -140,6 +150,7 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
     private JLabel lbJogador;
     private JButton btCriarSala;
     private JButton btAtualizar;
+    private JScrollPane scrollPane1;
     private JPanel pJogos;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 

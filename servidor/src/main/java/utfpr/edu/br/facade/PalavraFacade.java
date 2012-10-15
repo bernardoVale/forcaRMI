@@ -16,7 +16,7 @@ import java.util.List;
  */
 public interface PalavraFacade {
 
-     List<PalavraDTO> sortearPalavras(Long quantidade,CategoriaDTO categoriaPalavra);
+     List<PalavraDTO> sortearPalavras(Long quantidade,CategoriaDTO categoriaPalavra,String dificuldade);
      RetornoValidacao getPalavrasDoJogo(Long jogo_id);
 
     void salvarPalavraCorreta(JogadorDTO jogador, PalavraDTO palavra, JogoDTO jogo);
