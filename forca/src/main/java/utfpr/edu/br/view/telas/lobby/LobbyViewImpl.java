@@ -84,7 +84,7 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
                                 .addComponent(label3)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lbJogador)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 648, Short.MAX_VALUE)))
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 674, Short.MAX_VALUE)))
                         .addComponent(btCriarSala, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
             );
@@ -118,12 +118,16 @@ public class LobbyViewImpl extends JFrame implements LobbyView{
             {
                 pJogos.setBorder(new TitledBorder(null, "Lista de Jogos", TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION,
                     new Font("Garuda", Font.BOLD, 20), new Color(0, 169, 179)));
-                pJogos.setLayout(new FlowLayout(FlowLayout.LEFT));
+                pJogos.setLayout(new GridBagLayout());
+                ((GridBagLayout)pJogos.getLayout()).columnWidths = new int[] {0, 0, 0, 0};
+                ((GridBagLayout)pJogos.getLayout()).rowHeights = new int[] {0, 0, 0, 0};
+                ((GridBagLayout)pJogos.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
+                ((GridBagLayout)pJogos.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
             }
             scrollPane1.setViewportView(pJogos);
         }
         contentPane.add(scrollPane1);
-        scrollPane1.setBounds(5, 155, 1070, 475);
+        scrollPane1.setBounds(5, 155, 1055, 475);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();

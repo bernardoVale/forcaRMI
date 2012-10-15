@@ -12,6 +12,7 @@ import utfpr.edu.br.view.action.CriarSalaActionListener;
 import utfpr.edu.br.view.telas.lobby.LobbyView;
 import utfpr.edu.br.view.telas.lobby.painelPartida.PainelPartida;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,15 +54,23 @@ public class LobbyPresenter {
 
     public void exibirJogos(List<JogoDTO> jogos){
         int i=1; //Numero da sala
+        int x=0;
+        int y=0;
         if(this.jogos!=jogos){
             this.jogos = jogos;
             view.pJogos().removeAll();
             view.pJogos().revalidate();
             view.root().validate();
-            for (JogoDTO jogo : this.jogos) {
-                view.pJogos().add(new PainelPartida(jogo,i,view.jogador(),this));
+            for(int j=0;j<jogos.size();j++){
+                view.pJogos().add(new PainelPartida(jogos.get(j),i,view.jogador(),this),
+                        new GridBagConstraints(x, y, 1, 1, 0.0, 0.0,
+                                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                new Insets(0, 0, 0, 0), 0, 0));
                 view.pJogos().revalidate();
                 view.root().validate();
+                if(x==4){y++; x=0;}else{
+                    x++;
+                }
                 i++;
             }
         }
